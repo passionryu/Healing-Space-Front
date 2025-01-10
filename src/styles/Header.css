@@ -1,13 +1,25 @@
-/* 네비게이션을 가로로 배치 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  padding-top: 20px ;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
 header nav ul {
-    display: flex;  /* 항목들을 가로로 배치 */
-    list-style-type: none; /* 기본 리스트 스타일 제거 */
-    margin: 0;  /* 기본 여백 제거 */
-    padding: 0;  /* 기본 패딩 제거 */
-    justify-content: flex-end;   /* 항목들을 오른쪽으로 정렬 */
-    align-items: center;         /* 수직 가운데 정렬 */
-  }
-  
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding-right: 20px; 
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 나머지 기존 스타일은 유지 */
+
   /* 각 항목에 스타일 적용 */
   header nav ul li {
     position: relative; /* 서브 메뉴를 절대 위치로 배치할 수 있도록 설정 */
