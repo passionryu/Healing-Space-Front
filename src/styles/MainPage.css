@@ -42,13 +42,54 @@
   }
 }
 
+/* About US 부분 */
+
+/* 전체 컨테이너 스타일 */
+.about-us-container {
+  margin-top: 20px;
+  display: flex; /* 가로 정렬을 위한 flexbox */
+  text-align: left; /* 텍스트 좌측 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 이미지와 텍스트 사이 간격 */
+  padding: 20px; /* 내부 여백 */
+}
+
+/* 이미지 스타일 */
+.about-us-image img {
+  max-width: 500px; /* 이미지 최대 너비 */
+  height: auto; /* 비율 유지 */
+  border-radius: 10px; /* 둥근 모서리 (선택 사항) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+  transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
+}
+
+.about-us-image img:hover{
+  transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+}
+
+/* 텍스트 영역 스타일 */
+.about-us-text {
+  flex: 1; /* 텍스트 영역이 남은 공간을 차지하도록 설정 */
+}
+
+.about-us-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-us-text h4 {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
 /* 힐링 서비스 로고 부분 */
 .healing-service-logo img {
   height: 270px;
   border-radius: 15px; /* 모서리를 둥글게 설정 */
   /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-  margin-top: 30px;
-  margin-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* 힐링 프로그램 요소 */
