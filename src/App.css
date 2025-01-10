@@ -3,7 +3,7 @@ body {
   position: relative;
   margin: 0;
   padding-top: 60px; /* 헤더 높이만큼 패딩 추가 */
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   background-color: #ffffff; /* 흰색 */
   color: #000000; /* 글자색: 검정 */
   font-family: Arial, sans-serif; /* 기본 폰트 설정 */

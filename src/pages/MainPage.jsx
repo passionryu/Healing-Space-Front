@@ -9,7 +9,7 @@ function Main() {
     <>
         <div>
 
-         {/* SLIDER  시작점점*/}
+         {/* SLIDER  시작점 */}
             <section>
                 <div className="slider">
                     <div className="slide-track">
@@ -33,9 +33,9 @@ function Main() {
                     </div>
                 </div>
             </section>
-        {/* SLIDER  종단점점*/}
+        {/* SLIDER  종단점 */}
 
-        {/* About US  시작점*/}
+        {/* About US  시작점 */}
 
             <div className="about-us-container">
                 {/* 왼쪽 이미지 영역 */}
@@ -58,15 +58,20 @@ function Main() {
             </div>
         </div>
 
-        {/* About US  종단점*/}        
+        {/* About US  종단점 */}        
 
-        {/* 힐링 프로그램 로고 시작점*/}
+        {/* 힐링 프로그램 로고 시작점 */}
         <div className='healing-service-logo'>
             <img src='../src/assets/images/healingservice.png' alt='힐링 서비스 로고'/>
         </div>
-        {/* 힐링 프로그램 로고 종단점*/}
+        {/* 힐링 프로그램 로고 종단점 */}
 
-        {/* 힐링 프로그램 요소 시작점*/}
+        {/* 힐링 프로그램 요소 시작점 */}
+
+        <h4>우리 Healing Space 팀은 여러가지의 Healing Service를 제공합니다. </h4>
+        <p>원하는 서비스를 마음껏 사용하세요.
+        😊 </p>
+
         <div className="healing-program-container">
         
         <div className="card">
@@ -105,7 +110,18 @@ function Main() {
         </div>
   
       </div>
-      {/* 힐링 프로그램 요소 종단점점*/}
+      {/* 힐링 프로그램 요소 종단점 */}
+
+      {/* 힐링 스페이스 뉴스 로고 시작점 */}
+      <div className='healing-space-news'>
+        <img src='../src/assets/images/healingspacenews.png' alt='힐링 서비스 뉴스 로고'/>
+      </div>
+
+      {/* 힐링 스페이스 뉴스 로고 종단점 */}
+
+      {/* 힐링 스페이스 뉴스 시작점 */}
+
+      {/* 힐링 스페이스 뉴스 종단점 */}
             
         </div>
     </>

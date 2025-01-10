@@ -27,7 +27,7 @@ const Header = () => {
                             </ul>
                         </li>
                         <li>
-                            Healing Program
+                            Healing Service
                             <ul className="submenu">
                                 <li>
                                     <Link to="/healing-program">

@@ -82,7 +82,6 @@
   line-height: 1.6;
 }
 
-
 /* 힐링 서비스 로고 부분 */
 .healing-service-logo img {
   height: 270px;
@@ -137,4 +136,10 @@
 .card p {
   font-size: 14px;
   color: #555;            /* 텍스트 색상 */
+}
+
+/* 힐링 스페이스 뉴스 로고 부분 */
+.healing-space-news img{
+  height: 240px;
+  
 }
