@@ -1,3 +1,24 @@
+/* 기본 링크 스타일 제거 */
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 부모 요소의 글자 색상 상속 */
+}
+
+/* 링크에 커서 올렸을 때 스타일 */
+a:hover {
+  color: #917f27; /* 원하는 색상 설정 */
+}
+
+.header-container{
+  display: flex; /* 가로 정렬을 위한 flexbox */
+  
+}
+
+.main-logo img{
+  padding-left: 50px;
+  height: 70px; 
+}
+
 header {
   position: fixed;
   top: 0;
@@ -13,6 +34,7 @@ header nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
+  padding-top: 20px;
   padding-right: 20px; 
   justify-content: flex-end;
   align-items: center;
