@@ -13,7 +13,7 @@ const Header = () => {
                         Our Company
                         <ul className="submenu">
                             <li><Link to="/about-us">About Us</Link></li>
-                            <li>Team</li>
+                            <li><Link to="/team">Team</Link></li>
                             
                         </ul>
                     </li>

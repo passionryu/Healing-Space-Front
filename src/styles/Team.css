@@ -1,0 +1,22 @@
+/* 전체 컨테이너 스타일 */
+.team-container{
+    display: flex; /* 가로 정렬을 위한 flexbox */
+    text-align: left; /* 텍스트 좌측 정렬 */
+    max-width: 1100px;
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 20px; /* 이미지와 텍스트 사이 간격 */
+    padding: 20px; /* 내부 여백 */
+}
+
+.team-member-img img{
+    
+    max-width: 500px;
+    height: auto; /* 비율 유지 */
+    border-radius: 10px; /* 둥근 모서리 (선택 사항) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+}
+
+  /* 텍스트 영역 스타일 */
+  .team-member-text {
+    flex: 1; /* 텍스트 영역이 남은 공간을 차지하도록 설정 */
+  }
