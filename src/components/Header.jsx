@@ -12,17 +12,17 @@ const Header = () => {
                     <li>
                         Our Company
                         <ul className="submenu">
-                            <li>About Us</li>
+                            <li><Link to="/about-us">About Us</Link></li>
                             <li>Team</li>
-                            <li>Careers</li>
+                            
                         </ul>
                     </li>
                     <li>
                         Healing Program
                         <ul className="submenu">
-                            <li>Yoga</li>
-                            <li>Meditation</li>
-                            <li>Therapy</li>
+                            <li>Healing Program</li>
+                            <li>Healing Store</li>
+                            <li>AI Recommendation</li>
                         </ul>
                     </li>
                     <li>
@@ -37,7 +37,6 @@ const Header = () => {
                         Customer Service
                         <ul className="submenu">
                             <li>Contact Us</li>
-                            <li>FAQ</li>
                         </ul>
                     </li>
                     <li>My Pages</li>
