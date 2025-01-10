@@ -29,7 +29,11 @@ const Header = () => {
                         <li>
                             Healing Program
                             <ul className="submenu">
-                                <li>Healing Program</li>
+                                <li>
+                                    <Link to="/healing-program">
+                                        Healing Program
+                                    </Link>
+                                </li>
                                 <li>Healing Store</li>
                                 <li>AI Recommendation</li>
                             </ul>
