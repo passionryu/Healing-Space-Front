@@ -1,0 +1,104 @@
+.logo-container img{
+    height: 150px;
+}
+
+/* 전체 페이지 스타일 */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f7f7f7; /* 배경 색상 */
+  }
+  
+  .login-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #917f27;
+    width: 1000px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* 아이디/비밀번호 입력 칸 스타일 */
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container label {
+    display: block;
+    font-size: 14px;
+    color: #917f27;
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #917f27;
+    box-sizing: border-box;
+  }
+  
+  .input-container input:focus {
+    border-color: #917f27;
+    outline: none;
+  }
+  
+  /* 로그인 버튼 스타일 */
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #917f27;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #ab9839;
+  }
+  
+  /* 회원가입 유도 링크 스타일 */
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .signup-link span {
+    color: #917f27;
+  }
+  
+  .signup-link .signup {
+    color: #917f27;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link .signup:hover {
+    text-decoration: underline;
+  }
+  
+  /* 아이디 및 비밀번호 찾기 링크 스타일 */
+  .forgot-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .forgot-links a {
+    font-size: 14px;
+    color: #917f27;
+    text-decoration: none;
+  }
+  
+  .forgot-links a:hover {
+    text-decoration: underline;
+  }
+  

@@ -53,7 +53,9 @@ const Header = () => {
                             </ul>
                         </li>
                         <li>My Pages</li>
+                        <Link to="/login">
                         <button>Login</button>
+                        </Link>
                     </ul>
                 </nav>
 
