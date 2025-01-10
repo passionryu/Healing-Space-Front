@@ -1,3 +1,15 @@
-footer{
-    text-align: left;
+footer {
+    width: 100%;  /* 화면 전체 가로 크기를 차지 */
+    padding: 20px;  /* 푸터의 여백을 추가 */
+    box-sizing: border-box;  /* 패딩을 포함하여 크기 계산 */
+    text-align: left;  /* 텍스트 왼쪽 정렬 */
+    background-color: #f1f1f1;  /* 푸터 배경 색 */
+}
+
+footer h2, footer p {
+    margin: 0;  /* 여백 없애기 */
+}
+
+footer p {
+    font-size: 14px;  /* 텍스트 크기 설정 */
 }
