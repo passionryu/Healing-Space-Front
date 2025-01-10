@@ -1,0 +1,43 @@
+/* 슬라이더 컨테이너 */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* 슬라이더 전체 너비 */
+  height: 580px; /* 슬라이더 높이 */
+  margin: auto;
+}
+
+/* 슬라이드 트랙 */
+.slide-track {
+  display: flex;
+  width: 100%; /* 슬라이드 수 * 100% */
+  animation: slideAnimation 21s infinite; 
+}
+
+/* 각 슬라이드 */
+.slide {
+  width: 100%; /* 슬라이더 컨테이너와 동일한 너비 */
+  flex-shrink: 0; /* 슬라이드 크기를 고정 */
+}
+
+.slide img {
+  width: 100%; /* 이미지가 슬라이드 크기를 채우도록 설정 */
+  height: 100%; /* 이미지가 슬라이드 높이를 채우도록 설정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 애니메이션 */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0); /* 첫 번째 슬라이드 */
+  }
+  33% {
+    transform: translateX(-100%); /* 두 번째 슬라이드 */
+  }
+  66% {
+    transform: translateX(-200%); /* 세 번째 슬라이드 */
+  }
+  100% {
+    transform: translateX(0); /* 다시 첫 번째 슬라이드 */
+  }
+}
