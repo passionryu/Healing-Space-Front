@@ -27,6 +27,9 @@ const Mypage = () => {
     }, []);
 
     return (
+
+    <>
+        {/* 내 정보 카드 */}
         <div className="profile-card">
             <div className="profile-image">
                 <img src="../src/assets/images/profile.jpg" alt="Profile" />
@@ -36,6 +39,50 @@ const Mypage = () => {
                 <p className="profile-intro">Intro: {userInfo.intro}</p>
             </div>
         </div>
+
+        {/* 마이페이지 옵션 */}
+        <h2>Diary</h2>
+        <div className="mypage-option">
+            <h3>내 일기장 조회</h3>
+        </div>
+
+        <h2>Healing Message</h2>
+        <div className="mypage-option">
+            <h3>내가 올린 힐링 메시지 조회</h3>
+        </div>
+
+        <div className="mypage-option">
+            <h3>내가 좋아요 누른 힐링 메시지 조회</h3>
+        </div>
+
+        <h2>Healing Music</h2>
+        <div className="mypage-option">
+            <h3>내가 올린 힐링 뮤직 조회</h3>
+        </div>
+
+        <div className="mypage-option">
+            <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
+        </div>
+
+        <h2>Healing Tour</h2>
+        <div className="mypage-option">
+            <h3>내가 올린 힐링 투어 조회</h3>
+        </div>
+
+        <div className="mypage-option">
+            <h3>내가 좋아요 누른 힐링 투어 조회</h3>
+        </div>
+
+        <h2>Healing Store</h2>
+        <div className="mypage-option">
+            <h3>장바구니</h3>
+        </div>
+
+        <h2>Customer Service</h2>
+        <div className="mypage-option">
+            <h3>내가 문의한 내용 조회</h3>
+        </div>
+    </>
     );
 };
 
