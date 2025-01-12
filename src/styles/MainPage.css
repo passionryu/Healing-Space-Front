@@ -26,21 +26,21 @@
   object-fit: cover; /* 이미지 비율 유지 */
 }
 
-/* 애니메이션 */
-@keyframes slideAnimation {
+/* 애니메이션 -> 메인 부분에서 js로 대체 */
+/* @keyframes slideAnimation {
   0% {
-    transform: translateX(0); /* 첫 번째 슬라이드 */
+    transform: translateX(0); 
   }
   33% {
-    transform: translateX(-100%); /* 두 번째 슬라이드 */
+    transform: translateX(-100%); 
   }
   66% {
-    transform: translateX(-200%); /* 세 번째 슬라이드 */
+    transform: translateX(-200%); 
   }
   100% {
-    transform: translateX(0); /* 다시 첫 번째 슬라이드 */
+    transform: translateX(0); 
   }
-}
+} */
 
 /* About US 부분 */
 

@@ -21,8 +21,8 @@ const Header = () => {
                         <li>
                             Our Company
                             <ul className="submenu">
-                                <li><Link to="/about-us">About Us</Link></li>
-                                <li><Link to="/team">Team</Link></li>
+                                <li><Link to="/about-us">About us</Link></li>
+                                <li><Link to="/team">Team member</Link></li>
                                 
                             </ul>
                         </li>
@@ -39,16 +39,17 @@ const Header = () => {
                             </ul>
                         </li>
                         <li>
-                            News
+                            Healing Space News
                             <ul className="submenu">
-                                <li>Blog</li>
-                                <li>Events</li>
-                                <li>Press</li>
+                                <li>Our News</li>
+                                <li>News & Articles</li>
+                                <li>Notice</li>
                             </ul>
                         </li>
                         <li>
                             Customer Service
                             <ul className="submenu">
+                                <li>AI ChatBot</li>
                                 <li>Contact Us</li>
                             </ul>
                         </li>
