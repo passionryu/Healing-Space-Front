@@ -1,0 +1,40 @@
+/* Mypage.css */
+.profile-card {
+    display: flex;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
+}
+
+.profile-card:hover{
+    transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+}
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-text {
+    margin-left: 40px;
+
+    font-size: 30px;
+    color: #333;
+}
+
+.profile-id {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-intro {
+    font-style: italic;
+    color: #555;
+}

@@ -8,6 +8,7 @@ import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import DiaryPage from '../pages/DiaryPage'
 import DiaryResultPage from '../pages/DiaryResultPage'
+import Mypage from '../pages/Mypage'
 
 function AppRouter() {
   return (
@@ -21,6 +22,7 @@ function AppRouter() {
         <Route path="/healing-program" element={<HealingProgram />} />
         <Route path="/diary" element={<DiaryPage/>} />
         <Route path="/diary/result" element={<DiaryResultPage/>} />
+        <Route path="/mypage" element={<Mypage/>} />
       </Routes>
   
   );

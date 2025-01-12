@@ -11,6 +11,7 @@ const HealingProgram = () => {
 
         <div>
           <img src="../src/assets/images/dewcalendar.png" alt ="이미지"/>
+          
         </div>
 
         <div className="card-text">

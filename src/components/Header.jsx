@@ -52,7 +52,11 @@ const Header = () => {
                                 <li>Contact Us</li>
                             </ul>
                         </li>
-                        <li>My Pages</li>
+                        
+                        <Link to="/mypage">
+                            <li>My Pages</li>
+                        </Link>
+                        
                         <Link to="/login">
                         <button>Login</button>
                         </Link>
