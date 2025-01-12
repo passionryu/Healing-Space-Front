@@ -1,0 +1,77 @@
+.healing-message-header {
+    display: flex;
+    position: relative; /* 버튼을 배치하기 위한 기준 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    justify-content: center; /* 가로축 중앙 정렬 (로고가 가운데로) */
+    height: 270px; /* 헤더 높이를 적절히 설정 */
+}
+
+.healing-message-logo img {
+    height: 30px;
+   
+}
+
+.create-post-button {
+    position: absolute; /* 버튼을 자유롭게 배치 */
+    bottom: 10px; /* 헤더의 아래쪽 여백 */
+    right: 10px; /* 헤더의 오른쪽 여백 */
+    padding: 10px 20px;
+    background-color: #917f27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-button:hover {
+    background-color: #a5933a;
+}
+
+
+.healing-message-logo img{
+    height: 270px;
+     border-radius: 15px; /* 모서리를 둥글게 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+ 
+}
+
+.healing-message-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.healing-message-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.message-item {
+    width: 1000px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.message-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.message-item p {
+    margin: 5px 0;
+    color: #555;
+}

@@ -29,8 +29,10 @@ const HealingProgram = () => {
           </div>
 
           <div className="card-text">
+            <Link to="/healing-message-list">
             <h3>Healing Messge Sharing</h3>
             <p>Share your Messeage to others</p>
+            </Link>
           </div>
       </div>
 
