@@ -69,22 +69,23 @@ function Main() {
         {/* 힐링 프로그램 요소 시작점 */}
 
         <h4>우리 Healing Space 팀은 여러가지의 Healing Service를 제공합니다. </h4>
-        <p>원하는 서비스를 마음껏 사용하세요.
-        😊 </p>
+        <p>원하는 서비스를 마음껏 사용하세요.💓 </p>
 
         <div className="healing-program-container">
         
         <div className="card">
-  
           <div>
             <img src="../src/assets/images/dewcalendar.png" alt ="이미지"/>
           </div>
   
           <div className="card-text">
-            <h3>Dew Calendar</h3>
-            <p>Write your diary...I`ll be with you </p>
+            <Link to ="/healing-program">
+              <h3>Healing Program</h3>
+              <p>We prepare various healing program for you 😉</p>
+            </Link>
           </div>
   
+        
         </div>
   
         <div className="card">
@@ -93,19 +94,19 @@ function Main() {
             </div>
   
             <div className="card-text">
-              <h3>Healing Messge Sharing</h3>
-              <p>Share your Messeage to others</p>
+              <h3>Healing Store</h3>
+              <p>Why don't you buy some healing stuff for yourself? 😎</p>
             </div>
         </div>
   
         <div className="card">
           <div>
               <img src="../src/assets/images/healingmusicsharing.png" alt ="이미지"/>
-            </div>
+            </div>  
   
             <div className="card-text">
-              <h3>Healing Music Sharing</h3>
-              <p>Share Your favorite Music with others</p>
+              <h3>AI recomend</h3>
+              <p>We'll recommend the most suitable option for you.😉 </p>
             </div>
         </div>
   

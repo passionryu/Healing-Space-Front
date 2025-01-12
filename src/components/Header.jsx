@@ -35,7 +35,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li>Healing Store</li>
-                                <li>AI Recommendation</li>
+                                <li>AI Recommend</li>
                             </ul>
                         </li>
                         <li>

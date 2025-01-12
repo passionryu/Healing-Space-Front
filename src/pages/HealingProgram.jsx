@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../styles/HealingProgram.css";
 
 const HealingProgram = () => {
@@ -13,8 +14,10 @@ const HealingProgram = () => {
         </div>
 
         <div className="card-text">
+          <Link to="/diary">
           <h3>Dew Calendar</h3>
           <p>Write your diary...I`ll be with you </p>
+          </Link>
         </div>
 
       </div>

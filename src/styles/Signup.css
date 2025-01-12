@@ -1,0 +1,82 @@
+/* 서비스 로고 */
+.logo-container img {
+    height: 150px;
+  }
+  
+  /* 전체 페이지 스타일 */
+  .signup-container {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7; /* 배경 색상 */
+  }
+  
+  .signup-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #917f27;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* 아이디/비밀번호 입력 칸 스타일 */
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container label {
+    display: block;
+    font-size: 14px;
+    color: #917f27;
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #917f27;
+    box-sizing: border-box;
+  }
+  
+  .input-container input:focus {
+    border-color: #917f27;
+    outline: none;
+  }
+  
+  /* 성별 선택 라디오 버튼 스타일 */
+  .gender-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .gender-options label {
+    font-size: 14px;
+    color: #917f27;
+  }
+  
+  /* 회원가입 버튼 스타일 */
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #917f27;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #ab9839;
+  }
+  

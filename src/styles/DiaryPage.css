@@ -1,0 +1,85 @@
+/* DiaryPage.css */
+
+.diary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .diary-card {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #917f27;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+
+.input-container label {
+  display: block; /* 블록 요소로 설정하여 전체 폭을 차지 */
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  font-weight: bold; /* 선택적으로 추가: 가독성을 높이기 위해 볼드체 */
+  margin-bottom: 5px; /* 선택적으로 추가: 입력 필드와 약간의 여백 */
+}
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 200px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #917f27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* DiaryResultPage.css */
+  
+  .result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .result-card {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .result {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .result h3 {
+    margin: 10px 0;
+  }
+  
