@@ -3,8 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom"; // useParams로 URL 파라미터 받기
 import "../styles/HealingMessageDetail.css"; // 스타일 파일
 
-const HealingMessageDetail = ({ match }) => {
-    const {messageId} = useParams(); // URL에서 messageId 추출
+const HealingMessageDetail = () => {
+    const { messageId } = useParams(); // URL에서 messageId 추출
     const [message, setMessage] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -12,24 +12,22 @@ const HealingMessageDetail = ({ match }) => {
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
 
-    //const messageId = match.params.messageId;
-
     useEffect(() => {
         const fetchMessage = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
-                const response = await axios.get(`http://localhost:8080/healingmessage/${messageId}`,{
-                    headers: {
-                      "Content-Type": "application/json",
-                      Authorization: `Bearer ${token}`,
-                    },
-                  });
-                  
+                const response = await axios.get(
+                    `http://localhost:8080/healingmessage/${messageId}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
                 setMessage(response.data);
+                setLikeCount(response.data.likeCount); // 초기 좋아요 수 설정
                 setLoading(false);
-                // 좋아요 수와 댓글은 API 통신을 통해 가져오는 부분
-                // setLikeCount(response.data.like);
-                // setComments(response.data.comments || []);
             } catch (err) {
                 setError("Failed to load the post. Please try again.");
                 setLoading(false);
@@ -39,9 +37,23 @@ const HealingMessageDetail = ({ match }) => {
         fetchMessage();
     }, [messageId]);
 
-    const handleLike = () => {
-        setLikeCount((prev) => prev + 1);
-        // API로 좋아요 수 업데이트 로직 추가 가능
+    const handleLike = async () => {
+        try {
+            const token = localStorage.getItem("accessToken");
+            const response = await axios.post(
+                `http://localhost:8080/healingmessage/like/${messageId}`,
+                {}, // 필요한 데이터가 있다면 여기 추가
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setLikeCount(response.data); // 응답받은 좋아요 수로 업데이트
+        } catch (err) {
+            setError("Failed to update the like count. Please try again.");
+        }
     };
 
     const handleCommentSubmit = async (e) => {
@@ -63,17 +75,21 @@ const HealingMessageDetail = ({ match }) => {
         <div className="healing-message-detail">
             <h1>{message.title}</h1>
             <div className="author-info">
-            <img src="../src/assets/images/profile.jpg" alt="profile_image_pathr" className="profile-image" />
-                {/* <img src={message.profile_image_path} alt="profile_image_pathr" className="profile-image" /> */}
+                <img
+                    src="../src/assets/images/profile.jpg"
+                    alt="profile_image"
+                    className="profile-image"
+                />
                 <span className="nickname">{message.nickname}</span>
-                <span className="created-date">{new Date(message.createdDate).toLocaleString()}</span>
+                <span className="created-date">
+                    {new Date(message.createdDate).toLocaleString()}
+                </span>
             </div>
-            {/* <img src={message.imagePath} alt="Post" className="post-image" /> */}
             <p className="content">{message.content}</p>
 
             <div className="like-section">
                 <button className="like-button" onClick={handleLike}>
-                    ❤️ {likeCount}
+                    ❤️ {likeCount} 
                 </button>
             </div>
 
