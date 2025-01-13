@@ -8,6 +8,7 @@
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    gap:100px;
     transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
 }
 

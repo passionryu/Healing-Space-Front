@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // useNavigate 가져오기
 import axios from "axios";
 import "../styles/HealingMessageCreate.css"; // 스타일링 파일
 
 const HealingMessageCreate = () => {
+
+  const navigate = useNavigate(); // navigate 선언
+
   const [title, setTitle] = useState("");
   const [image, setImage] = useState(null);
   const [content, setContent] = useState("");
@@ -53,6 +57,7 @@ const HealingMessageCreate = () => {
         }
       );
       setSuccessMessage("힐링 메시지가 성공적으로 공유되었습니다.");
+      navigate("/healing-message-list"); // 성공 시 이동
     } catch (err) {
       setError("메시지 전송에 실패했습니다. 다시 시도해주세요.");
     } finally {

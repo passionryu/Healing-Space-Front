@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/HealingMessageList.css"; // 스타일링 파일
 import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 hook
+import { Link } from "react-router-dom";
 
 const HealingMessageList = () => {
     const [messages, setMessages] = useState([]);
@@ -60,11 +61,13 @@ const HealingMessageList = () => {
 
             <ul>
                 {messages.map((message) => (
-                    <li key={message.messageId} className="message-item">
+                    <Link to={`/healing-message-detail/${message.messageId}`} key={message.messageId}>
+                    <li className="message-item">
                         <h3>{message.title}</h3>
                         <p>By: {message.nickname}</p>
                         <p>Posted on: {new Date(message.createdDate).toLocaleString()}</p>
                     </li>
+                    </Link>
                 ))}
             </ul>
         </div>
