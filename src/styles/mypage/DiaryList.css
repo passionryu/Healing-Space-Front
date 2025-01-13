@@ -1,0 +1,46 @@
+
+/* .diary-list h2{
+    color: #555;
+    size: 20px;
+} */
+.diary-list {
+    padding: 20px;
+}
+
+.diary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개 카드씩 한 줄에 배치 */
+    gap: 20px; /* 카드 사이 간격 */
+}
+
+.diary-card {
+    width :320px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.diary-card:hover{
+    transform: scale(1.05);
+}
+
+.diary-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.diary-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.diary-card p {
+    font-size: 14px;
+    color: #555;
+}

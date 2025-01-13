@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; 
 import "../styles/Mypage.css";
 import axios from 'axios';
 
@@ -43,7 +44,9 @@ const Mypage = () => {
         {/* 마이페이지 옵션 */}
         <h2>Diary</h2>
         <div className="mypage-option">
-            <h3>내 일기장 조회</h3>
+            <Link to="/diary-list">
+                <h3>내 일기장 조회</h3>
+            </Link>
         </div>
 
         <h2>Healing Message</h2>
