@@ -42,6 +42,7 @@ const Mypage = () => {
         </div>
 
         {/* 마이페이지 옵션 */}
+        <div className="mypage">
         <h2>Diary</h2>
         <div className="mypage-option">
             <Link to="/diary-list">
@@ -84,6 +85,7 @@ const Mypage = () => {
         <h2>Customer Service</h2>
         <div className="mypage-option">
             <h3>내가 문의한 내용 조회</h3>
+        </div>
         </div>
     </>
     );

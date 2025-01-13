@@ -3,8 +3,9 @@
   position: relative;
   overflow: hidden;
   width: 100%; /* 슬라이더 전체 너비 */
-  height: 610px; /* 슬라이더 높이 */
+  height: 650px; /* 슬라이더 높이 */
   margin: auto;
+  border-radius: 60px; /* 모서리 둥글게 설정 */
 }
 
 /* 슬라이드 트랙 */
