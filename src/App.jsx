@@ -8,17 +8,14 @@ function App() {
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      
-      <div>
-        <AppRouter />
-      </div>
+      {/* <div><Header /></div> */}
+      {/* <div><AppRouter /></div> */}
+      {/* <div><Footer /></div>  */}
 
-      <div>
-        <Footer />
-      </div>
+      <Header />
+      <AppRouter />
+      <Footer />
+    
     </>
   )
 }

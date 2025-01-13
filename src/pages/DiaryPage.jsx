@@ -47,6 +47,7 @@ const DiaryPage = () => {
   };
 
   return (
+    
     <div className="diary-container">
       <div className="diary-card">
         <h2>Write Your Diary</h2>
@@ -81,6 +82,7 @@ const DiaryPage = () => {
         </form>
       </div>
     </div>
+    
   );
 };
 

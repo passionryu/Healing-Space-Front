@@ -32,6 +32,15 @@ const DiaryList = () => {
         fetchDiaryList();
     }, []);
 
+    const weatherImages = {
+        맑음: "../src/assets/images/weather_img/sunny.png", // 맑은 날씨 이미지 URL
+        봄비: "../src/assets/images/weather_img/spring.png", // 봄비 이미지 URL
+        노을: "../src/assets/images/weather_img/sunset.png", // 노을 이미지 URL
+        구름: "../src/assets/images/weather_img/cloudy.png", // 구름 이미지 URL
+        비: "../src/assets/images/weather_img/rain.png", // 비 이미지 URL
+        천둥: "../src/assets/images/weather_img/thunder.png", // 천둥 이미지 URL
+    };
+
     if (loading) {
         return <p>Loading diaries...</p>;
     }
@@ -46,12 +55,17 @@ const DiaryList = () => {
             <div className="diary-cards-container">
                 {diaries.map((diary) => (
                     <div key={diary.diaryNumber} className="diary-card">
-                        <h3>{diary.title}</h3>
-                        <p>{diary.weather}</p>
-                        <p>{diary.date}</p>
-                        {/* Link 컴포넌트를 사용하여 클릭 시 DiaryDetail 페이지로 이동 */}
                         <Link to={`/diary-detail/${diary.diaryNumber}`} key={diary.diaryNumber}>
-                            View Details
+                            {/* 날씨에 맞는 이미지 출력 */}
+                            <div className="weather-image-container">
+                                <img
+                                    src={weatherImages[diary.weather] || "path/to/default-image.jpg"} // 기본 이미지 설정
+                                    alt={diary.weather}
+                                    className="weather-image"
+                                />
+                            </div>
+                            <h3>{diary.title}</h3>
+                            <p>Written at: {diary.date}</p>
                         </Link>
                     </div>
                 ))}

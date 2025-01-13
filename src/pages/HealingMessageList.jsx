@@ -63,9 +63,9 @@ const HealingMessageList = () => {
                 {messages.map((message) => (
                     <Link to={`/healing-message-detail/${message.messageId}`} key={message.messageId}>
                     <li className="message-item">
-                        <h3>{message.title}</h3>
-                        <p>By: {message.nickname}</p>
-                        <p>Posted on: {new Date(message.createdDate).toLocaleString()}</p>
+                        <h3 style={{ textAlign: 'left' }}>{message.title}</h3>
+                        <p style={{ textAlign: 'left' }}>By: {message.nickname}</p>
+                        <p style={{ textAlign: 'left' }}>Posted on: {new Date(message.createdDate).toLocaleString()}</p>
                     </li>
                     </Link>
                 ))}

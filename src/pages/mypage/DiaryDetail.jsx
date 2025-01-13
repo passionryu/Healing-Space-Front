@@ -45,14 +45,20 @@ const DiaryDetail = () => {
 
     return (
         <div className="diary-detail">
+
             <h1>{diary.title}</h1>
-            <p><strong>Date: </strong>{diary.date}</p>
-            <p><strong>Emotion: </strong>{diary.emotion}</p>
-            <p><strong>Healing Message: </strong>{diary.healingMessage}</p>
-            <p><strong>Healing Music: </strong>{diary.healingMusic}</p>
+            {/* <p><strong>Date: </strong>{diary.date}</p> */}
+            <p style={{ textAlign: "right" }}><strong>Date: </strong>{diary.date}</p>
+
+            
             <div className="diary-content">
-                <p><strong>Diary Content: </strong>{diary.diary}</p>
+                <p><strong></strong>{diary.diary}</p>
             </div>
+
+            <p style={{ textAlign: "left" }}><strong>Emotion: </strong>{diary.emotion}</p>
+            <p style={{ textAlign: "left" }}><strong>Healing Message: </strong>{diary.healingMessage}</p>
+            <p style={{ textAlign: "left" }}><strong>Healing Music: </strong>{diary.healingMusic}</p>
+
         </div>
     );
 };
