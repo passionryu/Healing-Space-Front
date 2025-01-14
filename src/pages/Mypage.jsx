@@ -52,7 +52,9 @@ const Mypage = () => {
 
         <h2>Healing Message</h2>
         <div className="mypage-option">
+            <Link to="/my-healing-message-list">
             <h3>내가 올린 힐링 메시지 조회</h3>
+            </Link>
         </div>
 
         <div className="mypage-option">

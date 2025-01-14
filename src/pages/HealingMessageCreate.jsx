@@ -70,7 +70,7 @@ const HealingMessageCreate = () => {
       <h1>힐링 메시지 작성</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="title">제목</label>
+          <label htmlFor="title" style={{ textAlign: 'left' }}>제목</label>
           <input
             type="text"
             id="title"
@@ -80,7 +80,7 @@ const HealingMessageCreate = () => {
           />
         </div>
 
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="image">이미지</label>
           <input
             type="file"
@@ -88,10 +88,10 @@ const HealingMessageCreate = () => {
             onChange={handleImageChange}
             accept="image/*"
           />
-        </div>
+        </div> */}
 
         <div className="form-group">
-          <label htmlFor="content">내용</label>
+          <label htmlFor="content" style={{ textAlign: 'left' }}>내용</label>
           <textarea
             id="content"
             value={content}

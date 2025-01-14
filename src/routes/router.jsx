@@ -14,6 +14,7 @@ import HealingMessageCreate from '../pages/HealingMessageCreate'
 import HealingMessageDetail from '../pages/HealingMessageDetail';
 import DiaryList from '../pages/mypage/DiaryList';
 import DiaryDetail from '../pages/mypage/DiaryDetail';
+import MyHealingMessageList from '../pages/mypage/MyHealingMessageList';
 
 function AppRouter() {
   return (
@@ -33,6 +34,7 @@ function AppRouter() {
         <Route path="/healing-message-detail/:messageId" element={<HealingMessageDetail/>} />
         <Route path="/diary-list" element={<DiaryList/>}/>
         <Route path="/diary-detail/:diaryNumber" element={<DiaryDetail />} />
+        <Route path="/my-healing-message-list" element={<MyHealingMessageList/>}/>
         
       </Routes>
   
