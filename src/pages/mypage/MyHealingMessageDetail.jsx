@@ -89,6 +89,9 @@ const HealingMessageDetail = () => {
                     Delete
                 </button>
             </div>
+
+           
+          
         </div>
     );
 };

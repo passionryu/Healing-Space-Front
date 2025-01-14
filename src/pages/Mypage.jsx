@@ -72,14 +72,14 @@ const Mypage = () => {
             <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
         </div>
 
-        <h2>Healing Tour</h2>
+        {/* <h2>Healing Tour</h2>
         <div className="mypage-option">
             <h3>내가 올린 힐링 투어 조회</h3>
         </div>
 
         <div className="mypage-option">
             <h3>내가 좋아요 누른 힐링 투어 조회</h3>
-        </div>
+        </div> */}
 
         <h2>Healing Store</h2>
         <div className="mypage-option">
