@@ -6,6 +6,16 @@
     padding: 20px;
 }
 
+.diary-list h2{
+    font-weight: bold;         /* 글씨 두께 */
+    color: #917f27;               /* 글씨 색상 */
+    margin-top: 20px;          /* 상단 여백 */
+    margin-bottom: 10px;       /* 하단 여백 */
+    text-align: left;          /* 텍스트 정렬 */
+    border-bottom: 2px solid #ddd; /* 하단 경계선 추가 */
+    padding-bottom: 5px;       /* 하단 여백 추가 */
+}
+
 .diary-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개 카드씩 한 줄에 배치 */
