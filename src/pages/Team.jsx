@@ -16,6 +16,9 @@ const Team = () =>{
                 <p style={{ textAlign: 'left' }}>We would appreciate it.</p>
             </div>
 
+            <br />
+            <p style={{ textAlign: "left" }}>Apply form will be continue...</p> 
+
         </>
     )
 

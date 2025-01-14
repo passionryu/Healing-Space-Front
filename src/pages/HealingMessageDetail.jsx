@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom"; // useParams로 URL 파라미터 받기
-import "../styles/HealingMessageDetail.css"; // 스타일 파일
+import { useParams } from "react-router-dom";
+import "../styles/HealingMessageDetail.css";
 
 const HealingMessageDetail = () => {
-    const { messageId } = useParams(); // URL에서 messageId 추출
+    const { messageId } = useParams();
     const [message, setMessage] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -26,7 +26,7 @@ const HealingMessageDetail = () => {
                     }
                 );
                 setMessage(response.data);
-                setLikeCount(response.data.likeCount); // 초기 좋아요 수 설정
+                setLikeCount(response.data.likes);
                 setLoading(false);
             } catch (err) {
                 setError("Failed to load the post. Please try again.");
@@ -34,7 +34,26 @@ const HealingMessageDetail = () => {
             }
         };
 
+        const fetchComments = async () => {
+            try {
+                const token = localStorage.getItem("accessToken");
+                const response = await axios.get(
+                    `http://localhost:8080/healingmessage/comment/${messageId}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                setComments(response.data);
+            } catch (err) {
+                setError("Failed to load comments. Please try again.");
+            }
+        };
+
         fetchMessage();
+        fetchComments();
     }, [messageId]);
 
     const handleLike = async () => {
@@ -42,7 +61,7 @@ const HealingMessageDetail = () => {
             const token = localStorage.getItem("accessToken");
             const response = await axios.post(
                 `http://localhost:8080/healingmessage/like/${messageId}`,
-                {}, // 필요한 데이터가 있다면 여기 추가
+                {},
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -50,7 +69,7 @@ const HealingMessageDetail = () => {
                     },
                 }
             );
-            setLikeCount(response.data); // 응답받은 좋아요 수로 업데이트
+            setLikeCount(response.data);
         } catch (err) {
             setError("Failed to update the like count. Please try again.");
         }
@@ -58,9 +77,27 @@ const HealingMessageDetail = () => {
 
     const handleCommentSubmit = async (e) => {
         e.preventDefault();
-        setComments((prev) => [...prev, comment]);
-        setComment("");
-        // API로 댓글 추가 로직 추가 가능
+        try {
+            const token = localStorage.getItem("accessToken");
+            const response = await axios.post(
+                `http://localhost:8080/healingmessage/comment`,
+                {
+                    messageId,
+                    comment,
+                },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setComments((prev) => [...prev, response.data]);
+            setComment("");
+            window.location.reload(); // 페이지 새로 고침 -> 좋은 방법은 아님...
+        } catch (err) {
+            setError("Failed to post the comment. Please try again.");
+        }
     };
 
     if (loading) {
@@ -73,11 +110,11 @@ const HealingMessageDetail = () => {
 
     return (
         <div className="healing-message-detail">
-            <h1>{message.title}</h1>
+            <h1 style={{textAlign:"left"}}>{message.title}</h1>
             <div className="author-info">
                 <img
-                    src="../src/assets/images/profile.jpg"
-                    alt="profile_image"
+                    src={"../../src/assets/images/profile.jpg"}
+                    alt="profile"
                     className="profile-image"
                 />
                 <span className="nickname">{message.nickname}</span>
@@ -86,28 +123,66 @@ const HealingMessageDetail = () => {
                 </span>
             </div>
             <p className="content">{message.content}</p>
-
             <div className="like-section">
                 <button className="like-button" onClick={handleLike}>
-                    ❤️ {likeCount} 
+                    ❤️ {likeCount}
                 </button>
             </div>
-
             <div className="comment-section">
-                <h3>Comments</h3>
-                <ul>
-                    {comments.map((cmt, index) => (
-                        <li key={index}>{cmt}</li>
-                    ))}
-                </ul>
+                <h3 style={{textAlign:"left"}}>Comments</h3>
                 <form onSubmit={handleCommentSubmit}>
                     <textarea
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                         placeholder="Write a comment..."
                     />
-                    <button type="submit">Submit</button>
+                    <div style={{ textAlign: "right" }}>
+                        <button type="submit">Submit</button>
+                    </div>
                 </form>
+
+                {/* 댓글 부분 */}
+                <ul>
+                    {comments.map((cmt, index) => (
+                        <li key={index}>
+                            <div className="comment-info"
+                            style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
+                                <img
+                                    src={"../../src/assets/images/profile.jpg"}
+                                    alt="comment-profile"
+                                    className="profile-image2"
+                                />
+                                <span className="nickname2">{cmt.nickname}</span>
+                                <span className="created-date">
+                                    {new Date(cmt.createdDate).toLocaleString()}
+                                </span>
+                            </div>
+
+                            <div className="comment-content-container" >
+                            <p style={{ textAlign: "left" }} >{cmt.content}</p>
+                            <button
+                            type="button"
+                            className="hover-button-comment"
+                            onClick={() => handleDelete(cmt.id)} // 나중에 API 연결 시 사용할 함수
+                            style={{
+                                
+                                backgroundColor: "white", // 흰색 배경
+                                color: "black", // 검은색 텍스트
+                                border: "1px solid black", // 검은색 1px 테두리
+                                borderRadius: "5px",
+                                padding: "5px 10px",
+                                cursor: "pointer",
+                                transition: "transform 0.3s ease-in-out", // 부드럽게 크기 변화
+            
+                              }}                             
+                            >
+                            Delete
+                            </button>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+                {/* 댓글 부분 */}
             </div>
         </div>
     );

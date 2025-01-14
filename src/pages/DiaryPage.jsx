@@ -49,7 +49,7 @@ const DiaryPage = () => {
   return (
     
     <div className="diary-container">
-      <div className="diary-card">
+      <div className="diary-card2">
         <h2>Write Your Diary</h2>
 
         <form onSubmit={handleSubmit}>
