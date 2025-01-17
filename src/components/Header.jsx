@@ -46,13 +46,13 @@ const Header = () => {
                                 <li>Notice</li>
                             </ul>
                         </li>
-                        <li>
+                        {/* <li>
                             Customer Service
                             <ul className="submenu">
                                 <li>AI ChatBot</li>
                                 <li>Contact Us</li>
                             </ul>
-                        </li>
+                        </li> */}
                         
                         <Link to="/mypage">
                             <li>My Pages</li>

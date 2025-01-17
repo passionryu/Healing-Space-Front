@@ -32,8 +32,8 @@
 
 .healing-message-logo img{
     height: 270px;
-     border-radius: 15px; /* 모서리를 둥글게 설정 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; /* 모서리를 둥글게 설정 */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  */
  
 }
 
