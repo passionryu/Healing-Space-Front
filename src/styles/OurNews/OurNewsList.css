@@ -1,0 +1,49 @@
+.our-news-header {
+    display: flex;
+    position: relative; /* 버튼을 배치하기 위한 기준 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    justify-content: center; /* 가로축 중앙 정렬 (로고가 가운데로) */
+    height: 270px; /* 헤더 높이를 적절히 설정 */
+}
+
+.news-list-container {
+    width: 1000px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.news-list-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #917f27;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.news-item {
+    cursor: pointer; /* 게시글에 마우스를 올리면 포인터로 변경 */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.news-item p {
+    margin: 5px 0;
+    color: #555;
+}

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // useNavigate 가져오기
 import axios from "axios";
-import "../styles/HealingMessageCreate.css"; // 스타일링 파일
+import "../../styles/OurNews/OurNewsCreate.css"
 
-const HealingMessageCreate = () => {
-
+const OurNewsCreate = () => {
   const navigate = useNavigate(); // navigate 선언
 
   const [title, setTitle] = useState("");
@@ -47,17 +46,16 @@ const HealingMessageCreate = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.post(
-        "http://localhost:8080/healingmessage",
+        "http://localhost:8080/ournews/",
         formData,
         {
           headers: {
-            "Content-Type": 'application/json',
             Authorization: `Bearer ${token}`,
           },
         }
       );
       setSuccessMessage("힐링 메시지가 성공적으로 공유되었습니다.");
-      navigate("/healing-message-list"); // 성공 시 이동
+      navigate("/our-news-list"); // 성공 시 이동
     } catch (err) {
       setError("메시지 전송에 실패했습니다. 다시 시도해주세요.");
     } finally {
@@ -66,8 +64,8 @@ const HealingMessageCreate = () => {
   };
 
   return (
-    <div className="healing-message-create">
-      <h1 style={{ textAlign: 'left' }}>힐링 메시지 작성</h1>
+    <div className="ournews-create">
+      <h1 style={{ textAlign: 'left' }}>Create Our News</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="title" style={{ textAlign: 'left' }}>제목</label>
@@ -80,7 +78,7 @@ const HealingMessageCreate = () => {
           />
         </div>
 
-        {/* <div className="form-group">
+        <div className="form-group">
           <label htmlFor="image">이미지</label>
           <input
             type="file"
@@ -88,7 +86,7 @@ const HealingMessageCreate = () => {
             onChange={handleImageChange}
             accept="image/*"
           />
-        </div> */}
+        </div>
 
         <div className="form-group">
           <label htmlFor="content" style={{ textAlign: 'left' }}>내용</label>
@@ -102,7 +100,7 @@ const HealingMessageCreate = () => {
         </div>
 
         <button type="submit" className="submit-button" disabled={loading}>
-          {loading ? "전송 중..." : "힐링 메시지 공유하기"}
+          {loading ? "전송 중..." : "Upload Our News"}
         </button>
       </form>
 
@@ -112,4 +110,4 @@ const HealingMessageCreate = () => {
   );
 };
 
-export default HealingMessageCreate;
+export default OurNewsCreate;

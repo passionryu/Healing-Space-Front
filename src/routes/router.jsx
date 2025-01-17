@@ -18,6 +18,9 @@ import MyHealingMessageList from '../pages/mypage/MyHealingMessageList';
 import MyHealingMessageDetail from '../pages/mypage/MyHealingMessageDetail';
 import MyLikedHealingMessages from '../pages/mypage/MyLikedHealingMessages'
 import MyLikedHealingMessageDetail from '../pages/mypage/MyLikedHealingMessageDetail'
+import OurNewsList from "../pages/OurNews/OurNewsList"
+import OurNewsDetail from '../pages/OurNews/OurNewsDetail';
+import OurNewsCreate from '../pages/OurNews/OurNewsCreate';
 
 function AppRouter() {
   return (
@@ -41,8 +44,9 @@ function AppRouter() {
         <Route path="/my-healing-message-detail/:messageId" element={<MyHealingMessageDetail/>}/>
         <Route path="/liked-healing-message-list" element={<MyLikedHealingMessages/>}/>
         <Route path="/liked-healing-message-detail/:messageId" element={<MyLikedHealingMessageDetail/>}/>
-
-
+        <Route path="/our-news-list" element={<OurNewsList/>}/>
+        <Route path="/ournews/detail/:ourNewsNumber" element={<OurNewsDetail/>}/>
+        <Route path="/ournews-create" element={<OurNewsCreate/>} />
 
       </Routes>
   

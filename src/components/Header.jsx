@@ -41,7 +41,9 @@ const Header = () => {
                         <li>
                             Healing Space News
                             <ul className="submenu">
+                                <Link to="/our-news-list">
                                 <li>Our News</li>
+                                </Link>
                                 <li>News & Articles</li>
                                 <li>Notice</li>
                             </ul>
