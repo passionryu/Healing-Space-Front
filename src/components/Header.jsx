@@ -45,7 +45,7 @@ const Header = () => {
                                 <li>Our News</li>
                                 </Link>
                                 <li>News & Articles</li>
-                                <li>Notice</li>
+                                {/* <li>Notice</li> */}
                             </ul>
                         </li>
                         {/* <li>

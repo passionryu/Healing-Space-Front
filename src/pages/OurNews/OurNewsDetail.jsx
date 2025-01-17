@@ -32,26 +32,26 @@ const OurNewsDetail = () => {
             }
         };
 
-        // const fetchComments = async () => {
-        //     try {
-        //         const token = localStorage.getItem("accessToken");
-        //         const response = await axios.get(
-        //             `http://localhost:8080/ournews/comment/${ourNewsNumber}`,
-        //             {
-        //                 headers: {
-        //                     "Content-Type": "application/json",
-        //                     Authorization: `Bearer ${token}`,
-        //                 },
-        //             }
-        //         );
-        //         setComments(response.data);
-        //     } catch (err) {
-        //         setError("Failed to load comments. Please try again.");
-        //     }
-        // };
+        const fetchComments = async () => {
+            try {
+                const token = localStorage.getItem("accessToken");
+                const response = await axios.get(
+                    `http://localhost:8080/ournews/comment/${ourNewsNumber}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                setComments(response.data);
+            } catch (err) {
+                setError("Failed to load comments. Please try again.");
+            }
+        };
 
         fetchNews();
-        // fetchComments();
+        fetchComments();
     }, [ourNewsNumber]);
 
     const handleCommentSubmit = async (e) => {
@@ -62,7 +62,7 @@ const OurNewsDetail = () => {
                 `http://localhost:8080/ournews/comment`,
                 {
                     ourNewsNumber,
-                    comment,
+                    content: comment,
                 },
                 {
                     headers: {
@@ -71,10 +71,32 @@ const OurNewsDetail = () => {
                     },
                 }
             );
+            window.location.reload(); // 페이지 새로 고침 -> 좋은 방법은 아님...
             setComments((prev) => [...prev, response.data]);
             setComment("");
+            
         } catch (err) {
             setError("Failed to post the comment. Please try again.");
+        }
+    };
+
+    const handleDelete = async (commentId) => {
+        if (!window.confirm("Are you sure you want to delete this comment?")) return;
+        try {
+            const token = localStorage.getItem("accessToken");
+            await axios.delete(
+                `http://localhost:8080/ournews/comment/${commentId}`,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setComments((prev) => prev.filter((cmt) => cmt.id !== commentId));
+            window.location.reload(); // 페이지 새로 고침 -> 좋은 방법은 아님...
+        } catch (err) {
+            setError("Failed to delete the comment. Please try again.");
         }
     };
 
@@ -101,20 +123,15 @@ const OurNewsDetail = () => {
                 </span>
             </div>
 
-            {/* 이미지가 있는 경우에만 렌더링 */}
-             {news.img_path && (
+            {news.img_path && (
                 <img
                     src={news.img_path}
-                    // src={news.img_path}
                     alt="post-image"
                     className="post-image"
                 />
-            )} 
+            )}
 
-         
             <p className="content">{news.content}</p>
-
-            {/* 좋아요 관련 부분 삭제 */}
 
             <div className="comment-section">
                 <h3 style={{ textAlign: 'left' }}>Comments</h3>
@@ -124,23 +141,44 @@ const OurNewsDetail = () => {
                         onChange={(e) => setComment(e.target.value)}
                         placeholder="Write a comment..."
                     />
-                    <button type="submit" >Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
+
                 <ul>
                     {comments.map((cmt, index) => (
                         <li key={index}>
-                            <div className="comment-info">
+                            <div className="comment-info"
+                                style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
                                 <img
-                                    src={cmt.profile_img_path}
+                                    src={"../../src/assets/images/profile.jpg"}
                                     alt="comment-profile"
-                                    className="comment-profile-image"
+                                    className="profile-image2"
                                 />
-                                <span className="nickname">{cmt.nickname}</span>
+                                <span className="nickname2">{cmt.nickname}</span>
                                 <span className="created-date">
                                     {new Date(cmt.createdDate).toLocaleString()}
                                 </span>
                             </div>
-                            <p className="comment-content">{cmt.content}</p>
+
+                            <div className="comment-content-container">
+                                <p style={{ textAlign: "left" }}>{cmt.content}</p>
+                                <button
+                                    type="button"
+                                    className="hover-button-comment"
+                                    onClick={() => handleDelete(cmt.commentId)}
+                                    style={{
+                                        backgroundColor: "white",
+                                        color: "black",
+                                        border: "1px solid black",
+                                        borderRadius: "5px",
+                                        padding: "5px 10px",
+                                        cursor: "pointer",
+                                        transition: "transform 0.3s ease-in-out",
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </li>
                     ))}
                 </ul>
