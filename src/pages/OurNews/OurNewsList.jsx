@@ -57,9 +57,9 @@ const OurNewsList = () => {
                 </div>
 
                 {/* 글 작성하기 버튼 */}
-                <button className="create-post-button" onClick={handleCreatePost}>
+                {/* <button className="create-post-button" onClick={handleCreatePost}>
                     글 작성하기
-                </button>
+                </button> */}
             </div>
              
             <ul>
