@@ -21,8 +21,9 @@ const Header = () => {
                         <li>
                             Our Company
                             <ul className="submenu">
-                                <li><Link to="/about-us">About us</Link></li>
-                                <li><Link to="/team">Team member</Link></li>
+                                <li><Link to="/about-us">About Us</Link></li>
+                                <li><Link to="/team">Team Member</Link></li>
+                                <li>Service Details</li>
                                 
                             </ul>
                         </li>
@@ -44,7 +45,7 @@ const Header = () => {
                                 <Link to="/our-news-list">
                                 <li>Our News</li>
                                 </Link>
-                                <li>News & Articles</li>
+                                <li>Healing Blogs</li>
                                 {/* <li>Notice</li> */}
                             </ul>
                         </li>

@@ -100,6 +100,26 @@ const HealingMessageDetail = () => {
         }
     };
 
+    const handleDelete = async (commentId) => {
+        if (!window.confirm("Are you sure you want to delete this comment?")) return;
+        try {
+            const token = localStorage.getItem("accessToken");
+            await axios.delete(
+                `http://localhost:8080/healingmessage/comment/${commentId}`,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setComments((prev) => prev.filter((cmt) => cmt.id !== commentId));
+            window.location.reload(); // 페이지 새로 고침 -> 좋은 방법은 아님...
+        } catch (err) {
+            setError("Failed to delete the comment. Please try again.");
+        }
+    };
+
     if (loading) {
         return <p>Loading post...</p>;
     }
@@ -163,7 +183,7 @@ const HealingMessageDetail = () => {
                             <button
                             type="button"
                             className="hover-button-comment"
-                            onClick={() => handleDelete(cmt.id)} // 나중에 API 연결 시 사용할 함수
+                            onClick={() => handleDelete(cmt.commentId)} // 나중에 API 연결 시 사용할 함수
                             style={{
                                 
                                 backgroundColor: "white", // 흰색 배경

@@ -1,4 +1,4 @@
-.healing-message-detail {
+.my-healing-message-detail {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -64,8 +64,25 @@
     color: white;  /* 버튼 글자색 */
     border: none;  /* 버튼 테두리 제거 */
     cursor: pointer;  /* 커서 모양 변경 */
+    margin-bottom: 10px;
 }
 
 .delete-button:hover {
     background-color: #b8a547;  /* 버튼에 마우스를 올렸을 때 색상 변경 */
   }
+
+.my-healing-message-detail ul {
+    list-style-type: none; /* 기본 bullet 제거 */
+    padding: 0; /* 기본 padding 제거 */
+    margin: 0; /* 기본 margin 제거 */
+}
+
+.my-healing-message-detail ul li {
+    border: 1px solid #ddd; /* 네모난 상자의 테두리 */
+    border-radius: 5px; /* 모서리를 둥글게 */
+    padding: 10px; /* 내용과 테두리 간 여백 */
+    margin-bottom: 10px; /* 댓글 간 간격 */
+    background-color: #f9f9f9; /* 배경색 설정 */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 상자에 약간의 그림자 효과 */
+}
+

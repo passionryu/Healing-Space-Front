@@ -9,6 +9,8 @@ const HealingMessageDetail = () => {
     const [healingMessage, setHealingMessage] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [comment, setComment] = useState("");
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         const fetchHealingMessage = async () => {
@@ -31,6 +33,24 @@ const HealingMessageDetail = () => {
             }
         };
 
+        const fetchComments = async () => {
+            try {
+                const token = localStorage.getItem("accessToken");
+                const response = await axios.get(
+                    `http://localhost:8080/healingmessage/comment/${messageId}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                setComments(response.data);
+            } catch (err) {
+                setError("Failed to load comments. Please try again.");
+            }
+        };
+        fetchComments();
         fetchHealingMessage();
     }, [messageId]);
 
@@ -62,7 +82,7 @@ const HealingMessageDetail = () => {
     }
 
     return (
-        <div className="healing-message-detail">
+        <div className="my-healing-message-detail">
             <div className="header">
                 <div className="meta">
                     <h2>{healingMessage.title}</h2>
@@ -89,6 +109,33 @@ const HealingMessageDetail = () => {
                     Delete
                 </button>
             </div>
+
+              {/* 댓글 부분 */}
+              <ul>
+                    {comments.map((cmt, index) => (
+                        <li key={index}>
+                            <div className="comment-info"
+                            style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
+                                <img
+                                    src={"../../src/assets/images/profile.jpg"}
+                                    alt="comment-profile"
+                                    className="profile-image2"
+                                />
+                                <span className="nickname2">{cmt.nickname}</span>
+                                <span className="created-date">
+                                    {new Date(cmt.createdDate).toLocaleString()}
+                                </span>
+                            </div>
+
+                            <div className="comment-content-container" >
+                            <p style={{ textAlign: "left" }} >{cmt.content}</p>
+                           
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+                {/* 댓글 부분 */}
+            
 
            
           

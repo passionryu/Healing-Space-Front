@@ -81,14 +81,15 @@ const Mypage = () => {
             <h3>내가 좋아요 누른 힐링 투어 조회</h3>
         </div> */}
 
-        <h2>Healing Store</h2>
+        <h2> SMS Service </h2>
         <div className="mypage-option">
-            <h3>장바구니</h3>
+            <h3>SMS 힐링 문자 메시지 전송 서비스</h3>
         </div>
+        
 
         <h2>Customer Service</h2>
         <div className="mypage-option">
-            <h3>내가 문의한 내용 조회</h3>
+            <h3>관리자에게 문의하기 </h3>
         </div>
         </div>
     </>
