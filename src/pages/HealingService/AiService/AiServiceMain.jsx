@@ -8,13 +8,14 @@ const AiServiceMain = () => {
       
       {/* AI 서비스 로고 */}
       <img src="../src/assets/images/Ai_Services/AiServices.png"></img>
+      <p> We prepare AI Services for you. Let's try !😊 </p>
 
       <div className="card-container">
         {/* 첫 번째 카드: AI Letter */}
         <div className="service-card">
           <h2 style={{textAlign : "left"}} >AI Letter</h2>
           <img
-            src="/assets/images/ai-letter-image.jpg" // 적절한 이미지 경로로 변경
+            src="../src/assets/images/Ai_Services/letterimg.jpg" // 적절한 이미지 경로로 변경
             alt="AI Letter"
             className="service-image"
           />
@@ -27,7 +28,7 @@ const AiServiceMain = () => {
         <div className="service-card">
           <h2 style={{textAlign : "left"}}>Today's AI SnapShot</h2>
           <img
-            src="/assets/images/ai-snapshot-image.jpg" // 적절한 이미지 경로로 변경
+            src="../src/assets/images/Ai_Services/snapshotimg.jpg" // 적절한 이미지 경로로 변경
             alt="Today's AI SnapShot"
             className="service-image"
           />

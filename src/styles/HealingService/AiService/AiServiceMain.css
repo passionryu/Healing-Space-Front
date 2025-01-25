@@ -8,10 +8,14 @@
     height :auto ;
   }
 
+  .ai-service-container p{
+    padding-bottom: 30px;
+  }
+
   .card-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
   }
   
   .service-card {
@@ -22,26 +26,27 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     border-radius: 10px;
+
+    border: 1px solid #ccc; /* 테두리 추가 (두께: 2px, 색상: #ccc) */
+  }
+
+  .service-card img{
+        width :460px;
+        height: 300px;
+        border-radius: 8px;
   }
   
   .service-card:hover {
-    transform: scale(1.05); /* 호버 시 크기가 5% 증가 */
+    transform: scale(1.10); /* 호버 시 크기가 10% 증가 */
   }
   
   .service-card h2 {
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
     font-optical-sizing: auto;
     color: #917f27;
 
     font-size: 2rem;
     margin-bottom: 15px;
-  }
-  
-  .service-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
   }
   
   .service-description {
