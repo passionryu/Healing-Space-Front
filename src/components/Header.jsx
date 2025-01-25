@@ -36,7 +36,11 @@ const Header = () => {
                                     </Link>
                                 </li>
 
-                                <li>AI Service</li>
+                                <li>
+                                    <Link to="/ai-service-main">
+                                        AI Service
+                                    </Link>
+                                </li>
 
                                 <li>
                                     <Link to="/healing-store-main">

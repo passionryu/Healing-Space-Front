@@ -22,6 +22,7 @@ import OurNewsList from "../pages/OurNews/OurNewsList"
 import OurNewsDetail from '../pages/OurNews/OurNewsDetail';
 import OurNewsCreate from '../pages/OurNews/OurNewsCreate';
 import HealingStoreMain from '../pages/HealingService/HealingStore/HealingStoreMain'
+import AiServiceMain from '../pages/HealingService/AiService/AiServiceMain';
 
 function AppRouter() {
   return (
@@ -49,6 +50,7 @@ function AppRouter() {
         <Route path="/ournews/detail/:ourNewsNumber" element={<OurNewsDetail/>}/>
         <Route path="/ournews-create" element={<OurNewsCreate/>} />
         <Route path="/healing-store-main" element={<HealingStoreMain/>}/>
+        <Route path="/ai-service-main" element={<AiServiceMain/>}/>
 
       </Routes>
   

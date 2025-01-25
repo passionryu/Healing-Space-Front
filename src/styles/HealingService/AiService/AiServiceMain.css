@@ -1,0 +1,52 @@
+.ai-service-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .ai-service-container img{
+    width: 500px;
+    height :auto ;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* 호버 시 크기가 5% 증가 */
+  }
+  
+  .service-card h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    color: #917f27;
+
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
