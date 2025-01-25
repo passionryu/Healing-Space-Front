@@ -125,7 +125,7 @@ const OurNewsDetail = () => {
 
             {news.img_path && (
                 <img
-                    src={news.img_path}
+                    src={`http://localhost:8080/images/OurNews/${news.img_path}`}
                     alt="post-image"
                     className="post-image"
                 />

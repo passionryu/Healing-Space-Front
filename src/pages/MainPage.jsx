@@ -85,15 +85,19 @@ function Main() {
               </Link>
             </div>
           </div>
+
           <div className="card">
             <div>
               <img src="../src/assets/images/healingmessagesharing.png" alt="이미지" />
             </div>
             <div className="card-text">
+              <Link to="/healing-store-main">
               <h3>Healing Store</h3>
               <p>Why don't you buy some healing stuff for yourself? 😎</p>
+              </Link>
             </div>
           </div>
+
           <div className="card">
             <div>
               <img src="../src/assets/images/healingmusicsharing.png" alt="이미지" />

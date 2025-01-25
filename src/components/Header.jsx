@@ -35,8 +35,16 @@ const Header = () => {
                                         Healing Program
                                     </Link>
                                 </li>
-                                <li>Healing Store</li>
-                                <li>AI Recommend</li>
+
+                                <li>AI Service</li>
+
+                                <li>
+                                    <Link to="/healing-store-main">
+                                        Healing Store
+                                    </Link>
+                                </li>
+                                
+                               
                             </ul>
                         </li>
                         <li>

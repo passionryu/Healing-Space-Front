@@ -21,6 +21,7 @@ import MyLikedHealingMessageDetail from '../pages/mypage/MyLikedHealingMessageDe
 import OurNewsList from "../pages/OurNews/OurNewsList"
 import OurNewsDetail from '../pages/OurNews/OurNewsDetail';
 import OurNewsCreate from '../pages/OurNews/OurNewsCreate';
+import HealingStoreMain from '../pages/HealingService/HealingStore/HealingStoreMain'
 
 function AppRouter() {
   return (
@@ -47,6 +48,7 @@ function AppRouter() {
         <Route path="/our-news-list" element={<OurNewsList/>}/>
         <Route path="/ournews/detail/:ourNewsNumber" element={<OurNewsDetail/>}/>
         <Route path="/ournews-create" element={<OurNewsCreate/>} />
+        <Route path="/healing-store-main" element={<HealingStoreMain/>}/>
 
       </Routes>
   

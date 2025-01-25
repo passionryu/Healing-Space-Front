@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom"; 
 import "../styles/Mypage.css";
 import axios from 'axios';
 
 const Mypage = () => {
     const [userInfo, setUserInfo] = useState({});
+    const fileInputRef = useRef(null);  // 파일 입력 참조
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,6 +19,9 @@ const Mypage = () => {
                     withCredentials: true
                 });
                 setUserInfo(response.data);
+                // alert("profileImage : " + userInfo.ProfileImagePath);
+                // alert("nickname : " + userInfo.nickName);
+                // alert("intro : " + userInfo.intro);
             } catch (error) {
                 alert("Failed to load your myinfo");
                 console.error("Failed to fetch user info", error);
@@ -27,6 +31,35 @@ const Mypage = () => {
         fetchData();
     }, []);
 
+    const handleProfileImageClick = () => {
+        fileInputRef.current.click();  // 파일 선택 창 열기
+    };
+
+    const handleImageChange = async (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            try {
+                const token = localStorage.getItem("accessToken");
+                const response = await axios.put('http://localhost:8080/mypage/profile/image', formData, {
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "multipart/form-data",
+                    }
+                });
+
+                alert("Profile image updated successfully!");
+                console.log(response.data);
+                // 서버 응답에 따라 프로필 이미지 경로를 업데이트 할 수 있습니다.
+            } catch (error) {
+                alert("Failed to update profile image");
+                console.error("Error updating profile image:", error);
+            }
+        }
+    };
+
     return (
 
     <>
@@ -35,9 +68,20 @@ const Mypage = () => {
             <div className="profile-image">
                 <img src="../src/assets/images/profile.jpg" alt="Profile" />
             </div>
+             {/* <div className="profile-image" onClick={handleProfileImageClick}>
+             <img src={userInfo.ProfileImagePath ? `http://localhost:8080/images/Profile/${userInfo.ProfileImagePath}` : "src/assets/images/profile.jpg"} alt="Profile" /> 
+             
+                    <input
+                        ref={fileInputRef}
+                        type="file"
+                        style={{ display: "none" }}  // 파일 입력 필드는 화면에 보이지 않도록 설정
+                        accept="image/*"
+                        onChange={handleImageChange}
+                    />
+                </div> */}
             <div className="profile-text">
                 <p className="profile-id">ID: {userInfo.nickName}</p>
-                <p className="profile-intro">Intro: {userInfo.intro}</p>
+                <p className="profile-intro">Name: {userInfo.username}</p>
             </div>
         </div>
 
