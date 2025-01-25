@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, UNSAFE_DataRouterContext } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes ,UNSAFE_DataRouterContext } from 'react-router-dom';
 import Main from '../pages/MainPage'
 import AboutUs from '../pages/AboutUs';
 import Team from '../pages/Team';
@@ -23,6 +23,8 @@ import OurNewsDetail from '../pages/OurNews/OurNewsDetail';
 import OurNewsCreate from '../pages/OurNews/OurNewsCreate';
 import HealingStoreMain from '../pages/HealingService/HealingStore/HealingStoreMain'
 import AiServiceMain from '../pages/HealingService/AiService/AiServiceMain';
+import AiLetter from '../pages/HealingService/AiService/AiLetter/AiLetter';
+import AiLetterResult from '../pages/HealingService/AiService/AiLetter/AiLetterResult';
 
 function AppRouter() {
   return (
@@ -51,6 +53,8 @@ function AppRouter() {
         <Route path="/ournews-create" element={<OurNewsCreate/>} />
         <Route path="/healing-store-main" element={<HealingStoreMain/>}/>
         <Route path="/ai-service-main" element={<AiServiceMain/>}/>
+        <Route path="ai-letter" element={<AiLetter/>}/>
+        <Route path="/ai-letter-result" element={<AiLetterResult/>}/>
 
       </Routes>
   

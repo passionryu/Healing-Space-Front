@@ -103,8 +103,10 @@ function Main() {
               <img src="../src/assets/images/healingmusicsharing.png" alt="이미지" />
             </div>
             <div className="card-text">
+            <Link to={"/ai-service-main"}>
               <h3>AI Service</h3>
               <p>Healing Space's AI service will response for you.😉</p>
+              </Link>
             </div>
           </div>
         </div>
