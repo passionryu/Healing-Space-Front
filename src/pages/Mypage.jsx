@@ -116,14 +116,14 @@ const Mypage = () => {
             <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
         </div>
 
-        {/* <h2>Healing Tour</h2>
+        <h2>AI Service</h2>
         <div className="mypage-option">
-            <h3>내가 올린 힐링 투어 조회</h3>
+            <h3>내 AI Letter 조회</h3>
         </div>
 
         <div className="mypage-option">
-            <h3>내가 좋아요 누른 힐링 투어 조회</h3>
-        </div> */}
+            <h3>내 Today SnapShot 조회회</h3>
+        </div>
 
         <h2> SMS Service </h2>
         <div className="mypage-option">
