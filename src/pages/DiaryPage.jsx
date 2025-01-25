@@ -49,12 +49,25 @@ const DiaryPage = () => {
   return (
     
     <div className="diary-container">
+
+{/* <img src="../src/assets/images/dewcalendar.png"></img> */}
+
       <div className="diary-card2">
-        <h2>Write Your Diary</h2>
+
+        <div className="diary-header">
+          <h1 style={{textAlign : "left"}}>Diary</h1>
+          
+          <p
+            style={{ cursor: "pointer", color: "#917f27", textDecoration: "underline" }}
+            onClick={() => window.location.href = "https://www.youtube.com/"}
+          >
+          how to use ?
+          </p>
+        </div>
 
         <form onSubmit={handleSubmit}>
           <div className="input-container">
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Diary title</label>
             <input
               type="text"
               id="title"
@@ -66,7 +79,7 @@ const DiaryPage = () => {
           </div>
 
           <div className="input-container">
-            <label htmlFor="diary">Diary</label>
+            <label htmlFor="diary">Diary content</label>
             <textarea
               id="diary"
               name="diary"
