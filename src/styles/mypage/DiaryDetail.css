@@ -3,7 +3,7 @@
 /* 전체 컨테이너 */
 .diary-detail {
     width: 100%;
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -12,12 +12,11 @@
     transition: background-color 0.3s;
 }
 
-/* 제목 스타일 */
-.diary-detail h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
+.diary-content h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    color: #917f27;
 }
 
 /* 날짜, 감정, 힐링 메시지 등의 항목에 대한 스타일 */
@@ -70,3 +69,32 @@
         font-size: 1rem;
     }
 }
+
+/* 응답 메시지 부분 */
+  
+  .result-card {
+    width: 760px;
+    height: 540px;
+    padding: 20px;
+    margin-top: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-card h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    color: #917f27;
+  }
+  
+  .result {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .result h3 {
+    margin: 10px 0;
+  }
+  

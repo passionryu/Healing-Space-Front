@@ -45,9 +45,11 @@ function Main() {
         {/* About US 시작점 */}
         <div className="about-us-container">
           {/* 왼쪽 이미지 영역 */}
+          <Link to ="/about-us">
           <div className="about-us-image">
             <img src="../src/assets/images/Logo3.png" alt="Healing Space" />
           </div>
+          </Link>
 
           {/* 오른쪽 텍스트 영역 */}
           <div className="about-us-text">

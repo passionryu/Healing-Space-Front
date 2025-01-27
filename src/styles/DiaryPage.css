@@ -1,16 +1,16 @@
 /* DiaryPage.css */
 .diary-container {
-    width: 1500px ; 
+    width: 1300px ; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    margin-top : 50px;
     gap : 20px;
   }
   
   .diary-card2 {
-    width: 1500px;
+    width: 1300px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -18,7 +18,7 @@
   }
 
   .diary-header {
-    gap : 1200px;
+    gap : 1020px;
     display: flex;
     text-align: right; /* p 태그 내부 텍스트를 오른쪽으로 정렬 */
   }
@@ -50,7 +50,8 @@
   margin-bottom: 5px; /* 선택적으로 추가: 입력 필드와 약간의 여백 */
 }
   
-  input, textarea {
+
+input, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -107,8 +108,6 @@
     text-align: center;
     color: #917f27;
   }
-
-  
   
   .result {
     text-align: center;
