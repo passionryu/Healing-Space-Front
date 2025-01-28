@@ -2,6 +2,7 @@
 .diary-container {
     width: 1300px ; 
     display: flex;
+    flex-direction: column; /* 요소들을 세로로 배치 */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -18,7 +19,7 @@
   }
 
   .diary-header {
-    gap : 1020px;
+    gap : 30px; 
     display: flex;
     text-align: right; /* p 태그 내부 텍스트를 오른쪽으로 정렬 */
   }
@@ -62,7 +63,7 @@ input, textarea {
   }
   
   textarea {
-    height: 350px;
+    height: 200px;
   
   }
   
@@ -117,4 +118,17 @@ input, textarea {
   .result h3 {
     margin: 10px 0;
   }
+  
+  .message-banner {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    background-color: white;
+    padding-bottom: 10px; 
+  
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+  }
+  
   

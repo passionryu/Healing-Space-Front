@@ -133,7 +133,7 @@ const Mypage = () => {
 
         <h2>Customer Service</h2>
         <div className="mypage-option">
-            <h3>관리자에게 문의하기 </h3>
+            <h3>개발자에게 문의하기 </h3>
         </div>
         </div>
     </>
