@@ -5,6 +5,7 @@ import "../../../../styles/HealingService/AiService/TodayAiSnapShot/question.css
 
 const Question7 = () => {
   const [answer, setAnswer] = useState('');
+  const [isLoading, setIsLoading] = useState(false);  // 로딩 상태 추가
   const navigate = useNavigate();
 
   const handleAnswerChange = (e) => {
@@ -12,8 +13,10 @@ const Question7 = () => {
   };
 
   const handleSubmit = async () => {
+    setIsLoading(true); // 로딩 시작
     try {
       const token = localStorage.getItem("accessToken"); // 로컬 스토리지에서 JWT 가져오기
+
       // 답변 제출 후 AI 연산 API 호출
       const response = await axios.post(
         'http://localhost:8080/aisnapshot', // 답변을 저장하는 API
@@ -46,6 +49,8 @@ const Question7 = () => {
       navigate('/ai-response', { state: { aiResponse: aiResponse.data } }); // AI 응답을 전달하면서 페이지 이동
     } catch (error) {
       console.error('Error submitting answer:', error);
+    } finally {
+      setIsLoading(false); // 로딩 종료
     }
   };
 
@@ -61,8 +66,12 @@ const Question7 = () => {
         placeholder="여기에 답변을 입력해주세요."
         className="answer-input"
       />
-      <button onClick={handleSubmit} className="submit-btn">
-        제출
+      <button 
+        onClick={handleSubmit} 
+        className="submit-btn" 
+        disabled={isLoading}  // 로딩 중에는 버튼 비활성화
+      >
+        {isLoading ? '잠시만 기다려주세요...' : '제출'}  {/* 로딩 중일 때 버튼 텍스트 변경 */}
       </button>
     </div>
   );
