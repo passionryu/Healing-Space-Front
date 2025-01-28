@@ -51,7 +51,10 @@ const Question7 = () => {
 
   return (
     <div className="question-container">
-      <h2 style={{ textAlign: "left" }}>7번 질문 : 마지막으로 내일 당신에게는 어떠한 하루가 펼쳐지면 좋을지 간단하게 이야기해볼까요?</h2>
+      <h2 style={{ textAlign: "left" }}>[ 7 / 7 ] 
+        <br/>그렇군요 😌
+        <br/>이제 마지막 질문입니다!😎
+        <br/>마지막으로 내일 당신에게는 어떠한 하루가 펼쳐지면 좋을지 간단하게 기록해볼까요?</h2>
       <textarea
         value={answer}
         onChange={handleAnswerChange}

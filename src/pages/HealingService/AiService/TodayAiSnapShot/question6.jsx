@@ -35,9 +35,10 @@ const Question6 = () => {
 
   return (
     <div className="question-container">
-      <h2 style={{textAlign: "left"}}>6번 질문 : 당신의 삶을 언제나 지켜보고, 
-당신의 마음을 온전히 공감해주는 아주 가까운 친구가 있다고 생각해봅시다.
-당신은 그 친구에게 어떠한 말을 듣고 싶나요?
+      <h2 style={{textAlign: "left"}}>[ 6 / 7 ] 
+        <br/>언제나 당신의 편이며,
+        <br/>당신의 마음을 온전히 이해해주고, 공감해주는 좋은 친구가 있다고 가정정해봅시다.
+        <br/>당신은 그 친구에게 어떠한 말을 듣고 싶나요?
 </h2>
       <textarea
         value={answer}

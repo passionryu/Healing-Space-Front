@@ -35,8 +35,9 @@ const Question3 = () => {
 
   return (
     <div className="question-container">
-      <h2 style={{textAlign: "left"}}>3번 질문 : 최근에 가장 기분이 좋았거나, 편안했던 순간은 언제일까요? 
-      그리고 그 이유는 무엇인지 상세히 적어볼까요?</h2>
+      <h2 style={{textAlign: "left"}}>[ 3 / 7 ] 
+      <br/>최근에 가장 기분이 좋았거나, 기억에 남는 순간은 언제일까요?😌
+      <br/>그리고 그 이유는 무엇인지 상세히 나눠줄 수 있나요?</h2>
       <textarea
         value={answer}
         onChange={handleAnswerChange}

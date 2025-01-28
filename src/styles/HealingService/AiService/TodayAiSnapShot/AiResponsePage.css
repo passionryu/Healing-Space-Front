@@ -1,0 +1,93 @@
+/* 전체 페이지 스타일 */
+.ai-snapshot-response-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* 카드 스타일 */
+  .ai-snapshot-response-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+  
+  /* 카드 안의 제목 스타일 */
+  .ai-snapshot-response-card h1 {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    color: #917f27;
+    font-weight: 700;
+    margin-bottom: 20px;
+    /* font-family: 'Arial', sans-serif; */
+    letter-spacing: 0.5px;
+    word-break: keep-all;
+  }
+  
+  /* 카드 내용 (AI 메시지) 스타일 */
+  .ai-snapshot-response-message {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    word-break: break-word;
+    white-space: pre-line;
+  }
+  
+  /* 감성적인 배경 */
+  .ai-snapshot-response-message::before {
+    /* content: "💌"; */
+    font-size: 40px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* 추가적인 버튼(선택사항) 스타일 */
+  .ai-snapshot-response-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ai-snapshot-response-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* 반응형 디자인: 화면 크기에 맞게 조정 */
+  @media (max-width: 600px) {
+    .ai-response-card {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .ai-snapshot-response-card h2 {
+      font-size: 22px;
+    }
+  
+    .ai-snapshot-response-message {
+      font-size: 14px;
+    }
+  }
+  

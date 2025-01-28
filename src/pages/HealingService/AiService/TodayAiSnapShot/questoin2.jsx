@@ -35,7 +35,11 @@ const Question2 = () => {
 
   return (
     <div className="question-container">
-      <h2 style={{textAlign: "left"}}>2번 질문 : 오늘 왜 그런 기분이 느껴셨나요?</h2>
+      <h2 style={{textAlign: "left"}}>[ 2 /7 ] 
+        <br/>오늘 왜 그런 기분이 느껴셨나요?
+        <br/>다른 사람에게 말할 수 없는 이야기를 나눠도 좋아요.
+        <br/>당신의 깊은 이야기는 오직 Healing Space AI와 당신만 알 수 있어요.🗝️ 
+        </h2>
       <textarea
         value={answer}
         onChange={handleAnswerChange}
