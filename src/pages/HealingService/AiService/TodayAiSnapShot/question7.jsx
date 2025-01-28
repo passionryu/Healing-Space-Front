@@ -71,7 +71,7 @@ const Question7 = () => {
         className="submit-btn" 
         disabled={isLoading}  // 로딩 중에는 버튼 비활성화
       >
-        {isLoading ? '잠시만 기다려주세요...' : '제출'}  {/* 로딩 중일 때 버튼 텍스트 변경 */}
+        {isLoading ? ' AI가 당신의 답변을 읽고 있습니다. 잠시만 기다려주세요...' : '제출'}  {/* 로딩 중일 때 버튼 텍스트 변경 */}
       </button>
     </div>
   );
