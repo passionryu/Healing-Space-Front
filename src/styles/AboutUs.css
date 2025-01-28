@@ -18,11 +18,13 @@
   /* 텍스트 영역 스타일 */
   .about-us-text {
     flex: 1; /* 텍스트 영역이 남은 공간을 차지하도록 설정 */
+    
   }
   
   .about-us-text h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+    
   }
   
   .about-us-text h4 {
@@ -30,3 +32,9 @@
     line-height: 1.6;
   }
   
+
+/* second */
+
+.year p{
+  padding-left : 20px;
+}

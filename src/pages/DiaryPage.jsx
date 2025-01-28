@@ -27,7 +27,7 @@ const DiaryPage = () => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * messages.length);
       setMessage(messages[randomIndex]);
-    }, 3500);
+    }, 5000);
 
     return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 정리
   }, []);

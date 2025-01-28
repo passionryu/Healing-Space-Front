@@ -32,7 +32,10 @@ const AiServiceMain = () => {
         </div>
 
         {/* 두 번째 카드: Today's AI SnapShot */}
-        <div className="service-card">
+        <div className="service-card"
+        onClick={() => navigate("/question1")} // 클릭 시 AiLetter 페이지로 이동
+        style={{ cursor: "pointer" }} // 카드에 클릭 가능한 스타일 추가
+        >
           <h2 style={{textAlign : "left"}}>Today's AI SnapShot</h2>
           <img
             src="../src/assets/images/Ai_Services/snapshotimg.jpg" // 적절한 이미지 경로로 변경
