@@ -108,7 +108,7 @@ const DiaryPage = () => {
             ></textarea>
           </div>
 
-          <button type="submit" className="submit-btn">
+          <button type="submit" className="diary-submit-btn">
             Save Diary
           </button>
         </form>
