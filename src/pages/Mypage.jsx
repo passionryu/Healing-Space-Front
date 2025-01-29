@@ -125,9 +125,9 @@ const Mypage = () => {
             <h3>내 Today SnapShot 조회회</h3>
         </div> */}
 
-        <h2> SMS Service </h2>
+        <h2> KaKao Service </h2>
         <div className="mypage-option">
-            <h3>SMS 힐링 문자 메시지 전송 서비스</h3>
+            <h3>힐링 메시지 카카오톡 전송 서비스</h3>
         </div>
         
 

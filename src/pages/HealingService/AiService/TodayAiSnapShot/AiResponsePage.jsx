@@ -9,9 +9,9 @@ const AiResponsePage = () => {
   return (
     <div className="ai-snapshot-response-container">
       <div className="ai-snapshot-response-card">
-        <h1 style={{textAlign : "center"}}>AI 위로의 편지📬</h1>
+        <h1 style={{textAlign : "center"}}>오늘 하루 고생한 당신을 위한 편지📬</h1>
         <div className="ai-snapshot-response-message">
-          <p>{aiResponse}</p>
+          <p>{aiResponse}</p> 
 
           <h4 style={{textAlign : "right"}}> <strong> * 당신을 언제나 응원하는 Healing Space AI</strong></h4>
         </div>

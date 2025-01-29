@@ -23,7 +23,7 @@ const DiaryPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 메시지를 3.5초마다 변경
+    // 메시지를 5초마다 변경
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * messages.length);
       setMessage(messages[randomIndex]);
