@@ -1,0 +1,73 @@
+.healing-music-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+}
+
+.healing-music-logo img {
+    height: 270px;
+    border-radius: 15px;
+}
+
+.create-music-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #917f27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.create-music-button:hover {
+    background-color: #a5933a;
+}
+
+.healing-music-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.music-thumbnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.music-info h3 {
+    margin: 0 0 10px 0;
+}
+
+.music-info p {
+    margin: 5px 0;
+    color: #555;
+}

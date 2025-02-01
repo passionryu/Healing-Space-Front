@@ -33,6 +33,8 @@ import Question5 from '../pages/HealingService/AiService/TodayAiSnapShot/questio
 import Question6 from '../pages/HealingService/AiService/TodayAiSnapShot/question6';
 import Question7 from '../pages/HealingService/AiService/TodayAiSnapShot/question7';
 import AiResponsePage from '../pages/HealingService/AiService/TodayAiSnapShot/AiResponsePage';
+import HealingMusicList from '../pages/HealingService/HealingCommunity/HealingMusic/HealingMusicList';
+import HealingMusicDetail from '../pages/HealingService/HealingCommunity/HealingMusic/HealingMusicDetail';
 
 function AppRouter() {
   return (
@@ -71,6 +73,8 @@ function AppRouter() {
         <Route path='/question6' element={<Question6/>}/>
         <Route path='/question7' element={<Question7/>}/>
         <Route path='/ai-response' element={<AiResponsePage/>}/>
+        <Route path='/healing-music-list' element={<HealingMusicList/>}/>
+        <Route path='/healing-music-detail/:musicId' element={<HealingMusicDetail/>}/>
 
       </Routes>
   
