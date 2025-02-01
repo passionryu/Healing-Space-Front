@@ -79,12 +79,16 @@ const HealingMusicDetail = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem("accessToken");
+
+            // DTO에 맞게 postCommentRequest를 준비
+            const postCommentRequest = {
+                musicId: musicId, // musicId
+                content: comment,  // content
+            };
+
             const response = await axios.post(
                 `http://localhost:8080/healingmusic/comment`,
-                {
-                    musicId,
-                    comment,
-                },
+                postCommentRequest,
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -92,8 +96,9 @@ const HealingMusicDetail = () => {
                     },
                 }
             );
-            setComments((prev) => [...prev, response.data]);
-            setComment("");
+            setComments((prev) => [...prev, response.data]);  // 서버에서 반환된 댓글을 추가
+            setComment("");  // 댓글 입력란 초기화
+            window.location.reload(); // 페이지 새로 고침 -> 좋은 방법은 아님...
         } catch (err) {
             setError("Failed to post the comment. Please try again.");
         }
