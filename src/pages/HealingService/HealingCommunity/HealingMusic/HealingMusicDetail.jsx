@@ -9,6 +9,8 @@ const HealingMusicDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [likeCount, setLikeCount] = useState(0);
+    const [comment, setComment] = useState("");
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         const fetchMusic = async () => {
@@ -32,7 +34,26 @@ const HealingMusicDetail = () => {
             }
         };
 
+        const fetchComments = async () => {
+            try {
+                const token = localStorage.getItem("accessToken");
+                const response = await axios.get(
+                    `http://localhost:8080/healingmusic/comment/${musicId}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+                setComments(response.data);
+            } catch (err) {
+                setError("Failed to load comments. Please try again.");
+            }
+        };
+
         fetchMusic();
+        fetchComments();
     }, [musicId]);
 
     const handleLike = async () => {
@@ -54,6 +75,49 @@ const HealingMusicDetail = () => {
         }
     };
 
+    const handleCommentSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const token = localStorage.getItem("accessToken");
+            const response = await axios.post(
+                `http://localhost:8080/healingmusic/comment`,
+                {
+                    musicId,
+                    comment,
+                },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setComments((prev) => [...prev, response.data]);
+            setComment("");
+        } catch (err) {
+            setError("Failed to post the comment. Please try again.");
+        }
+    };
+
+    const handleDelete = async (commentId) => {
+        if (!window.confirm("Are you sure you want to delete this comment?")) return;
+        try {
+            const token = localStorage.getItem("accessToken");
+            await axios.delete(
+                `http://localhost:8080/healingmusic/comment/${commentId}`,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+            setComments((prev) => prev.filter((cmt) => cmt.commentId !== commentId));
+        } catch (err) {
+            setError("Failed to delete the comment. Please try again.");
+        }
+    };
+
     if (loading) {
         return <p>Loading music details...</p>;
     }
@@ -66,13 +130,12 @@ const HealingMusicDetail = () => {
         <div className="healing-music-detail">
             <h1>{music.title}</h1>
             <div className="author-info">
-                <img src={ "../src/assets/images/profile.jpg"} alt="profile" className="profile-image" />
+                <img src={"../src/assets/images/profile.jpg"} alt="profile" className="profile-image" />
                 <span className="nickname">{music.nickName}</span>
                 <span className="created-date">{new Date(music.dateTime).toLocaleString()}</span>
             </div>
 
             {music.image && <img src={music.image} alt="music" className="music-image" />}
-
             <p className="content">{music.content}</p>
             <p>
                 <strong>Healing Music</strong> :
@@ -90,6 +153,53 @@ const HealingMusicDetail = () => {
                 <button className="like-button" onClick={handleLike}>
                     ❤️ {likeCount}
                 </button>
+            </div>
+
+            {/* 댓글 섹션 */}
+            <div className="comment-section">
+                <h3 style={{ textAlign: "left" }}>Comments</h3>
+                <form onSubmit={handleCommentSubmit}>
+                    <textarea
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                        placeholder="Write a comment..."
+                    />
+                    <div style={{ textAlign: "right" }}>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+                <ul>
+                    {comments.map((cmt, index) => (
+                        <li key={index}>
+                            <div className="comment-info" style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
+                                <img src={"../src/assets/images/profile.jpg"} alt="comment-profile" className="profile-image2" />
+                                <span className="nickname2">{cmt.nickname}</span>
+                                <span className="created-date">{new Date(cmt.createdDate).toLocaleString()}</span>
+                            </div>
+
+                            <div className="comment-content-container">
+                                <p style={{ textAlign: "left" }}>{cmt.content}</p>
+                                <button
+                                    type="button"
+                                    className="hover-button-comment"
+                                    onClick={() => handleDelete(cmt.commentId)}
+                                    style={{
+                                        backgroundColor: "white",
+                                        color: "black",
+                                        border: "1px solid black",
+                                        borderRadius: "5px",
+                                        padding: "5px 10px",
+                                        cursor: "pointer",
+                                        transition: "transform 0.3s ease-in-out",
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
