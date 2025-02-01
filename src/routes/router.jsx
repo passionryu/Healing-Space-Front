@@ -36,6 +36,7 @@ import AiResponsePage from '../pages/HealingService/AiService/TodayAiSnapShot/Ai
 import HealingMusicList from '../pages/HealingService/HealingCommunity/HealingMusic/HealingMusicList';
 import HealingMusicDetail from '../pages/HealingService/HealingCommunity/HealingMusic/HealingMusicDetail';
 import MyHealingMusicList from '../pages/mypage/MyHealingMusicList';
+import MyLikedHealingMusicList from '../pages/mypage/MyLikedHealingMusicList';
 
 function AppRouter() {
   return (
@@ -77,6 +78,7 @@ function AppRouter() {
         <Route path='/healing-music-list' element={<HealingMusicList/>}/>
         <Route path='/healing-music-detail/:musicId' element={<HealingMusicDetail/>}/>
         <Route path='/my-healing-music-list' element={<MyHealingMusicList/>}/>
+        <Route path='/my-liked-healing-music-list' element={<MyLikedHealingMusicList/>}/>
       </Routes>
   
   );

@@ -115,7 +115,9 @@ const Mypage = () => {
         </div>
 
         <div className="mypage-option">
-            <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
+            <Link to="/my-liked-healing-music-list">
+                <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
+            </Link>
         </div>
 
         {/* <h2>AI Service</h2>
