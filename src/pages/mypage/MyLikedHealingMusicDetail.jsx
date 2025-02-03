@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../../styles/HealingCommunity/HealingMusic/MyHealingMusicDetail.css";
+import "../../styles/HealingCommunity/HealingMusic/MyLikedHealingMusic.css";
 
 const MyLikedHealingMusicDetail = () => {
     const { musicId } = useParams();
@@ -81,7 +81,7 @@ const MyLikedHealingMusicDetail = () => {
                 </div>
             </div>
 
-            {healingMusic.image && <img src={healingMusic.image} alt="music" className="music-image" />}
+            {healingMusic.image && <img src={healingMusic.image} alt="music" className="my-liked-music-image" />}
             <p className="content">{healingMusic.content}</p>
             <p>
                 <strong>Healing Music</strong> :

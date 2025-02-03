@@ -140,7 +140,7 @@ const HealingMusicDetail = () => {
                 <span className="created-date">{new Date(music.dateTime).toLocaleString()}</span>
             </div>
 
-            {music.image && <img src={music.image} alt="music" className="music-image" />}
+            {music.image && <img src={music.image} alt="music" className="healing-music-image" />}
             <p className="content">{music.content}</p>
             <p>
                 <strong>Healing Music</strong> :

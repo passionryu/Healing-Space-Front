@@ -81,7 +81,7 @@ const MyHealingMusicDetail = () => {
                 </div>
             </div>
 
-            {healingMusic.image && <img src={healingMusic.image} alt="music" className="music-image" />}
+            {healingMusic.image && <img src={healingMusic.image} alt="music" className="my-music-image" />}
             <p className="content">{healingMusic.content}</p>
             <p>
                 <strong>Healing Music</strong> :

@@ -64,8 +64,8 @@ const HealingMusicList = () => {
                         <li className="music-item">
                             <img src={music.img} alt={music.title} className="music-thumbnail" />
                             <div className="music-info">
-                                <h3>{music.title}</h3>
-                                <p>By: {music.nickName}</p>
+                                <h3 style={{textAlign : "left"}}>{music.title}</h3>
+                                <p style={{textAlign : "left"}}>By: {music.nickName}</p>
                                 <p>Posted on: {new Date(music.dateTime).toLocaleString()}</p>
                             </div>
                         </li>
