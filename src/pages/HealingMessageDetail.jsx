@@ -8,7 +8,7 @@ const HealingMessageDetail = () => {
     const [message, setMessage] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [likeCount, setLikeCount] = useState(0);
+    const [likeCount, setLikeCount] = useState(null);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
 
@@ -145,7 +145,7 @@ const HealingMessageDetail = () => {
             <p className="content">{message.content}</p>
             <div className="like-section">
                 <button className="like-button" onClick={handleLike}>
-                    ❤️ {likeCount}
+                    ❤️  {likeCount !== null ? likeCount : "Loading..."}
                 </button>
             </div>
             <div className="comment-section">

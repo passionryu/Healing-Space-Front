@@ -179,8 +179,8 @@ const HealingMusicDetail = () => {
                         <li key={index}>
                             <div className="comment-info" style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
                                 <img src={"../src/assets/images/profile.jpg"} alt="comment-profile" className="profile-image2" />
-                                <span className="nickname2">{cmt.nickname}</span>
-                                <span className="created-date">{new Date(cmt.createdDate).toLocaleString()}</span>
+                                <span className="nickname2">{cmt.nickName}</span>
+                                <span className="created-date">{new Date(cmt.dateTime).toLocaleString()}</span>
                             </div>
 
                             <div className="comment-content-container">

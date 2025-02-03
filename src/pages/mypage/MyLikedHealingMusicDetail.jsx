@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/HealingCommunity/HealingMusic/MyHealingMusicDetail.css";
 
-const MyHealingMusicDetail = () => {
+const MyLikedHealingMusicDetail = () => {
     const { musicId } = useParams();
     const navigate = useNavigate();
     const [healingMusic, setHealingMusic] = useState(null);
@@ -127,4 +127,4 @@ const MyHealingMusicDetail = () => {
     );
 };
 
-export default MyHealingMusicDetail;
+export default MyLikedHealingMusicDetail;
