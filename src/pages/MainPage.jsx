@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios"
 import "../styles/MainPage.css";
 
 function Main() {
   const [index, setIndex] = useState(0);
+  const [blogs, setBlogs] = useState([]);
+
   const slides = [
     "../src/assets/images/slide1.png",
     "../src/assets/images/slide2.png",
@@ -17,8 +20,27 @@ function Main() {
     }, 4000); // 4초 간격
 
     return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 해제
+
   }, [slides.length]);
 
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
+    axios
+      .get('http://localhost:8080/blog',{
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    })
+      .then((response) => {
+        setBlogs(response.data); // 응답받은 데이터를 state에 저장 
+      }
+    )
+      .catch((error) => {
+        console.error("Failed to fetch blog data", error);
+      });
+  }, []);
+  
   return (
     <>
       <div>
@@ -118,7 +140,41 @@ function Main() {
         <div className="healing-space-news">
           <img src="../src/assets/images/healingspacenews.png" alt="힐링 서비스 뉴스 로고" />
         </div>
+        
+        <p> 아래 블로그들은 실제 Naver 블로그를 크롤링 한 데이터입니다. </p>
+
+         {/* 힐링 블로그 카드 나열 */}
+         <div className="healing-blog-container">
+          {blogs.length > 0 ? (
+            <div className="blog-grid">
+
+              {blogs.map((blog) => (
+                <div className="blog-card" key={blog.id}>
+
+                  <Link to={blog.link} target="_blank">
+
+                    <div className="blog-content">
+                      <h4 style={{ textAlign: "left" }}>{blog.title}</h4>
+                      <p style={{ textAlign: "left" }}>{blog.author}</p>
+                      {/* <img className="profile-img" src={blog.profile_img} alt="Profile" /> */}
+                    </div>
+
+                    <div className="blog-thumbnail">
+                      <img src={blog.thumbnail} alt="Thumbnail" />
+                    </div>
+
+                  </Link>
+                </div>
+              ))}
+
+            </div>
+          ) : (
+            <p>Loading blogs...</p>
+          )}
+        </div>
+
         {/* 힐링 스페이스 뉴스 로고 종단점 */}
+
       </div>
     </>
   );
