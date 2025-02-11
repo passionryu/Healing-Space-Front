@@ -26,21 +26,21 @@ function Main() {
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
     axios
-      .get('http://localhost:8080/blog',{
+      .get('http://localhost:8080/blog', {
         headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
-    })
+      })
       .then((response) => {
         setBlogs(response.data); // 응답받은 데이터를 state에 저장 
       }
-    )
+      )
       .catch((error) => {
         console.error("Failed to fetch blog data", error);
       });
   }, []);
-  
+
   return (
     <>
       <div>
@@ -67,10 +67,10 @@ function Main() {
         {/* About US 시작점 */}
         <div className="about-us-container">
           {/* 왼쪽 이미지 영역 */}
-          <Link to ="/about-us">
-          <div className="about-us-image">
-            <img src="../src/assets/images/Logo3.png" alt="Healing Space" />
-          </div>
+          <Link to="/about-us">
+            <div className="about-us-image">
+              <img src="../src/assets/images/Logo3.png" alt="Healing Space" />
+            </div>
           </Link>
 
           {/* 오른쪽 텍스트 영역 */}
@@ -98,14 +98,15 @@ function Main() {
         <p>원하는 서비스를 마음껏 사용하세요.💓 </p>
 
         <div className="healing-program-container">
+
           <div className="card">
             <div>
-              <img src="../src/assets/images/dewcalendar.png" alt="이미지" />
+              <img src="../src/assets/images/healingmusicsharing.png" alt="이미지" />
             </div>
             <div className="card-text">
-              <Link to="/healing-program">
-                <h3>Healing Program</h3>
-                <p>We prepare various healing program for you 😉</p>
+              <Link to={"/ai-service-main"}>
+                <h3>AI Healing Service</h3>
+                <p>Healing Space's AI service will response for you.😉</p>
               </Link>
             </div>
           </div>
@@ -116,23 +117,24 @@ function Main() {
             </div>
             <div className="card-text">
               <Link to="/healing-store-main">
-              <h3>Healing Store</h3>
-              <p>Why don't you buy some healing stuff for yourself? 😎</p>
+                <h3>Healing Store</h3>
+                <p>Why don't you buy some healing stuff for yourself? 😎</p>
               </Link>
             </div>
           </div>
 
           <div className="card">
             <div>
-              <img src="../src/assets/images/healingmusicsharing.png" alt="이미지" />
+              <img src="../src/assets/images/dewcalendar.png" alt="이미지" />
             </div>
             <div className="card-text">
-            <Link to={"/ai-service-main"}>
-              <h3>AI Service</h3>
-              <p>Healing Space's AI service will response for you.😉</p>
+              <Link to="/healing-program">
+                <h3>Healing Community</h3>
+                <p>We prepare various healing Community for you 😉</p>
               </Link>
             </div>
           </div>
+
         </div>
         {/* 힐링 프로그램 요소 종단점 */}
 
@@ -140,11 +142,11 @@ function Main() {
         <div className="healing-space-news">
           <img src="../src/assets/images/healingspacenews.png" alt="힐링 서비스 뉴스 로고" />
         </div>
-        
+
         <p> 아래 블로그들은 실제 Naver 블로그를 크롤링 한 데이터입니다. </p>
 
-         {/* 힐링 블로그 카드 나열 */}
-         <div className="healing-blog-container">
+        {/* 힐링 블로그 카드 나열 */}
+        <div className="healing-blog-container">
           {blogs.length > 0 ? (
             <div className="blog-grid">
 

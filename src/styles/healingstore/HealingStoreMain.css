@@ -1,8 +1,10 @@
+
+
 .healing-store-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 화면 전체 높이 */
+    height: 90vh; /* 화면 전체 높이 */
     /* background-color: #f4f4f4; /* 배경색 (선택 사항) */
 }
 
