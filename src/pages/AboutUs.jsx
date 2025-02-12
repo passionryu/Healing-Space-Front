@@ -9,12 +9,12 @@ const AboutUs = () => {
       <div className="about-us-container">
 
         {/* 왼쪽 이미지 영역 */}
-        <div className="about-us-image">
-          <img src="../src/assets/images/Logo3.png" alt="Healing Space" />
+        <div className="about-us-page-image">
+          <img src="../src/assets/images/slide_2.png" alt="Healing Space" />
         </div>
 
         {/* 오른쪽 텍스트 영역 */}
-        <div className="about-us-text">
+        {/* <div className="about-us-text">
           <h1>About Us</h1>
           <h4>Healing Space는 마음의 평안과 삶의 치유를 추구하는 모든 사람들을 위한 공간입니다.</h4>
           <h4>우리는 현대인의 지친 마음을 돌보고, 스스로를 사랑하는 방법을 다시 발견할 수 있도록 돕는 데 초점을 맞추고 있습니다.</h4>
@@ -25,17 +25,10 @@ const AboutUs = () => {
 
           <br></br>
           <h4>*Team Healing-Space</h4>
-        </div>
+        </div> */}
 
       </div>
 
-      {/* <div className="year">
-        <br></br>
-        <h2>Company History</h2>
-
-        <p style={{textAlign : "left"}}> <strong>start :</strong> 2025.01.28 </p>
-
-      </div> */}
     </div>
   );
 };

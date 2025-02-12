@@ -17,11 +17,20 @@ function Main() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % slides.length); // 다음 슬라이드로 이동
-    }, 6000); // 4초 간격
+    }, 10000); // 초 간격
 
     return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 해제
 
   }, [slides.length]);
+
+  // 수동 슬라이드 이동
+  const handlePrev = () => {
+    setIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+  };
+
+  const handleNext = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
@@ -44,14 +53,42 @@ function Main() {
   return (
     <>
       <div>
-        {/* SLIDER 시작점 */}
+
+        {/* SLIDER 시작 */}
         <section>
+          <div className="slider-container">
+            <button className="prev-button" onClick={handlePrev}>
+              ◀
+            </button>
+            <div className="slider">
+              <div
+                className="slide-track"
+                style={{
+                  transform: `translateX(-${index * 100}%)`,
+                  transition: "transform 1.2s ease",
+                }}
+              >
+                {slides.map((slide, i) => (
+                  <div className="slide" key={i}>
+                    <img src={slide} alt={`슬라이드 ${i + 1}`} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <button className="next-button" onClick={handleNext}>
+              ▶
+            </button>
+          </div>
+        </section>
+        {/* SLIDER 종료 */}
+        {/* SLIDER 시작점 */}
+        {/* <section>
           <div className="slider">
             <div
               className="slide-track"
               style={{
                 transform: `translateX(-${index * 100}%)`, // 슬라이드 위치 조정
-                transition: "transform 0.9s ease", // 부드러운 이동 효과
+                transition: "transform 1.2s ease", // 부드러운 이동 효과
               }}
             >
               {slides.map((slide, i) => (
@@ -61,7 +98,7 @@ function Main() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
         {/* SLIDER 종단점 */}
 
         {/* About US 시작점 */}
@@ -75,14 +112,22 @@ function Main() {
 
           {/* 오른쪽 텍스트 영역 */}
           <div className="about-us-text">
-            <h1>About Us</h1>
-            <h4>Healing Space는 마음의 평안과 삶의 치유를 추구하는 모든 사람들을 위한 공간입니다.</h4>
-            <h4>우리는 현대인의 지친 마음을 돌보고, 스스로를 사랑하는 방법을 다시 발견할 수 있도록 돕는 데 초점을 맞추고 있습니다.</h4>
-            <h4>저희 Healing Space는 여러 가지의 온라인 힐링 프로그램, 엄선된 힐링 용품 쇼핑몰, 유익한 힐링 투어 정보 공유 서비스를 통해 여러분의 삶에 작은 변화와 따뜻한 위로를 더하고자 합니다.</h4>
-            <h4>Healing Space는 단순한 서비스 그 이상입니다. 여러분이 자신을 더 깊이 이해하고, 스스로를 소중히 여기는 여정을 함께 걸어가는 동반자가 되고 싶습니다.</h4>
-            <h4>함께 회복과 평안이 넘치는 세상을 만들어갑시다.</h4>
-            <br />
-            <h4>*Team Healing-Space</h4>
+            <h1 style={{ textAlign: "left" }}>  Introduce </h1>
+            <h4>Healing Space Web Service는 AI를 활용한 힐링 프로그램 및 다양한 서비스를 제공하는 웹 서비스입니다. <br />
+              눈이 부시도록 고도로 발전한 대한민국을 돌아보면, 그 간 얼마나 많은 이들이 땀을 흘리며 이 사회를 일궈왔는지를 모르겠습니다. </h4>
+            <h4>제 주변의 사람들만 보아도, 참 많은 이들이 본인의 자리에서 열정을 다하여 자신의 본분에 최선을 다합니다.<br />
+              하지만 그들이 꿈을 가지고 열심히 달려감에도 불구하고, 가꿈은 본인인 스스로가 얼마나 지쳐있는 상태인지 돌아보지 못하곤 하는 것 같습니다.</h4>
+
+            <h4>그들을 향해 제가 학교에서 배운 기술로 조그마한 위안이며 격려의 편지라도 누군가 써줄 수 있으면 좋지 않을까 하는 마음에, 대학교 2~3학년 시절에 조그맣게 꿈을 꾸어 봤습니다.</h4>
+            <h4>비록 지금은 이렇게 미약하게 시작하나, 언젠가는 사람들에게 유익하게 쓰일 수 있는 훌륭한 응용 소프트웨어를 개발하는 첫걸음이 되지 않을까 기대합니다.</h4>
+            <h4>마지막으로 제가 가장 좋아하는 인사말로 간단한 소개를 마무리하며, <br/>
+            이제 지난 방학 6주간 혼자서 매일 아침 카페에 출근하며 개발한 저만의 웹 서비스를 배포합니다.</h4>
+
+            <h4>평안하세요! 🌿</h4>
+            <p style={{ textAlign: "right", fontStyle: "italic", color: "gray"  }}>
+              - Healing Space 개발자. 류성열
+            </p>
+
           </div>
         </div>
         {/* About US 종단점 */}

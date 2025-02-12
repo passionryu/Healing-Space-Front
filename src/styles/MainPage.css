@@ -15,6 +15,38 @@
   
 }
 
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 24px;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 /* 각 슬라이드 */
 .slide {
   width: 100%; /* 슬라이더 컨테이너와 동일한 너비 */

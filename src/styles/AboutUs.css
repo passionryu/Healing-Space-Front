@@ -8,12 +8,17 @@
   }
   
   /* 이미지 스타일 */
-  .about-us-image img {
-    max-width: 500px; /* 이미지 최대 너비 */
+  .about-us-page-image img {
+    width: 100%; /* 이미지 최대 너비 */
     height: auto; /* 비율 유지 */
     border-radius: 10px; /* 둥근 모서리 (선택 사항) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+    transition: transform 0.3s ease;
   }
+
+.about-us-page-image img:hover{
+  transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+}
   
   /* 텍스트 영역 스타일 */
   .about-us-text {
