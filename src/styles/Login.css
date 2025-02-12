@@ -63,6 +63,7 @@
   
   .login-btn:hover {
     background-color: #ab9839;
+    transform: scale(1.10);
   }
   
   /* 회원가입 유도 링크 스타일 */

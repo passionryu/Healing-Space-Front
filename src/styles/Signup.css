@@ -1,6 +1,60 @@
+.signup-header{
+  text-align: left; /* 좌측 정렬 */
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: left; /* 설명도 왼쪽 정렬 */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.line {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+.line1 {
+  animation-delay: 0s, 2.5s;
+}
+
+.line2 {
+  animation-delay: 3.2s, 5s;
+}
+
+.line3 {
+  animation-delay: 5.5s, 10s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 /* 서비스 로고 */
 .logo-container img {
-    height: 150px;
+    height: 170px;
+    display: block; /* 블록 요소로 변경하여 정렬 효과 적용 */
+    padding-left: 4px;
   }
   
   /* 전체 페이지 스타일 */
@@ -10,19 +64,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     background-color: #f7f7f7; /* 배경 색상 */
   }
-  
+
   .signup-card {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px #917f27;
-    width: 100%;
-    max-width: 400px;
+    width: 800px;
+    height: 610px;
     text-align: center;
   }
+
+  .login-input-form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 좌우 간격 조정 */
+    width: 100%;
+  }
+  
+  .login-left,
+  .login-right {
+    flex: 1; /* 좌우 균등한 크기 */
+    display: flex;
+    flex-direction: column;
+  }
+    
   
   /* 아이디/비밀번호 입력 칸 스타일 */
   .input-container {
@@ -78,5 +147,6 @@
   
   .signup-btn:hover {
     background-color: #ab9839;
+    transform: scale(1.10);
   }
   
