@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import "../styles/Mypage.css";
 import axios from 'axios';
 
@@ -62,13 +62,13 @@ const Mypage = () => {
 
     return (
 
-    <>
-        {/* 내 정보 카드 */}
-        <div className="profile-card">
-            <div className="profile-image">
-                <img src="../src/assets/images/profile.jpg" alt="Profile" />
-            </div>
-             {/* <div className="profile-image" onClick={handleProfileImageClick}>
+        <>
+            {/* 내 정보 카드 */}
+            <div className="profile-card">
+                <div className="profile-image">
+                    <img src="../src/assets/images/profile.jpg" alt="Profile" />
+                </div>
+                {/* <div className="profile-image" onClick={handleProfileImageClick}>
              <img src={userInfo.ProfileImagePath ? `http://localhost:8080/images/Profile/${userInfo.ProfileImagePath}` : "src/assets/images/profile.jpg"} alt="Profile" /> 
              
                     <input
@@ -79,48 +79,48 @@ const Mypage = () => {
                         onChange={handleImageChange}
                     />
                 </div> */}
-            <div className="profile-text">
-                <p className="profile-id">ID: {userInfo.nickName}</p>
-                <p className="profile-intro">Name: {userInfo.username}</p>
+                <div className="profile-text">
+                    <p className="profile-id">ID: {userInfo.nickName}</p>
+                    <p className="profile-intro">Name: {userInfo.username}</p>
+                </div>
             </div>
-        </div>
 
-        {/* 마이페이지 옵션 */}
-        <div className="mypage">
-        <h2>Diary</h2>
-        <div className="mypage-option">
-            <Link to="/diary-list">
-                <h3>내 일기장 조회</h3>
-            </Link>
-        </div>
+            {/* 마이페이지 옵션 */}
+            <div className="mypage">
+                <h2>Diary</h2>
+                <div className="mypage-option">
+                    <Link to="/diary-list">
+                        <h3>내 일기장 조회</h3>
+                    </Link>
+                </div>
 
-        <h2>Healing Message</h2>
-        <div className="mypage-option">
-            <Link to="/my-healing-message-list">
-                <h3>내가 올린 힐링 메시지 조회</h3>
-            </Link>
-        </div>
+                <h2>Healing Message</h2>
+                <div className="mypage-option">
+                    <Link to="/my-healing-message-list">
+                        <h3>내가 올린 힐링 메시지 조회</h3>
+                    </Link>
+                </div>
 
-        <div className="mypage-option">
-            <Link to="/liked-healing-message-list">
-                <h3>내가 좋아요 누른 힐링 메시지 조회</h3>
-            </Link>
-        </div>
+                <div className="mypage-option">
+                    <Link to="/liked-healing-message-list">
+                        <h3>내가 좋아요 누른 힐링 메시지 조회</h3>
+                    </Link>
+                </div>
 
-        <h2>Healing Music</h2>
-        <div className="mypage-option">
-            <Link to="/my-healing-music-list">
-                <h3>내가 올린 힐링 뮤직 조회</h3>
-            </Link>
-        </div>
+                <h2>Healing Music</h2>
+                <div className="mypage-option">
+                    <Link to="/my-healing-music-list">
+                        <h3>내가 올린 힐링 뮤직 조회</h3>
+                    </Link>
+                </div>
 
-        <div className="mypage-option">
-            <Link to="/my-liked-healing-music-list">
-                <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
-            </Link>
-        </div>
+                <div className="mypage-option">
+                    <Link to="/my-liked-healing-music-list">
+                        <h3>내가 좋아요 누른 힐링 뮤직 조회</h3>
+                    </Link>
+                </div>
 
-        {/* <h2>AI Service</h2>
+                {/* <h2>AI Service</h2>
         <div className="mypage-option">
             <h3>내 AI Letter 조회</h3>
         </div>
@@ -129,18 +129,32 @@ const Mypage = () => {
             <h3>내 Today SnapShot 조회회</h3>
         </div> */}
 
-        <h2> KaKao Service </h2>
-        <div className="mypage-option">
-            <h3>힐링 메시지 카카오톡 전송 서비스</h3>
-        </div>
-        
+                <h2> KaKao Service </h2>
+                <div className="mypage-option">
+                    <h3>힐링 메시지 카카오톡 전송 서비스</h3>
+                </div>
 
-        <h2>Customer Service</h2>
-        <div className="mypage-option">
-            <h3>개발자에게 문의하기 </h3>
-        </div>
-        </div>
-    </>
+                <h2>Customer Service</h2>
+                <div className="mypage-option">
+                    <h3>개발자에게 문의하기 </h3>
+                </div>
+
+                {/* <h2>Profile & Logout</h2> */}
+                <div className="profile-logout">
+                    {/* 내 프로필 조회 버튼 */}
+                    <div className="button-box profile">
+                        <button>내 프로필 조회</button>
+                    </div>
+
+                    {/* 로그아웃 버튼 */}
+                    <div className="button-box logout">
+                        <button>로그아웃</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </>
     );
 };
 
