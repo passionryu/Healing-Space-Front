@@ -52,7 +52,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
         {/* 서비스 로고 */}
-        <div className="logo-container">
+        <div className="login-logo-container">
           <img src="../src/assets/images/main_logo.png" alt="Main Logo" className="main-logo" />
         </div>
 
