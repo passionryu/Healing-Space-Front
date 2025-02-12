@@ -157,12 +157,12 @@ function Main() {
 
                     <div className="blog-content">
                       <h4 style={{ textAlign: "left" }}>{blog.title}</h4>
-                      <p style={{ textAlign: "left" }}>{blog.author}</p>
+                      <p style={{ textAlign: "left" }}> 블로그 작성자 : {blog.author}</p>
                       {/* <img className="profile-img" src={blog.profile_img} alt="Profile" /> */}
                     </div>
 
                     <div className="blog-thumbnail">
-                      <img src={blog.thumbnail} alt="Thumbnail" />
+                      <img src={blog.profile_img} alt="Thumbnail" />
                     </div>
 
                   </Link>
