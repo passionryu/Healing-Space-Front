@@ -61,7 +61,7 @@ const Header = () => {
 
         {/* 음악 삽입 부분 */}
         <div className="audio-container">
-          <audio ref={audioRef} controls>
+          <audio ref={audioRef} controls autoplay  >
             <source src="../src/assets/audio/YouTube.mp3" type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
