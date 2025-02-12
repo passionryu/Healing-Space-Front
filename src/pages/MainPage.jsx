@@ -8,16 +8,16 @@ function Main() {
   const [blogs, setBlogs] = useState([]);
 
   const slides = [
-    "../src/assets/images/slide1.png",
-    "../src/assets/images/slide2.png",
-    "../src/assets/images/slide3.png",
+    "../src/assets/images/slide_2.png",
+    "../src/assets/images/slide_3.png",
+    "../src/assets/images/slide_1.png",
   ];
 
   // 슬라이드 자동 변경 로직
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % slides.length); // 다음 슬라이드로 이동
-    }, 4000); // 4초 간격
+    }, 6000); // 4초 간격
 
     return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 해제
 
