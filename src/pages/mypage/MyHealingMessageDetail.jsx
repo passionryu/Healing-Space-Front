@@ -101,7 +101,7 @@ const HealingMessageDetail = () => {
             </div>
 
             <div className="content">
-                <p>{healingMessage.content}</p>
+                <p style={{textAlign : "left"}} >{healingMessage.content}</p>
             </div>
             <div className="footer">
                 <p>❤️ {healingMessage.like} likes</p>
