@@ -78,9 +78,12 @@ const AiLetterResult = () => {
       <div className="ai-letter-string">
         <h3 className="result-title">{aiResponse.title}</h3>
         <p className="result-content">{formatTextWithLineBreaks(aiResponse.content)}</p>
+        {/* <p className="result-content">{aiResponse.content}</p> */}
 
         <h4 className="result-footer" style={{ textAlign: "right" }}>
-          *보내는 이 : 언제나 당신을 응원하는 Healing Space AI
+          -보내는 이 :<br/>  
+          오늘 당신의 고민에 조그마한 위안이 되기를 바라며 <br/>  
+          언제나 당신을 응원하는 Team Healing Space 
         </h4>
       </div>
 

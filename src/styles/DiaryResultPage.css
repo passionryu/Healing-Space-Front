@@ -1,0 +1,22 @@
+.result-container {
+  width: 1000px ; 
+  display: flex;
+  flex-direction: column; /* 요소들을 세로로 배치 */
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  margin-top : 50px;
+  gap : 20px;
+}
+
+.result-page-card{ 
+  max-height: 1000px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result h5{
+  color: gray;
+}

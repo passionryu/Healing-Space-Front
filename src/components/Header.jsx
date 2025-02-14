@@ -6,11 +6,11 @@ const Header = () => {
   const audioRef = useRef(null); // audio 요소에 대한 참조
 
   // 페이지가 로드될 때 자동으로 음악 재생
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.play(); // 음악 자동 재생
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (audioRef.current) {
+  //     audioRef.current.play(); // 음악 자동 재생
+  //   }
+  // }, []);
 
   return (
     <header>
@@ -62,7 +62,7 @@ const Header = () => {
         {/* 음악 삽입 부분 */}
         <div className="audio-container">
           <p>Click here <br/> to play music👉</p>
-          <audio ref={audioRef} controls autoplay  >
+          <audio ref={audioRef} controls   >
             <source src="../src/assets/audio/YouTube.mp3" type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>

@@ -66,22 +66,13 @@ const DiaryPage = () => {
 
       <div className="diary-card2">
         <div className="diary-header">
+          
           <h1 style={{ textAlign: "left" }}>Diary</h1>
 
           <div className="message-banner">
             <p>{message}</p>
           </div>
 
-          {/* <p
-            style={{
-              cursor: "pointer",
-              color: "#917f27",
-              textDecoration: "underline",
-            }}
-            onClick={() => (window.location.href = "https://www.youtube.com/")}
-          >
-            how to use ?
-          </p> */}
         </div>
 
         <form onSubmit={handleSubmit}>
