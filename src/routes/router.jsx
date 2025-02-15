@@ -40,6 +40,7 @@ import MyLikedHealingMusicList from '../pages/mypage/MyLikedHealingMusicList';
 import HealingMusicCreate from '../pages/HealingService/HealingCommunity/HealingMusic/HealingMusicCreate';
 import MyHealingMusicDetail from '../pages/mypage/MyHealingMusicDetail';
 import MyLikedHealingMusicDetail from '../pages/mypage/MyLikedHealingMusicDetail';
+import MyInfoPage from '../pages/mypage/MyInfo';
 
 function AppRouter() {
   return (
@@ -85,6 +86,7 @@ function AppRouter() {
         <Route path='/healing-music-create' element={<HealingMusicCreate/>}/>
         <Route path='/my-healing-music-detail/:musicId' element={<MyHealingMusicDetail/>}/>
         <Route path='/liked-healing-music-detail/:musicId' element={<MyLikedHealingMusicDetail/>}/>
+        <Route path='/myinfo' element={<MyInfoPage/>}/>
       </Routes>
   
   );

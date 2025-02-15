@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios"; // axios 임포트 추가
+import { useNavigate } from "react-router-dom";
 import "../styles/Signup.css";
 
 // 회원가입 요청 함수
@@ -13,6 +14,7 @@ const signup = async (formData) => {
 };
 
 const Signup = () => {
+  const navigate = useNavigate(); // 네비게이션 훅 사용
   const [formData, setFormData] = useState({
     username: "",
     nickName: "",
@@ -32,11 +34,14 @@ const Signup = () => {
   };
 
   const handleSubmit = async (e) => {
+    
+
     e.preventDefault();
 
     try {
       const result = await signup(formData); // signup 함수 호출
       alert("Sign Up Successful");
+      navigate("/login"); // 회원가입 성공 후 로그인 페이지로 이동
     } catch (error) {
       alert("An error occurred. Please try again.");
     }

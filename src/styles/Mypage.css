@@ -1,14 +1,14 @@
 /* Mypage.css */
 .profile-card {
   display: flex;
-  width: 500px;
+  width: 600px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  gap: 100px;
+  gap: 50px;
   transition: transform 0.2s ease;
   /* 호버 시 크기 변화를 부드럽게 */
 }
@@ -26,8 +26,7 @@
 }
 
 .profile-text {
-  margin-left: 40px;
-
+  padding-top: 20px;
   font-size: 30px;
   color: #333;
 }
@@ -40,6 +39,43 @@
 .profile-intro {
   font-style: italic;
   color: #555;
+}
+
+.mypage-ai{
+  padding-top : 10px;
+  padding-bottom: 5px;
+  display : flex;
+  justify-content: space-between; /* 처음, 중간, 끝에 배치 */
+  align-items: center; /* 버튼 높이 정렬 */
+  width: 100%; /* 부모 요소가 차지하는 너비 */
+}
+
+.mypage-button {
+  flex: 1; /* 버튼이 동일한 비율로 분배됨 */
+  display: flex;
+  justify-content: center; /* 버튼 내부에서 중앙 정렬 */
+}
+
+.mypage-button button{
+  /* background-color: #917f27; */
+  width: 300px;
+  height: 60px;
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color : black;
+
+  font-size: 18px; /* 글씨 크기 */
+  font-weight: bold; /* 글씨 두께 */
+}
+
+.mypage-button button:hover{
+  background-color: #ffffff;
+  border-color: #f0eeee;
+  color :#917f27;
+  transform: scale(1.15);
 }
 
 /* 마이페이지 옵션 스타일 */
@@ -57,7 +93,7 @@
 }
 
 .mypage-option:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   /* 호버 시 5% 커지도록 설정 */
   /* color: #917f27;        
     transition: all 0.3s ease; */
