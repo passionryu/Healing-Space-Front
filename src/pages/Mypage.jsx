@@ -109,7 +109,9 @@ const Mypage = () => {
                     </div>
 
                     <div className="mypage-button">
-                        <button>My AI Letter History</button>
+                        <Link to="/my-ai-letter-history">
+                            <button>My AI Letter History</button>
+                        </Link>
                     </div>
 
                     <div className="mypage-button">

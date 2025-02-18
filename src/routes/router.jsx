@@ -41,6 +41,9 @@ import HealingMusicCreate from '../pages/HealingService/HealingCommunity/Healing
 import MyHealingMusicDetail from '../pages/mypage/MyHealingMusicDetail';
 import MyLikedHealingMusicDetail from '../pages/mypage/MyLikedHealingMusicDetail';
 import MyInfoPage from '../pages/mypage/MyInfo';
+import MyAiLetterList from '../pages/mypage/MyAiLetterList/MyAiLetterList';
+import MyAiLetterDetail from '../pages/mypage/MyAiLetterList/MYAiLetterDetail';
+
 
 function AppRouter() {
   return (
@@ -87,6 +90,8 @@ function AppRouter() {
         <Route path='/my-healing-music-detail/:musicId' element={<MyHealingMusicDetail/>}/>
         <Route path='/liked-healing-music-detail/:musicId' element={<MyLikedHealingMusicDetail/>}/>
         <Route path='/myinfo' element={<MyInfoPage/>}/>
+        <Route path='/my-ai-letter-history' element={<MyAiLetterList/>}/>
+        <Route path='/my-ai-letter-detail/:AiRecommendMessageId' element={<MyAiLetterDetail/>}/>
       </Routes>
   
   );
