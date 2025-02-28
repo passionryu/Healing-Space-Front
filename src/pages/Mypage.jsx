@@ -115,7 +115,7 @@ const Mypage = () => {
                     </div>
 
                     <div className="mypage-button">
-                        <button>My AI Today's SnapShot History </button>
+                        <button>My AI ChatBot History </button>
                     </div>
                 </div>
 
