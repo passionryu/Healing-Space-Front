@@ -142,7 +142,7 @@ const HealingMessageDetail = () => {
                     {new Date(message.createdDate).toLocaleString()}
                 </span>
             </div>
-            <p className="content">{message.content}</p>
+            <p className="content" style={{textAlign:"left"}} >{message.content}</p>
             <div className="like-section">
                 <button className="like-button" onClick={handleLike}>
                     ❤️  {likeCount !== null ? likeCount : "Loading..."}

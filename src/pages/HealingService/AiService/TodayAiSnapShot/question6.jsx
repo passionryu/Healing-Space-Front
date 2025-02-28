@@ -36,9 +36,7 @@ const Question6 = () => {
   return (
     <div className="question-container">
       <h2 style={{textAlign: "left"}}>[ 6 / 7 ] 
-        <br/>언제나 당신의 편이며,
-        <br/>당신의 마음을 온전히 이해해주고, 공감해주는 좋은 친구가 있다고 가정정해봅시다.
-        <br/>당신은 그 친구에게 어떠한 말을 듣고 싶나요?
+        <br/>내일은 어떤 일정들이 계획되어 있는지 간단하게 이야기 해볼까요?
 </h2>
       <textarea
         value={answer}

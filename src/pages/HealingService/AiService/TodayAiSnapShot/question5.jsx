@@ -36,9 +36,8 @@ const Question5 = () => {
   return (
     <div className="question-container">
       <h2 style={{textAlign: "left"}}>[ 5 / 7 ]
-      <br/>돌아오는 한주간 당신에게는 원하는 무엇이든 할 수 있는 돈과 시간이 주어집니다.💰🕒
-      <br/>당신은 그것들을 이용해서 무엇을 하고싶나요?🤔
-      <br/>여행이든...좋아하는 음식을 마음껏 먹든! 뭐든 좋아요! </h2>
+      <br/>오늘 하루 다사다난한 일이 있었네요 !
+      <br/>오늘 하루도 고생한 나 자신에게 해주고 싶은 말이 있다면? 🤔</h2>
       <textarea
         value={answer}
         onChange={handleAnswerChange}

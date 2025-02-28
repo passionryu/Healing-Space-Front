@@ -37,8 +37,8 @@ const navigate = useNavigate();
   return (
     <div className="question-container">
       <h2 style={{textAlign : "left"}}> [ 1 / 7 ] 
-        <br/> 사랑하는 당신 ! 
-        <br/> 오늘 당신의 기분은 어떠한가요?
+        <br/> 오늘 하루를 먼저 가볍게 돌아보고자 합니다.
+        <br/> 오늘 어떤 일들이 있었는지 간단히 이야기 해볼까요?
         <br/> 당신의 하루가 궁금해요😊 </h2>
       <textarea
         value={answer}
