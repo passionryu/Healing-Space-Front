@@ -43,6 +43,7 @@ import MyLikedHealingMusicDetail from '../pages/mypage/MyLikedHealingMusicDetail
 import MyInfoPage from '../pages/mypage/MyInfo';
 import MyAiLetterList from '../pages/mypage/MyAiLetterList/MyAiLetterList';
 import MyAiLetterDetail from '../pages/mypage/MyAiLetterList/MYAiLetterDetail';
+import Chatting from '../pages/HealingService/AiService/AiChatBot/Chatting';
 
 
 function AppRouter() {
@@ -92,6 +93,7 @@ function AppRouter() {
         <Route path='/myinfo' element={<MyInfoPage/>}/>
         <Route path='/my-ai-letter-history' element={<MyAiLetterList/>}/>
         <Route path='/my-ai-letter-detail/:AiRecommendMessageId' element={<MyAiLetterDetail/>}/>
+        <Route path='/chatting' element={<Chatting/>}/>
       </Routes>
   
   );

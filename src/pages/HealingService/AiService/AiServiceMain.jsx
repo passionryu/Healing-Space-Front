@@ -83,27 +83,26 @@
 
           {/* 두 번째 카드: Today's AI SnapShot */}
           <div className="service-card"
-            onClick={() => navigate("/question1")} // 클릭 시 AiLetter 페이지로 이동
+            onClick={() => navigate("/chatting")} // 클릭 시 AiLetter 페이지로 이동
             style={{ cursor: "pointer" }} // 카드에 클릭 가능한 스타일 추가
           >
             <div className="left-point">
-              <h2 style={{ textAlign: "left" }}>[ Today's AI SnapShot ]</h2>
+              <h2 style={{ textAlign: "left" }}>[ AI ChatBot  ]</h2>
               <img
-                src="../src/assets/images/Ai_Services/snapshotimg.jpg" // 적절한 이미지 경로로 변경
+                src="../src/assets/images/Ai_Services/chatbot.png" // 적절한 이미지 경로로 변경
                 alt="Today's AI SnapShot"
                 className="service-image"
               />
             </div>
             <p className="service-description" style={{ textAlign: "left" }}>
-              Today's AI SnapShot은 오늘 하루에 대한 질문에 하나하나 답을 하며, 당신에게 평안과 위로의 메시지를 전해주는 서비스 입니다.<br/>
-              하루를 차분히 마무리하며 스스로를 이해하고, 내일을 향해 나아갈 힘을 얻을 수 있도록 돕는 서비스입니다.
+              AI ChatBot은 당신의 마음을 공감해주고 격려해주는 AI 심리상담 챗봇입니다.<br/>
+              AI 심리상담 챗봇은 당신을 함부로 판단하지 않고,당신의 고민을 그 누구에게도 이야기 하지 않습니다.<br/>
+              <br/>
+              * PS. 당신이 AI 심리상담 챗봇과 대화한 내용은 데이터베이스에 저장이 되지 않으니, 안심하세요! 😊
 
-              
-            <h5 style={{ textAlign: "left" }}> ❓ 나를 돌아보는 7가지의 정해진 질문 ❓ </h5>
+            <h5 style={{ textAlign: "left" }}> 🤔 현재의 고민을 조용히 상담 🤔 </h5>
 
-            <h5 style={{ textAlign: "left" }}> ⏰ 나에 대해 조금씩 알아가는 시간...😊 ⏰ </h5>
-
-            <h5 style={{ textAlign: "left" }}> 🔒 남들은 볼 수 없는 나만의 기록 🔒</h5>
+            <h5 style={{ textAlign: "left" }}> 🔒 남들은 볼 수 없는 나와 챗봇만의 비밀 채팅 🔒</h5>
 
             <h5 style={{ textAlign: "left" }}> 💌 AI 격려와 응원 편지 💌 </h5>
 
