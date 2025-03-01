@@ -1,7 +1,59 @@
-.chat-container {
+/* 전체 페이지를 좌우 정렬 */
+.chatting-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 900px;
-    margin: auto;
+    height: 100vh;
+    gap: 30px; /* 좌우 간격 */
+    padding: 20px;
+}
+
+/* 좌측 메타 데이터 (텍스트 + 이미지) */
+.meta-data {
+    width: 200px;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.meta-data:hover{
+    transform: scale(1.10);
+}
+
+.meta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meta-image {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.meta-data h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.meta-data p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 우측 채팅 박스 */
+.chat-container {
+    width: 750px;
     display: flex;
     flex-direction: column;
     height: 80vh;
@@ -11,18 +63,17 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* 채팅 박스 */
 .chat-box {
-    width : 900px;
     flex: 1;
     overflow-y: auto;
-    /* padding: 15px; */
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
+    padding: 15px;
 }
 
 .message {
-    margin-left: 10px;
     max-width: 80%;
     padding: 10px;
     margin-bottom: 10px;
@@ -32,8 +83,6 @@
 }
 
 .message.user {
-    margin-top: 10px;
-    margin-right:10px ;
     align-self: flex-end;
     background: #917f27;
     color: white;
@@ -45,11 +94,10 @@
     color: black;
 }
 
+/* 입력창 스타일 */
 .chatting-input-container {
     display: flex;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     background: #fff;
     border-top: 1px solid #ddd;
 }
@@ -75,7 +123,7 @@
     transition: all 0.3s ease;
 }
 
-.chatting-input-container button:hover{
+.chatting-input-container button:hover {
     background-color: #ab9839;
     transform: scale(1.10);
 }
@@ -85,8 +133,9 @@
     cursor: not-allowed;
 }
 
-.chatting-result-button button{
-    width : 98% ; 
+/* 대화 종료 버튼 */
+.chatting-result-button button {
+    width: 98%;
     margin-top: 8px;
     margin-bottom: 10px;
     transition: all 0.3s ease;
@@ -95,7 +144,25 @@
     color: black;
 }
 
-.chatting-result-button button:hover{
+.chatting-result-button button:hover {
     background-color: silver;
     transform: scale(1.05);
+}
+
+/* 반응형 처리: 작은 화면에서는 세로 정렬 */
+@media (max-width: 768px) {
+    .chatting-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meta-data {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .chat-container {
+        width: 100%;
+    }
 }
