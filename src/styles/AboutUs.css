@@ -1,45 +1,74 @@
-/* 전체 컨테이너 스타일 */
+/* 전체 컨테이너 */
 .about-us-container {
-    display: flex; /* 가로 정렬을 위한 flexbox */
-    text-align: left; /* 텍스트 좌측 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    gap: 20px; /* 이미지와 텍스트 사이 간격 */
-    padding: 20px; /* 내부 여백 */
-  }
-  
-  /* 이미지 스타일 */
-  .about-us-page-image img {
-    width: 100%; /* 이미지 최대 너비 */
-    height: auto; /* 비율 유지 */
-    border-radius: 10px; /* 둥근 모서리 (선택 사항) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
-    transition: transform 0.3s ease;
-  }
-
-.about-us-page-image img:hover{
-  transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-  
-  /* 텍스트 영역 스타일 */
-  .about-us-text {
-    flex: 1; /* 텍스트 영역이 남은 공간을 차지하도록 설정 */
-    
-  }
-  
-  .about-us-text h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    
-  }
-  
-  .about-us-text h4 {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
 
-/* second */
+/* 기존 큰 이미지 스타일 */
+.about-us-page-image img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-.year p{
-  padding-left : 20px;
+.about-us-page-image img:hover {
+  transform: scale(1.10);
+}
+
+/* 새로운 컨텐츠 박스 (아래 배치) */
+.about-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  max-width: 1200px;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px; /* 기존 이미지와 간격 */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+/* 왼쪽 작은 이미지 */
+.about-us-small-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* 오른쪽 텍스트 */
+.about-us-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-us-text h4 {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.year {
+  font-style: italic;
+  color: gray;
+  padding-left: 10px;
+}
+
+/* 반응형 (화면이 작아질 때 세로 정렬) */
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .about-us-small-image img {
+    width: 80px;
+  }
 }

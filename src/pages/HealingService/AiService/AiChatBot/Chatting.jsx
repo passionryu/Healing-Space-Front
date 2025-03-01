@@ -91,6 +91,7 @@ const Chatting = () => {
                     대화 종료
                 </button>
             </div>
+            
         </div>
     );
 };

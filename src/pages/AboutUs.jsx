@@ -1,32 +1,35 @@
-// src/pages/AboutUs.jsx
 import React from 'react';
-import "../styles/AboutUs.css"
+import "../styles/AboutUs.css";
 
 const AboutUs = () => {
   return (
+    <div className="about-us-container">
+  
+      <div className="about-us-content">
 
-    <div className="about-us-main">
-      <div className="about-us-container">
-
-        {/* 왼쪽 이미지 영역 */}
-        <div className="about-us-page-image">
-          <img src="../src/assets/images/slide_2.png" alt="Healing Space" />
+        {/* 왼쪽 작은 이미지 */}
+        <div className="about-us-small-image">
+          <img src="../src/assets/images/aboutus.png" alt="Healing Space Logo" />
         </div>
 
-        {/* 오른쪽 텍스트 영역 */}
-        {/* <div className="about-us-text">
-          <h1>About Us</h1>
-          <h4>Healing Space는 마음의 평안과 삶의 치유를 추구하는 모든 사람들을 위한 공간입니다.</h4>
-          <h4>우리는 현대인의 지친 마음을 돌보고, 스스로를 사랑하는 방법을 다시 발견할 수 있도록 돕는 데 초점을 맞추고 있습니다.</h4>
+        {/* 오른쪽 텍스트 */}
+        <div className="about-us-text">
+          
+          <h4>
+            Healing Space는 AI 기반 심리 상담과 힐링 프로그램을 제공하는 웹 서비스입니다.
+            우리는 현대인의 정신적 건강을 위해 다양한 콘텐츠와 서비스를 제공합니다.
+          </h4>
+          <h4>
+            바쁜 일상 속에서 잠시 쉬어갈 수 있는 공간을 마련하여, 
+            여러분의 마음이 편안해지길 바랍니다. 🌿
+          </h4>
+          <p className="year">- Since 2025</p>
+        </div>
 
-          <h4>저희 Healing Space는 여러가지의 온라인 힐링 프로그램, 엄선된 힐링 용품 쇼핑몰, 유익한 힐링 정보 공유 서비스를 통해 여러분의 삶에 작은 변화와 따뜻한 위로를 더하고자 합니다.</h4>
-          <h4>Healing Space는 단순한 서비스 그 이상입니다. 여러분이 자신을 더 깊이 이해하고, 스스로를 소중히 여기는 여정을 함께 걸어가는 동반자가 되고 싶습니다.</h4>
-          <h4>함께 회복과 평안이 넘치는 세상을 만들어갑시다.</h4>
+      </div>
 
-          <br></br>
-          <h4>*Team Healing-Space</h4>
-        </div> */}
-
+      <div className="about-us-page-image">
+        <img src="../src/assets/images/slide_2.png" alt="Healing Space" />
       </div>
 
     </div>
