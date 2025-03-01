@@ -94,18 +94,18 @@
     
   
   /* 아이디/비밀번호 입력 칸 스타일 */
-  .input-container {
+  .signup-input-container {
     margin-bottom: 20px;
   }
   
-  .input-container label {
+  .signup-input-container label {
     display: block;
     font-size: 14px;
     color: #917f27;
     margin-bottom: 5px;
   }
   
-  .input-container input {
+  .signup-input-container input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -115,7 +115,7 @@
     box-sizing: border-box;
   }
   
-  .input-container input:focus {
+  .signup-input-container input:focus {
     border-color: #917f27;
     outline: none;
   }

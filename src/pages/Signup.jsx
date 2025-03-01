@@ -66,7 +66,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div className="login-input-form-container">
             <div className="login-left">
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="username">Username (실제 이름)</label>
                 <input
                   type="text"
@@ -78,7 +78,7 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="nickName">ID (활동명)</label>
                 <input
                   type="text"
@@ -90,7 +90,7 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="phoneNumber">Phone Number</label>
                 <input
                   type="tel"
@@ -104,7 +104,7 @@ const Signup = () => {
             </div>
 
             <div className="login-right">
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -116,7 +116,7 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -128,7 +128,7 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="input-container">
+              <div className="signup-input-container">
                 <label htmlFor="birth">Birth Date</label>
                 <input
                   type="date"

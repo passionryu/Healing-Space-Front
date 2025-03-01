@@ -71,7 +71,7 @@ const Login = () => {
           </div>
 
           {/* 비밀번호 입력 칸 */}
-          <div className="input-container">
+          <div className="pw-input-container">
             <label htmlFor="password">Password</label>
             <input
               type="password"
