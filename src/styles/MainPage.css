@@ -59,22 +59,6 @@
   object-fit: contain; /* 이미지 비율 유지 */
 }
 
-/* 애니메이션 -> 메인 부분에서 js로 대체 */
-/* @keyframes slideAnimation {
-  0% {
-    transform: translateX(0); 
-  }
-  33% {
-    transform: translateX(-100%); 
-  }
-  66% {
-    transform: translateX(-200%); 
-  }
-  100% {
-    transform: translateX(0); 
-  }
-} */
-
 /* About US 부분 */
 
 /* 전체 컨테이너 스타일 */
@@ -135,7 +119,7 @@
   padding: 20px;           /* 컨테이너 여백 */
 }
 
-.card {
+.main-card {
   display: flex;
   width: 600px;            /* 카드 너비 */
   padding: 20px;           /* 카드 안쪽 여백 */
@@ -146,27 +130,27 @@
   transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
 }
 
-.card img {
+.main-card img {
   height: 110px;
 }
 
-.card:hover {
-  transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+.main-card:hover {
+  transform: scale(1.15);  /* 호버 시 5% 커지도록 설정 */
 }
 
-.card:nth-child(1), .card:nth-child(3) {
+.main-card:nth-child(1), .main-card:nth-child(3) {
   align-self: flex-start; /* 1번, 3번 카드를 왼쪽에 정렬 */
 }
 
-.card:nth-child(2) {
+.main-card:nth-child(2) {
   align-self: flex-end;   /* 2번 카드를 오른쪽에 정렬 */
 }
 
-.card h3 {
+.main-card h3 {
   margin-bottom: 10px;    /* 카드 제목과 본문 사이 간격 */
 }
 
-.card p {
+.main-card p {
   font-size: 14px;
   color: #555;            /* 텍스트 색상 */
 }
