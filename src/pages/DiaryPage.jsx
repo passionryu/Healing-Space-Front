@@ -63,20 +63,35 @@ const DiaryPage = () => {
 
   return (
     <div className="diary-container">
+      <div className="diary-meta-data">
+        <h2>How was your day today? 😊</h2>
+        <p style={{ textAlign: "left" }}>Healing Space AI 기상 캐스터와 함께 <br/>오늘의 일기를 작성해 보세요!</p>
+        <p style={{ textAlign: "left" }}>Healing Space AI 기상 캐스터는... </p>
+        <p style={{ textAlign: "left" }}>1. 당신의 일기에서 오늘 당신의 감정을 분석합니다.</p>
+        <p style={{ textAlign: "left" }}>2. 당신의 감정을 날씨와 비유하여 기록해줍니다. <br /> 
+        <br/> 기쁨 = 맑음 ☀️
+        <br/> 설렘&사랑 = 봄비 🌦️
+        <br/> 평온 = 노을 🌇
+        <br/> 외로움 = 구름 ☁️
+        <br/> 슬픔 = 비 🌧️
+        <br/> 화남 = 천둥 ⛈️</p>
+        <p style={{ textAlign: "left" }}>3. 마지막으로, Healing Space AI 기상 캐스터는 일기를 기반으로 당신에게 "따뜻한 편지"를 써줍니다.</p>
+
+      </div>
 
       <div className="diary-card2">
         <div className="diary-header">
-          
-          <h1 style={{ textAlign: "left" }}>Diary</h1>
+          {/* <h1 style={{ textAlign: "left" }}>Diary</h1> */}
+          <img src='../src/assets/images/aidiary.png' alt='Chatbot' className='meta-image' />
 
           <div className="message-banner">
             <p>{message}</p>
           </div>
-
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="input-container">
+
             <label htmlFor="title">Diary title</label>
             <input
               type="text"
