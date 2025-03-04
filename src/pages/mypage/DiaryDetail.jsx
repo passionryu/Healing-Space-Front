@@ -79,22 +79,6 @@ const DiaryDetail = () => {
 
                     <p style={{ textAlign: "left" }}>{diary.healingMessage}</p>
 
-                    {/* <p style={{ textAlign: "left" }}>
-                        우리 Healing Space의 AI감정 분류 서비스에 의하면, 현재 당신의 감정은 "{diary.emotion}"으로 분석이 됩니다. <br />
-
-                        내일 당신은 어떤 날씨(감정)가운데 하루를 보내고 싶은가요?
-                    </p>
-
-                    <p style={{ textAlign: "left" }}>
-                        당신이 일기를 작성하여 하루를 기록함과 동시에, <br />
-                        당신의 오늘의 복잡한 생각과 감정을 명확히 정리할 수 있는 시간이였기를 바랍니다.
-                    </p>
-
-                    <p style={{ textAlign: "left" }}>
-                        마지막으로 우리 Healing Space팀이 당신에게 추천해주는 음악은 다음과 같습니다.🎵 <br />
-                        당신의 오늘의 감정과 어울리는 음악으로 준비해봤습니다.
-                    </p> */}
-
                     <p style={{ textAlign: "left" }}>
                         AI가 분석한 이날 당신의 감정 : {diary.emotion}
                     </p>

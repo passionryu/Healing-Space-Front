@@ -57,7 +57,7 @@ const DiaryList = () => {
                     <div key={diary.diaryNumber} className="diary-card">
                         <Link to={`/diary-detail/${diary.diaryNumber}`} key={diary.diaryNumber}>
                             {/* 날씨에 맞는 이미지 출력 */}
-                            <div className="weather-image-container">
+                            <div className="mypage-weather-image-container">
                                 <img
                                     src={weatherImages[diary.weather] || "path/to/default-image.jpg"} // 기본 이미지 설정
                                     alt={diary.weather}

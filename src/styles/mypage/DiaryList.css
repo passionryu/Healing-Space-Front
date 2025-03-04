@@ -53,3 +53,8 @@
     font-size: 14px;
     color: #555;
 }
+
+.mypage-weather-image-container img{
+    width: 150px;
+    height: auto;
+}
