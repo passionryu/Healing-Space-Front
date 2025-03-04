@@ -20,3 +20,8 @@
 .result h5{
   color: gray;
 }
+
+.weather-image-container img{
+  width: 300px;
+  height: auto;
+}
