@@ -32,19 +32,34 @@
       setIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
 
+    // useEffect(() => {
+    //   const token = localStorage.getItem("accessToken");
+    //   axios
+    //     .get('http://localhost:8080/blog', {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Authorization: `Bearer ${token}`,
+    //       },
+    //     })
+    //     .then((response) => {
+    //       setBlogs(response.data); // 응답받은 데이터를 state에 저장 
+    //     }
+    //     )
+    //     .catch((error) => {
+    //       console.error("Failed to fetch blog data", error);
+    //     });
+    // }, []);
+
     useEffect(() => {
-      const token = localStorage.getItem("accessToken");
       axios
         .get('http://localhost:8080/blog', {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
           },
         })
         .then((response) => {
-          setBlogs(response.data); // 응답받은 데이터를 state에 저장 
-        }
-        )
+          setBlogs(response.data); // 응답받은 데이터를 state에 저장
+        })
         .catch((error) => {
           console.error("Failed to fetch blog data", error);
         });
@@ -111,7 +126,7 @@
             {/* </Link> */}
 
             {/* 오른쪽 텍스트 영역 */}
-            <div className="main-about-us-text">
+            <div className="about-us-text">
               <h1 style={{ textAlign: "left" }}>  Introduce </h1>
               <h4>Healing Space Web Service는 AI를 활용한 힐링 프로그램 및 다양한 서비스를 제공하는 웹 서비스입니다. <br />
                 눈이 부시도록 고도로 발전한 대한민국을 돌아보면, 그간 얼마나 많은 이들이 땀을 흘리며 이 사회를 일궈 왔는지를 모르겠습니다. </h4>
