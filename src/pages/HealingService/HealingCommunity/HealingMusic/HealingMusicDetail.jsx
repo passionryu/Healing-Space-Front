@@ -11,6 +11,7 @@ const HealingMusicDetail = () => {
     const [likeCount, setLikeCount] = useState(0);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchMusic = async () => {
