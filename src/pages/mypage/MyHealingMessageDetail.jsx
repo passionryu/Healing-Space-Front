@@ -11,13 +11,14 @@ const HealingMessageDetail = () => {
     const [error, setError] = useState(null);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchHealingMessage = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmessage/my/${messageId}`,
+                    `${apiBaseUrl}/healingmessage/my/${messageId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -37,7 +38,7 @@ const HealingMessageDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmessage/comment/${messageId}`,
+                    `${apiBaseUrl}/healingmessage/comment/${messageId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -60,7 +61,7 @@ const HealingMessageDetail = () => {
 
         try {
             const token = localStorage.getItem("accessToken");
-            await axios.delete(`http://localhost:8080/healingmessage/${messageId}`, {
+            await axios.delete(`${apiBaseUrl}/healingmessage/${messageId}`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,

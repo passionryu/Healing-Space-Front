@@ -7,13 +7,14 @@ const MyHealingMessageList = () => {
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchHealingMessages = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    "http://localhost:8080/healingmessage/list/my",
+                    `${apiBaseUrl}/healingmessage/list/my`,
                     {
                         headers: {
                             "Content-Type": "application/json",

@@ -10,13 +10,14 @@ const MyHealingMusicDetail = () => {
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchHealingMusic = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/my/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/my/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -36,7 +37,7 @@ const MyHealingMusicDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/comment/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/comment/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",

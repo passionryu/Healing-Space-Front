@@ -7,13 +7,14 @@ const DiaryList = () => {
     const [diaries, setDiaries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchDiaryList = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    "http://localhost:8080/mypage/diary/show/list",
+                    `${apiBaseUrl}/mypage/diary/show/list`,
                     {
                         headers: {
                             "Content-Type": "application/json",

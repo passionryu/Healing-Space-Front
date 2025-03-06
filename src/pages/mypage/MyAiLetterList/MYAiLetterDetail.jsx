@@ -6,6 +6,7 @@ import "../../../styles/mypage/MyAiLetterDetail/MyAiLetterDetail.css";
 const MyAiLetterDetail = () => {
   const { AiRecommendMessageId } = useParams(); // useParams로 파라미터 받아오기
   const [aiResponseDetail, setAiResponseDetail] = useState(null);
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     if (AiRecommendMessageId) {
@@ -23,7 +24,7 @@ const MyAiLetterDetail = () => {
       }
 
       const response = await axios.get(
-        `http://localhost:8080/airecommend/${AiRecommendMessageId}`,
+        `${apiBaseUrl}/airecommend/${AiRecommendMessageId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

@@ -8,6 +8,7 @@ const DiaryDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { diaryNumber } = useParams();
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     const weatherImages = {
         맑음: "../src/assets/images/weather_img/sunny.png", // 맑은 날씨 이미지 URL
@@ -25,7 +26,7 @@ const DiaryDetail = () => {
 
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/mypage/diary/show/${diaryNumber}`,
+                    `${apiBaseUrl}/mypage/diary/show/${diaryNumber}`,
                     {
                         headers: {
                             "Content-Type": "application/json",

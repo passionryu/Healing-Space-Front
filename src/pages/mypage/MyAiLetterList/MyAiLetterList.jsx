@@ -5,6 +5,7 @@ import "../../../styles/mypage/MyAiLetterList/MyAiLetterList.css";
 
 const MyAiLetterList = () => {
   const [recommendations, setRecommendations] = useState([]);
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     fetchAiRecommendations();
@@ -19,7 +20,7 @@ const MyAiLetterList = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:8080/airecommend/list", {
+      const response = await axios.get(`${apiBaseUrl}/airecommend/list`, {
         headers: {
           Authorization: `Bearer ${accessToken}`, // JWT 인증 추가
         },

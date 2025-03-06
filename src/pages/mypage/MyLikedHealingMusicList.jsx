@@ -7,13 +7,14 @@ const MyLikedHealingMusicList = () => {
     const [musicList, setMusicList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchLikedHealingMusic = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    "http://localhost:8080/healingmusic/like/list",
+                    `${apiBaseUrl}/healingmusic/like/list`,
                     {
                         headers: {
                             "Content-Type": "application/json",

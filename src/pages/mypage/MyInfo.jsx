@@ -7,6 +7,7 @@ const MyInfoPage = () => {
     const [userInfo, setUserInfo] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     // 내 모든 정보 조회 API 호출
     useEffect(() => {
@@ -16,7 +17,7 @@ const MyInfoPage = () => {
                 const token = localStorage.getItem("accessToken");
 
                 // API 호출
-                const response = await axios.get("http://localhost:8080/mypage/myinfo/all", {
+                const response = await axios.get(`${apiBaseUrl}/mypage/myinfo/all`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         "Content-Type": "application/json",
@@ -43,7 +44,7 @@ const MyInfoPage = () => {
             const token = localStorage.getItem("accessToken");
 
             const response = await axios.post(
-                "http://localhost:8080/auth/delete", 
+                `${apiBaseUrl}/auth/delete`, 
                 {}, 
                 {
                     headers: {
