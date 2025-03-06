@@ -9,32 +9,13 @@ const HealingMessageList = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate(); // 페이지 이동을 위한 함수
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
-    // useEffect(() => {
-    //     const fetchMessages = async () => {
-    //         try {
-    //             const token = localStorage.getItem("accessToken");
-    //             const response = await axios.get("http://localhost:8080/healingmessage/list", {
-    //                 headers: {
-    //                     "Content-Type": "application/json",
-    //                     Authorization: `Bearer ${token}`,
-    //                 },
-    //                 withCredentials: true,
-    //             });
-    //             setMessages(response.data); // API에서 받은 데이터를 상태로 설정
-    //             setLoading(false);
-    //         } catch (err) {
-    //             setError("Failed to load messages. Please try again.");
-    //             setLoading(false);
-    //         }
-    //     };
-
-    //     fetchMessages(); // 컴포넌트 로드 시 API 호출
-    // }, []);
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/healingmessage/list", {
+                const response = await axios.get(
+                    `${apiBaseUrl}/healingmessage/list`, {
                     headers: {
                         "Content-Type": "application/json",
                     },

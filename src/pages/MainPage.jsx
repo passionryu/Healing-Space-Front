@@ -6,6 +6,7 @@
   function Main() {
     const [index, setIndex] = useState(0);
     const [blogs, setBlogs] = useState([]);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     const slides = [
       "../src/assets/images/slide_2.png",
@@ -32,27 +33,9 @@
       setIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
 
-    // useEffect(() => {
-    //   const token = localStorage.getItem("accessToken");
-    //   axios
-    //     .get('http://localhost:8080/blog', {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Authorization: `Bearer ${token}`,
-    //       },
-    //     })
-    //     .then((response) => {
-    //       setBlogs(response.data); // 응답받은 데이터를 state에 저장 
-    //     }
-    //     )
-    //     .catch((error) => {
-    //       console.error("Failed to fetch blog data", error);
-    //     });
-    // }, []);
-
     useEffect(() => {
       axios
-        .get('http://localhost:8080/blog', {
+        .get(`${apiBaseUrl}/blog`, {
           headers: {
             "Content-Type": "application/json",
           },

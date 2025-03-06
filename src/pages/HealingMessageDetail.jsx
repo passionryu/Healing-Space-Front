@@ -11,13 +11,14 @@ const HealingMessageDetail = () => {
     const [likeCount, setLikeCount] = useState(null);
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchMessage = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmessage/${messageId}`,
+                    `${apiBaseUrl}/healingmessage/${messageId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -38,7 +39,7 @@ const HealingMessageDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmessage/comment/${messageId}`,
+                    `${apiBaseUrl}/healingmessage/comment/${messageId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -60,7 +61,7 @@ const HealingMessageDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             const response = await axios.post(
-                `http://localhost:8080/healingmessage/like/${messageId}`,
+                `${apiBaseUrl}/healingmessage/like/${messageId}`,
                 {},
                 {
                     headers: {
@@ -80,7 +81,7 @@ const HealingMessageDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             const response = await axios.post(
-                `http://localhost:8080/healingmessage/comment`,
+                `${apiBaseUrl}/healingmessage/comment`,
                 {
                     messageId,
                     comment,
@@ -105,7 +106,7 @@ const HealingMessageDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             await axios.delete(
-                `http://localhost:8080/healingmessage/comment/${commentId}`,
+                `${apiBaseUrl}/healingmessage/comment/${commentId}`,
                 {
                     headers: {
                         "Content-Type": "application/json",

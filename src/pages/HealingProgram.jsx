@@ -7,22 +7,6 @@ const HealingProgram = () => {
 
     <div className="healing-community-container">
 
-      {/* <div className="card">
-
-        <div>
-          <img src="../src/assets/images/dewcalendar.png" alt ="이미지"/>
-          
-        </div>
-
-        <div className="card-text">
-          <Link to="/diary">
-          <h3>Dew Calendar</h3>
-          <p>Write your diary...I`ll be with you </p>
-          </Link>
-        </div>
-
-      </div> */}
-
       <div className="heal-card">
         <Link to="/healing-message-list">
           <div>

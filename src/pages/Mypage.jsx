@@ -7,12 +7,13 @@ const Mypage = () => {
     const [userInfo, setUserInfo] = useState({});
     const fileInputRef = useRef(null);  // 파일 입력 참조
     const navigate = useNavigate();  // 페이지 이동을 위한 hook 추가
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
-                const response = await axios.get('http://localhost:8080/mypage/myinfo', {
+                const response = await axios.get(`${apiBaseUrl}/mypage/myinfo`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`
@@ -41,7 +42,7 @@ const Mypage = () => {
 
             try {
                 const token = localStorage.getItem("accessToken");
-                const response = await axios.put('http://localhost:8080/mypage/profile/image', formData, {
+                const response = await axios.put(`${apiBaseUrl}/mypage/profile/image`, formData, {
                     headers: {
                         "Authorization": `Bearer ${token}`,
                         "Content-Type": "multipart/form-data",
@@ -62,7 +63,7 @@ const Mypage = () => {
         try {
             const token = localStorage.getItem("accessToken");
 
-            await axios.post("http://localhost:8080/auth/logout", {}, {
+            await axios.post(`${apiBaseUrl}/auth/logout`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true
             });
