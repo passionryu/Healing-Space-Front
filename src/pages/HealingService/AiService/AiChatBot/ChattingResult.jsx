@@ -5,6 +5,7 @@ const ChattingResult = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const letter = location.state?.letter || "결과가 없습니다.";
+    //const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     // 오늘 날짜 가져오기 (한국 기준)
     const today = new Date().toLocaleDateString("ko-KR", {

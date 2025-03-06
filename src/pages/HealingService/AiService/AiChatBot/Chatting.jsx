@@ -8,6 +8,7 @@ const Chatting = () => {
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     // 사용자 메시지 전송
     const sendMessage = async () => {
@@ -20,7 +21,7 @@ const Chatting = () => {
         setUserMessage('');
 
         try {
-            const response = await axios.post('http://localhost:8080/chatbot', userMessage, {
+            const response = await axios.post(`${apiBaseUrl}/chatbot`, userMessage, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${accessToken}`,

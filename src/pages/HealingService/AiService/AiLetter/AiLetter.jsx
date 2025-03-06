@@ -8,6 +8,7 @@ const AiLetter = () => {
   const [isSubmitting, setIsSubmitting] = useState(false); // 제출 상태
   const [aiResponse, setAiResponse] = useState(null); // AI 응답 상태
   const navigate = useNavigate(); // navigate 객체 사용
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   const handleInputChange = (e) => {
     setStory(e.target.value);
@@ -26,7 +27,7 @@ const AiLetter = () => {
 
       // 서버로 데이터 전송
       const response = await axios.post(
-        "http://localhost:8080/airecommend", 
+        `${apiBaseUrl}/airecommend`, 
         { content: story },  // 서버에 보낼 데이터
         {
           headers: {

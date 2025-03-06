@@ -7,6 +7,7 @@ const AiLetterResult = () => {
   const location = useLocation(); // 이전 화면에서 전달된 상태 가져오기
   const { aiResponse, userNumber } = location.state || {}; // 상태 값이 없으면 빈 객체
   const navigate = useNavigate(); // 페이지 전환을 위해 useNavigate 훅을 사용
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   if (!aiResponse) {
     return <div>결과가 없습니다.</div>;
@@ -47,7 +48,7 @@ const AiLetterResult = () => {
 
       // API 요청
       const response = await axios.post(
-        "http://localhost:8080/airecommend/save", 
+        `${apiBaseUrl}/airecommend/save`, 
         payload, 
         {
           headers: {

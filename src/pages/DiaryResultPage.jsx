@@ -5,6 +5,7 @@ import "../styles/DiaryResultPage.css";
 const DiaryResultPage = () => {
   const location = useLocation();
   const { emotion, weather, healingMessage, healingMusic } = location.state || {};
+  //const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   const weatherImages = {
     맑음: "../src/assets/images/weather_img/sunny.png", // 맑은 날씨 이미지 URL

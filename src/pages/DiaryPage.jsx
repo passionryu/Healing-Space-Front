@@ -21,6 +21,7 @@ const DiaryPage = () => {
   ];
 
   const navigate = useNavigate();
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     // 메시지를 5초마다 변경
@@ -46,7 +47,7 @@ const DiaryPage = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.post(
-        "http://localhost:8080/dew/diary",
+        `${apiBaseUrl}/dew/diary`,
         formData,
         {
           headers: {

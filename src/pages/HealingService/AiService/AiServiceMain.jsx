@@ -5,6 +5,7 @@
   const AiServiceMain = () => {
 
     const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate 훅 사용
+    //const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     return (
       <div className="ai-service-container">
