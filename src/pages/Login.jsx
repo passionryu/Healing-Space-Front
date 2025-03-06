@@ -8,6 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState(""); // 비밀번호
   const [errorMessage, setErrorMessage] = useState(""); // 오류 메시지
   const navigate = useNavigate(); // 로그인 성공 후 페이지 이동
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   // 아이디 변경 시 호출
   const handleUsernameChange = (e) => {
@@ -26,7 +27,7 @@ const Login = () => {
     try {
       // 요청을 보낼 때 JSON 형식으로 데이터 전송
       const response = await axios.post(
-        "http://localhost:8080/auth/login/id", // 로그인 API 경로
+        "${apiBaseUrl}/auth/login/id", // 로그인 API 경로
         { nickName: username, password },
         { headers: { "Content-Type": "application/json" } }
       );
