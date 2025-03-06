@@ -45,7 +45,7 @@ const HealingMusicCreate = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.post(
-        "http://localhost:8080/healingmusic",
+        `${apiBaseUrl}/healingmusic`,
         postData,
         {
           headers: {

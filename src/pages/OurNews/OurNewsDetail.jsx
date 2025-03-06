@@ -10,13 +10,14 @@ const OurNewsDetail = () => {
     const [error, setError] = useState(null);
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState("");
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/ournews/${ourNewsNumber}`,
+                    `${apiBaseUrl}/ournews/${ourNewsNumber}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -36,7 +37,7 @@ const OurNewsDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/ournews/comment/${ourNewsNumber}`,
+                    `${apiBaseUrl}/ournews/comment/${ourNewsNumber}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -59,7 +60,7 @@ const OurNewsDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             const response = await axios.post(
-                `http://localhost:8080/ournews/comment`,
+                `${apiBaseUrl}/ournews/comment`,
                 {
                     ourNewsNumber,
                     content: comment,
@@ -85,7 +86,7 @@ const OurNewsDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             await axios.delete(
-                `http://localhost:8080/ournews/comment/${commentId}`,
+                `${apiBaseUrl}/ournews/comment/${commentId}`,
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -125,7 +126,7 @@ const OurNewsDetail = () => {
 
             {news.img_path && (
                 <img
-                    src={`http://localhost:8080/images/OurNews/${news.img_path}`}
+                    src={`${apiBaseUrl}/images/OurNews/${news.img_path}`}
                     alt="post-image"
                     className="post-image"
                 />

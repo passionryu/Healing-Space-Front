@@ -17,7 +17,7 @@ const HealingMusicDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const HealingMusicDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/comment/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/comment/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const HealingMusicDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             const response = await axios.post(
-                `http://localhost:8080/healingmusic/like/${musicId}`,
+                `${apiBaseUrl}/healingmusic/like/${musicId}`,
                 {},
                 {
                     headers: {
@@ -87,7 +87,7 @@ const HealingMusicDetail = () => {
             };
 
             const response = await axios.post(
-                `http://localhost:8080/healingmusic/comment`,
+                `${apiBaseUrl}/healingmusic/comment`,
                 postCommentRequest,
                 {
                     headers: {
@@ -109,7 +109,7 @@ const HealingMusicDetail = () => {
         try {
             const token = localStorage.getItem("accessToken");
             await axios.delete(
-                `http://localhost:8080/healingmusic/comment/${commentId}`,
+                `${apiBaseUrl}/healingmusic/comment/${commentId}`,
                 {
                     headers: {
                         "Content-Type": "application/json",

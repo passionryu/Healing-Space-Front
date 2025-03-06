@@ -12,6 +12,7 @@ const OurNewsCreate = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   // 제목 변경 핸들러
   const handleTitleChange = (e) => {
@@ -46,7 +47,7 @@ const OurNewsCreate = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.post(
-        "http://localhost:8080/ournews/",
+        `${apiBaseUrl}/ournews/`,
         formData,
         {
           headers: {

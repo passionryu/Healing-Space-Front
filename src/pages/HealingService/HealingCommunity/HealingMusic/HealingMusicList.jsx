@@ -9,12 +9,13 @@ const HealingMusicList = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate(); // 페이지 이동을 위한 hook
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchMusicList = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
-                const response = await axios.get("http://localhost:8080/healingmusic/list", {
+                const response = await axios.get(`${apiBaseUrl}/healingmusic/list`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,

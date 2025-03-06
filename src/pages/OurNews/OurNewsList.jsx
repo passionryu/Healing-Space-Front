@@ -10,13 +10,14 @@ const OurNewsList = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate(); // useNavigate 훅 호출
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchNewsList = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 
-                const response = await axios.get("http://localhost:8080/ournews/list", {
+                const response = await axios.get(`${apiBaseUrl}/ournews/list`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
