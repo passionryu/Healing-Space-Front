@@ -26,8 +26,10 @@ const Login = () => {
     
     try {
       // 요청을 보낼 때 JSON 형식으로 데이터 전송
+      // ${apiBaseUrl}
+      // http://localhost:8080
       const response = await axios.post(
-        "${apiBaseUrl}/auth/login/id", // 로그인 API 경로
+        `${apiBaseUrl}/auth/login/id`, // 로그인 API 경로
         { nickName: username, password },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -40,7 +42,8 @@ const Login = () => {
       localStorage.setItem("refreshToken", refreshToken);
 
       // 로그인 성공 시 홈 화면으로 이동
-      alert("Login Successful");
+      //alert("Login Successful");
+      alert(apiBaseUrl);
       navigate("/");
     } catch (error) {
       // 오류 발생 시 오류 메시지 처리

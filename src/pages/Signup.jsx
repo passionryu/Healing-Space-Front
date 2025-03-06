@@ -5,9 +5,11 @@ import "../styles/Signup.css";
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 // 회원가입 요청 함수
+// ${apiBaseUrl}
+// http://localhost:8080
 const signup = async (formData) => {
   try {
-    const response = await axios.post("${apiBaseUrl}/member/register", formData);
+    const response = await axios.post(`${apiBaseUrl}/member/register`, formData);
     return response.data; // API에서 보내주는 성공 메시지나 데이터를 반환
   } catch (error) {
     throw error; // 에러 발생 시 throw
