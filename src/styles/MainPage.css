@@ -218,3 +218,32 @@
   border-radius: 50%;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: 90%; /* 슬라이더 전체 너비 */ 
+    margin: auto;
+    border-radius: 60px; /* 모서리 둥글게 설정 */
+  }
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 힐링 프로그램 요소 */
+.healing-program-container {
+  margin-left: 30px;
+  display: flex;
+  width: 1000px;
+  flex-direction: column;  /* 카드들을 세로로 배치 */
+  align-items: flex-start;  /* 카드들을 왼쪽으로 정렬 */
+  gap: 20px;               /* 카드들 사이에 간격 추가 */
+  padding: 20px;           /* 컨테이너 여백 */
+}
+}
