@@ -28,24 +28,24 @@
 
 .chatbot-letter {
     font-size: 16px;
-    color: #333;
     padding: 10px;
-    background: #f0f0f0;
+
     border-radius: 5px;
 }
 
 .back-button {
+    width: 100%;
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
-    background: #007bff;
+    background: #917f27;
     color: white;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: transform 0.3s ease;
 }
 
 .back-button:hover {
-    background: #0056b3;
+    background: #a89741;
 }

@@ -35,18 +35,18 @@ const MyChatbotList = () => {
 
     return (
         <div className="my-chatbot-history">
-            <h2>My AI ChatBot History</h2>
+            <h2 style={{textAlign:"left"}}>My AI ChatBot History</h2>
             {chatHistory.length > 0 ? (
                 <ul className="chatbot-list">
                     {chatHistory.map((chat) => (
                         <li key={chat.chat_id} className="chatbot-item" onClick={() => handleChatClick(chat.chat_id)}>
-                            <p>Chat ID: {chat.chat_id}</p>
+                            {/* <p>Chat ID: {chat.chat_id}</p> */}
                             <p className="chatbot-date">{new Date(chat.writtenDate).toLocaleString()}</p>
                         </li>
                     ))}
                 </ul>
             ) : (
-                <p className="no-history">이용 기록이 없습니다.</p>
+                <p className="no-history">이용 기록이 없습니다. AI ChatBot 서비스를 이용해보세요! </p>
             )}
         </div>
     );

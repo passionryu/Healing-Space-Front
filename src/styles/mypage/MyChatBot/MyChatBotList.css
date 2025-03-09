@@ -1,5 +1,5 @@
 .my-chatbot-history {
-    max-width: 800px;
+    width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: #f9f9f9;
@@ -10,7 +10,7 @@
 .my-chatbot-history h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #917f27;
 }
 
 .chatbot-list {

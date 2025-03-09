@@ -32,18 +32,18 @@ const MyChatbotDetail = () => {
 
     return (
         <div className="chatbot-detail">
-            <h2>Chat Detail</h2>
+            <h2>🌿Letter For You🌿</h2>
             {chatDetail ? (
                 <div className="chatbot-content">
-                    <p className="chatbot-date">Date: {new Date(chatDetail.writtenDate).toLocaleString()}</p>
-                    <div className="chatbot-letter">
+                    <p className="chatbot-date" style={{textAlign:"right"}}>Date: {new Date(chatDetail.writtenDate).toLocaleString()}</p>
+                    <div className="chatbot-letter" style={{textAlign:"left"}}>
                         <p>{chatDetail.letter}</p>
                     </div>
                 </div>
             ) : (
                 <p>Loading...</p>
             )}
-            <button className="back-button" onClick={() => navigate(-1)}>뒤로 가기</button>
+            {/* <button className="back-button" onClick={() => navigate(-1)}>뒤로 가기</button> */}
         </div>
     );
 };
