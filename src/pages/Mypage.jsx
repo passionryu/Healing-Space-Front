@@ -116,7 +116,9 @@ const Mypage = () => {
                     </div>
 
                     <div className="mypage-button">
-                        <button>My AI ChatBot History </button>
+                        <Link to="/chatting-list">
+                            <button>My AI ChatBot History </button>
+                        </Link>
                     </div>
                 </div>
 
