@@ -78,25 +78,7 @@
               </button>
             </div>
           </section>
-          {/* SLIDER 종료 */}
-          {/* SLIDER 시작점 */}
-          {/* <section>
-            <div className="slider">
-              <div
-                className="slide-track"
-                style={{
-                  transform: `translateX(-${index * 100}%)`, // 슬라이드 위치 조정
-                  transition: "transform 1.2s ease", // 부드러운 이동 효과
-                }}
-              >
-                {slides.map((slide, i) => (
-                  <div className="slide" key={i}>
-                    <img src={slide} alt={`슬라이드 ${i + 1}`} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section> */}
+        
           {/* SLIDER 종단점 */}
 
           {/* About US 시작점 */}
@@ -138,8 +120,9 @@
           {/* 힐링 프로그램 로고 종단점 */}
 
           {/* 힐링 프로그램 요소 시작점 */}
-          <h4>우리 Healing Space 팀은 여러 가지의 Healing Service를 제공합니다.</h4>
-          <p>원하는 서비스를 마음껏 사용하세요.💓 </p>
+          <h4>Healing Space 팀이 준비한 다양한 힐링 서비스를 만나보세요.</h4>
+<p>Explore the diverse healing services prepared by the Healing Space team.</p>
+
 
           <div className="healing-program-container">
 
@@ -174,7 +157,7 @@
               <div className="card-text">
                 <Link to="/healing-program">
                   <h3>Healing Community</h3>
-                  <p>We prepare various healing Community for you 😉</p>
+                  <p>Healing Community for you 😉</p>
                 </Link>
               </div>
             </div>
@@ -187,7 +170,7 @@
             <img src="../src/assets/images/healingspacenews.png" alt="힐링 서비스 뉴스 로고" />
           </div>
 
-          <p> 아래 블로그들은 실제 Naver 블로그를 크롤링 한 데이터입니다. </p>
+          <p> 아래 블로그들은 실제 Naver의 힐링 블로그들을 자동 크롤링 한 데이터이며, 이는 매일 자정마다 지동으로 업데이트 됩니다.</p>
 
           {/* 힐링 블로그 카드 나열 */}
           <div className="healing-blog-container">
