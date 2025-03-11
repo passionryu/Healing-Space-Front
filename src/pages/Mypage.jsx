@@ -81,7 +81,7 @@ const Mypage = () => {
 
     return (
 
-        <>
+        <div className="mypage-container">
             {/* 내 정보 카드 */}
             <Link to="/myinfo">
                 <div className="profile-card">
@@ -172,7 +172,7 @@ const Mypage = () => {
                 </div>
 
             </div>
-        </>
+        </div>
     );
 };
 
