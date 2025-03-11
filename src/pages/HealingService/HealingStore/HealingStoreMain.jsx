@@ -6,12 +6,6 @@ const HelaingStoreMain = () => {
 
         <div className="healing-store-container">
 
-            <div className="healing-store-header">
-                {/* <h1> Healing Store </h1>
-                <p>healing store for you</p> */}
-
-            </div>
-
             <div className="healing-store-main">
                 <div className="healing-store-text">
                     <h1 style={{ textAlign: "left" }}>Healing <br />Farms</h1>
