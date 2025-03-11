@@ -219,34 +219,243 @@
   margin-top: 10px;
 }
 
+
+
+/* 모바일 대응 */
+/* 모바일 대응 */
+/* 모바일 대응 */
+/* 모바일 대응 */
+/* 모바일 대응 */
+
+
+
 @media (max-width: 768px) {
 
   .slider {
+    
     position: relative;
     overflow: hidden;
-    width: 90%; /* 슬라이더 전체 너비 */ 
+    width: 100%; /* 슬라이더 전체 너비 */
     margin: auto;
-    border-radius: 60px; /* 모서리 둥글게 설정 */
+    border-radius: 30px; /* 모서리 둥글게 설정 */
   }
-
+  
+  /* 슬라이드 트랙 */
+  .slide-track {
+    display: flex;
+    width: 100%; /* 슬라이드 수 * 100% */
+    transition: transform 0.9s ease;
+    
+  }
+  
   .slider-container {
-    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
+  .prev-button, .next-button {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /* 각 슬라이드 */
+  .slide {
+    width: 100%; /* 슬라이더 컨테이너와 동일한 너비 */
+    flex-shrink: 0; /* 슬라이드 크기를 고정 */
+  }
+  
+  .slide img {
+    width: 100%; /* 이미지가 슬라이드 크기를 채우도록 설정 */
+    height: 100%; /* 이미지가 슬라이드 높이를 채우도록 설정 */
+    object-fit: contain; /* 이미지 비율 유지 */
+  }
+  
+  /* About US 부분 */
+  
+  /* 전체 컨테이너 스타일 */
+  .main-about-us-container {
+    margin-top: 20px;
+    display:grid; /* 가로 정렬을 위한 flexbox */
+    text-align: left; /* 텍스트 좌측 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 20px; /* 이미지와 텍스트 사이 간격 */
+    padding: 10px; /* 내부 여백 */
+  }
+  
+  /* 이미지 스타일 */
+  .main-about-us-image img {
+    width: 100%; /* 이미지 최대 너비 */
+    padding : 10px;
+    height: auto; /* 비율 유지 */
+    border-radius: 30px; /* 둥근 모서리 (선택 사항) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+    transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
+  }
+  
+  .main-about-us-image img:hover{
+    transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+  }
+  
+  /* 텍스트 영역 스타일 */
+  .main-about-us-text {
+    flex: 1; /* 텍스트 영역이 남은 공간을 차지하도록 설정 */
+  }
+  
+  .main-about-us-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .main-about-us-text h4 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* 힐링 서비스 로고 부분 */
+  /* 힐링 서비스 로고 부분 */
+  /* 힐링 서비스 로고 부분 */
 
+  .healing-service-logo img {
+    height: 270px;
+    border-radius: 15px; /* 모서리를 둥글게 설정 */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    /* margin-top: 0px; */
+    margin-bottom: 20px;
+  }
+  
   /* 힐링 프로그램 요소 */
-.healing-program-container {
-  margin-left: 30px;
-  display: flex;
-  width: 1000px;
-  flex-direction: column;  /* 카드들을 세로로 배치 */
-  align-items: flex-start;  /* 카드들을 왼쪽으로 정렬 */
-  gap: 20px;               /* 카드들 사이에 간격 추가 */
-  padding: 20px;           /* 컨테이너 여백 */
-}
+  .healing-program-container {
+    margin-left: 0px; 
+    display: flex;
+    width: 100%;
+    flex-direction: column;  /* 카드들을 세로로 배치 */
+    align-items: flex-start;  /* 카드들을 왼쪽으로 정렬 */
+    gap: 20px;               /* 카드들 사이에 간격 추가 */
+    padding: 20px;           /* 컨테이너 여백 */
+  }
+  
+  .main-card {
+    display: flex;
+    width: 70%;            /* 카드 너비 */
+    /*padding: 20px;           /* 카드 안쪽 여백 */
+    border: 1px solid #ccc; /* 카드 테두리 */
+    border-radius: 10px;     /* 카드 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    text-align: center;      /* 카드 안의 내용 중앙 정렬 */
+    transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
+  }
+  
+  .main-card img {
+    height: 110px;
+  }
+  
+  .main-card:hover {
+    transform: scale(1.15);  /* 호버 시 5% 커지도록 설정 */
+  }
+  
+  .main-card:nth-child(1), .main-card:nth-child(3) {
+    align-self: flex-start; /* 1번, 3번 카드를 왼쪽에 정렬 */
+  }
+  
+  .main-card:nth-child(2) {
+    align-self: flex-end;   /* 2번 카드를 오른쪽에 정렬 */
+  }
+  
+  .main-card h3 {
+    margin-bottom: 5px;    /* 카드 제목과 본문 사이 간격 */
+  }
+  
+  .main-card p {
+    font-size: 14px;
+    color: #555;            /* 텍스트 색상 */
+  }
+  
+  /* 힐링 스페이스 뉴스 로고 부분 */
+  .healing-space-news img{
+    height: 240px;
+    
+  }
+  
+  .healing-blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    
+  }
+  
+  .blog-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 250px;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-thumbnail img {
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start; /* 좌측 정렬 */
+    border-radius: 8px;
+  }
+  
+  .blog-content {
+    padding-top: 0px;
+  }
+  
+  .blog-content h4 {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .blog-content p {
+    font-size: 0.7rem;
+    color: #666;
+  }
+  
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  
 
 }
 

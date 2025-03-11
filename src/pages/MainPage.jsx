@@ -92,7 +92,7 @@
 
             {/* 오른쪽 텍스트 영역 */}
             <div className="about-us-text">
-              <h1 style={{ textAlign: "left" }}>  Introduce </h1>
+              <h1 style={{ textAlign: "left" }}>  Introduce  </h1>
               <h4>Healing Space Web Service는 AI를 활용한 힐링 프로그램 및 다양한 서비스를 제공하는 웹 서비스입니다. <br />
                 눈이 부시도록 고도로 발전한 대한민국을 돌아보면, 그간 얼마나 많은 이들이 땀을 흘리며 이 사회를 일궈 왔는지를 모르겠습니다. </h4>
               <h4>제 주변의 사람들만 보아도, 참 많은 이들이 본인의 자리에서 열정을 다하여 자신의 본분에 최선을 다합니다.<br />
