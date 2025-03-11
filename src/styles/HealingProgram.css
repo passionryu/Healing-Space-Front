@@ -42,9 +42,8 @@
 
 @media (max-width : 768px){
   .healing-community-container {
+    
     display: grid;
-    margin-right: 0px;
-    margin-left: 0px;
     width: 100%;
     flex-direction: row;  /* 카드들을 가로로 배치 */
     align-items: flex-start;  /* 카드들을 왼쪽으로 정렬 */
@@ -66,6 +65,7 @@
   }
   
   .heal-card img {
+    
     height: 280px;
   }
   
