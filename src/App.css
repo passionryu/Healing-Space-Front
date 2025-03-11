@@ -7,10 +7,14 @@ body {
   background-color: #ffffff; /* 흰색 */
   color: #000000; /* 글자색: 검정 */
   font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+   /* 모바일 대응 시 추가한 요소 25.03.11*/
+  box-sizing: border-box; /**/
+  overflow-x: hidden; /* 넘치는 요소 방지 */
 }
 
 #root {
   max-width: 1400px;
+  
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
