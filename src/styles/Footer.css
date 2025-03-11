@@ -29,7 +29,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .footer {
+    footer {
 
         position: fixed;
         /* 화면에서 절대 위치 설정 */
