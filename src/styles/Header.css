@@ -116,9 +116,124 @@ audio {
 /* ====== 모바일 대응 ====== */
 /* ==================== */
 @media (max-width: 768px) {
-  .header{
-    width: 90%;
-    background-color: none;
+ /* 기본 링크 스타일 제거 */
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 부모 요소의 글자 색상 상속 */
+}
+
+/* 링크에 커서 올렸을 때 스타일 */
+a:hover {
+  color: #917f27; /* 원하는 색상 설정 */
+}
+
+.header-container{
+  display: grid; /* 가로 정렬을 위한 flexbox */
+  height: 17vh;
+}
+
+.main-logo img{
+  padding-left: 0vh;
+  height: 8vh; 
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  padding-top: 10px ;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 20px; 
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 나머지 기존 스타일은 유지 */
+
+  /* 각 항목에 스타일 적용 */
+  header nav ul li {
+    position: relative; /* 서브 메뉴를 절대 위치로 배치할 수 있도록 설정 */
+    margin-right: 20px;  /* 항목들 사이 간격 설정 */
+    font-size: 16px;  /* 글자 크기 설정 */
+    font-weight: bold;  /* 글자 두께 설정 */
   }
+  
+  /* 버튼에 스타일 적용 */
+  header nav ul button {
+    padding: 5px 15px;  /* 버튼 크기 설정 */
+    font-size: 16px;  /* 글자 크기 설정 */
+    background-color: #917f27;  /* 버튼 배경색 */
+    color: white;  /* 버튼 글자색 */
+    border: none;  /* 버튼 테두리 제거 */
+    cursor: pointer;  /* 커서 모양 변경 */
+  }
+  
+  header nav ul button:hover {
+    background-color: #a99946;  /* 버튼에 마우스를 올렸을 때 색상 변경 */
+  }
+  
+  /* 메인 메뉴와 서브 메뉴에 대한 설정 */
+
+/* 서브 메뉴 기본 숨김 */
+header nav ul li .submenu {
+  display: none; /* 기본적으로 서브 메뉴 숨김 */
+  position: absolute; /* 상위 메뉴 아래에 배치 */
+  top: 100%; /* 상위 메뉴 바로 아래에 위치 */
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1; /* 서브 메뉴 배경색 */
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* 서브 메뉴 항목 스타일 */
+header nav ul li .submenu li {
+  margin: 5px 0; /* 서브 메뉴 간 간격 */
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* 마우스 호버 시 서브 메뉴 표시 */
+header nav ul li:hover .submenu {
+  display: block; /* 호버하면 서브 메뉴 표시 */
+}
+
+.audio-container {
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
+  display: flex;
+  gap :5vh;
+  background-color: white;
+}
+
+.audio-container p{
+  padding-left: 10vh;
+  margin-top: 2vh;
+  color : gray;
+  
+}
+audio {
+  margin-top: 2.5vh;
+  width: 40vh; 
+  height: 5vh;
+  outline: none; /* 테두리 없애기 */
+  transition: all 0.3s ease; /* 변화에 부드러운 전환 효과 */
+}
+
   
 }

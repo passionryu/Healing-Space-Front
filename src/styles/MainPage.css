@@ -249,6 +249,7 @@
   }
   
   .slider-container {
+    padding-top : 18vh;
     position: relative;
     display: flex;
     align-items: center;
