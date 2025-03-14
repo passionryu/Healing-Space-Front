@@ -232,7 +232,7 @@
 @media (max-width: 768px) {
 
   .slider-container {
-    padding-top : 20vh;
+    margin-top : 20vh;
     width: 100vw;
     position: relative;
     display: flex;   
@@ -262,8 +262,8 @@
     color: white;
     border: none;
     cursor: pointer;
-    padding: 5vh 1.5vw;
-    height: 58%;
+    padding: 5vh 2vw;
+    height: 80%;
     font-size: 1rem;
     z-index: 10;
     transition: background-color 0.3s;
