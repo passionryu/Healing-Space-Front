@@ -105,19 +105,19 @@ const Mypage = () => {
 
                     <div className="mypage-button">
                         <Link to="/diary-list">
-                            <button>My AI Diary History</button>
+                            <button>My AI Diary </button>
                         </Link>
                     </div>
 
                     <div className="mypage-button">
                         <Link to="/my-ai-letter-history">
-                            <button>My AI Letter History</button>
+                            <button>My AI Letter </button>
                         </Link>
                     </div>
 
                     <div className="mypage-button">
                         <Link to="/chatting-list">
-                            <button>My AI ChatBot History </button>
+                            <button>My AI Chat</button>
                         </Link>
                     </div>
                 </div>
