@@ -308,7 +308,7 @@
   
   /* 이미지 스타일 */
   .main-about-us-image img {
-    width: 95vw; /* 이미지 최대 너비 */
+    width: 100vw; /* 이미지 최대 너비 */
     padding : 2vw;
     height: auto; /* 비율 유지 */
     border-radius: 30px; /* 둥근 모서리 (선택 사항) */
