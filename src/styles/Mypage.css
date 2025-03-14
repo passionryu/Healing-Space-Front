@@ -253,7 +253,7 @@
   }
   
   .profile-image img {
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-top : 0vh;
     border-radius: 50%;
@@ -346,7 +346,7 @@
     
     width: 100%;
     background-color: #ffffff;
-    padding: 0.4vh;
+    /* padding: 0.4vh; */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;

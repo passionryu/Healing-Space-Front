@@ -153,6 +153,7 @@ header nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
+  background-color: white;
   /* padding-top: 20px;
   padding-right: 20px;  */
   justify-content: center;
@@ -164,7 +165,7 @@ header nav ul {
   /* 각 항목에 스타일 적용 */
   header nav ul li {
     position: relative; /* 서브 메뉴를 절대 위치로 배치할 수 있도록 설정 */
-    margin-right: 20px;  /* 항목들 사이 간격 설정 */
+    margin-right: 10px;  /* 항목들 사이 간격 설정 */
     font-size: 16px;  /* 글자 크기 설정 */
     font-weight: bold;  /* 글자 두께 설정 */
   }
