@@ -148,23 +148,8 @@ const Mypage = () => {
                     </Link>
                 </div>
 
-                {/* <h2> KaKao Service </h2>
-                <div className="mypage-option">
-                    <h3>힐링 메시지 카카오톡 전송 서비스</h3>
-                </div>
-
-                <h2>Customer Service</h2>
-                <div className="mypage-option">
-                    <h3>개발자에게 문의하기 </h3>
-                </div> */}
-
-                {/* <h2>Profile & Logout</h2> */}
                 <div className="profile-logout">
-                    {/* 내 프로필 조회 버튼
-                    <div className="button-box profile">
-                        <button>내 프로필 조회</button>
-                    </div> */}
-
+                    
                     {/* 로그아웃 버튼 */}
                     <div className="button-box logout">
                         <button onClick={handleLogout}>로그아웃</button>
