@@ -235,15 +235,15 @@
 
   .profile-card {
     display: flex;
-    width: 50%;
-    height : 25vh;
-    margin: 3.5vh auto;
-    padding: 5vh;
+    width: 70%;
+    height : 15vh;
+    margin-top : 10vh;
+    padding: 2vh;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    gap: 50px;
+    gap: 10px;
     transition: transform 0.2s ease;
     /* 호버 시 크기 변화를 부드럽게 */
   }
@@ -253,17 +253,18 @@
   }
   
   .profile-image img {
-    width: 100%;
-    height: 100%;
-    margin-top : 1.5vh;
+    width: 80%;
+    height: auto;
+    margin-top : 0vh;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0px;
   }
   
   .profile-text {
-    padding-top: 20px;
-    font-size: 30px;
+    padding-right: 8%;
+    padding-top: 0vh;
+    font-size: 1rem;
     color: #333;
   }
   
@@ -282,7 +283,7 @@
   }
 
   .mypage h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     /* 글씨 크기 */
     font-weight: bold;
     /* 글씨 두께 */
@@ -302,7 +303,7 @@
   }
   
   .mypage-ai{
-    padding-top : 3vh;
+    padding-top : 1vh;
     padding-bottom: 0vh;
     display : flex;
     justify-content: space-between; /* 처음, 중간, 끝에 배치 */
@@ -319,8 +320,8 @@
   
   .mypage-button button{
     /* background-color: #917f27; */
-    width: 300px;
-    height: 60px;
+    width: 100%;
+    height: 8vh;
     transition: transform 0.3s ease;
     background-color: #ffffff;
     
@@ -349,8 +350,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 3.5vh;
-    margin-bottom: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     /* box-shadow: 0 4px 8px #917f27; */
     transition: transform 0.3s ease;
     /* 호버 시 크기 변화를 부드럽게 */
@@ -414,14 +415,13 @@
     /* 텍스트 색상 */
   }
   
-  
-  
   .button-box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
+    margin-bottom: 13vh;
     border-radius: 30px;
     /* 둥근 모서리 */
     background-color: #917f27;
