@@ -16,8 +16,11 @@
 - 힐링 메시지 카카오톡 전송 서비스
 - 유저 간 친구 추가 및 네트워킹 시스템 구축
 
+### AWS Architecture
+![image](https://github.com/user-attachments/assets/5d1b2b9d-2879-4d1a-9e50-7f905fdf2a1c)
 
-Dev Log  
+
+### Dev Log...
 
 Dev Start : 2025.01.01  
 Dev first demo : 2025.02.28  
