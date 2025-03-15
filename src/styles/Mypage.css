@@ -234,16 +234,16 @@
   }
 
   .profile-card {
-    display: flex;
+    display: grid;
     width: 70%;
-    height : 15vh;
+    height : auto;
     margin-top : 15vh;
     padding: 2vh;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    gap: 10px;
+    gap: 1vh;
     transition: transform 0.2s ease;
     /* 호버 시 크기 변화를 부드럽게 */
   }
@@ -262,7 +262,7 @@
   }
   
   .profile-text {
-    padding-right: 8%;
+    padding-right: 0vw;
     padding-top: 0vh;
     font-size: 1rem;
     color: #333;
@@ -343,7 +343,6 @@
   
   /* 마이페이지 옵션 스타일 */
   .mypage-option {
-    
     width: 100%;
     background-color: #ffffff;
     /* padding: 0.4vh; */
@@ -441,12 +440,12 @@
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 30px;
     /* 버튼도 둥근 모서리 */
     transition: background-color 0.3s;
