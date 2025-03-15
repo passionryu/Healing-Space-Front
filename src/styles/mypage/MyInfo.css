@@ -49,3 +49,60 @@ h1 {
     transform: scale(1.05); /* 크기 5% 증가 */
 }
 
+@media (max-width:768px){
+    /* MyInfoPage.css */
+.my-info-detail {
+    margin-top:18vh;
+    display: grid;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc; /* 테두리 추가 */
+    border-radius: 10px; /* 둥근 테두리 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    
+    width: 100vw;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.user-details {
+    margin-left: 5vw;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.user-details p {
+    margin: 8px 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.account-delete h3{
+    color : red;
+}
+/* .account-delete button 기본 스타일 */
+.account-delete button {
+    width: 100%;
+    height: 8vh;
+    background-color: red;
+    transition: transform 0.3s ease; /* 크기 변화를 부드럽게 하기 위한 트랜지션 */
+}
+
+/* .account-delete button 호버링 시 스타일 */
+.account-delete button:hover {
+    transform: scale(1.05); /* 크기 5% 증가 */
+}
+
+
+}
+
