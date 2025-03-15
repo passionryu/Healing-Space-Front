@@ -157,9 +157,22 @@
   /* 모바일 대응 */
 
   @media (max-width :768px){
+
+    /* 전체 페이지 스타일 */
+    .signup-container {
+      width : 95vw;
+      height: 95vh;
+      margin-top: 13vh;
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;     
+      background-color: white; /* 배경 색상 */
+    }
+
     .signup-header{
       text-align: left; /* 좌측 정렬 */
-      display: flex;
+      display: grid;
       align-items: center;
     }
     
@@ -214,17 +227,6 @@
         height: 170px;
         display: block; /* 블록 요소로 변경하여 정렬 효과 적용 */
         padding-left: 4px;
-      }
-      
-      /* 전체 페이지 스타일 */
-      .signup-container {
-        margin-top: 30vh;
-        margin-bottom: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        background-color: #f7f7f7; /* 배경 색상 */
       }
     
       .signup-card {
