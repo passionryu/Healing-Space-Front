@@ -49,8 +49,8 @@ function Main() {
   }, []);
 
   return (
-    <>
-      <div>
+    
+      <div className="main-page">
 
         {/* SLIDER 시작 */}
         <section>
@@ -206,7 +206,7 @@ function Main() {
         {/* 힐링 스페이스 뉴스 로고 종단점 */}
 
       </div>
-    </>
+    
   );
 }
 

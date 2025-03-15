@@ -231,10 +231,14 @@
 
 @media (max-width: 768px) {
 
+  .main-page{
+    width: 97vw;
+  }
+
   .slider-container {
     padding-left: 2vw;
     margin-top : 20vh;
-    width: 100vw;
+    width: 95vw;
     position: relative;
     display: flex;   
     align-items: center;
@@ -244,7 +248,7 @@
   .slider {
     position: relative;
     overflow: hidden;
-    width: 100vw; /* 슬라이더 전체 너비 */
+    width: 95vw; /* 슬라이더 전체 너비 */
     margin: auto;
     border-radius: 30px; /* 모서리 둥글게 설정 */
   }
@@ -299,7 +303,7 @@
   
   /* 전체 컨테이너 스타일 */
   .main-about-us-container {
-    width: 100vw;
+    width: 95vw;
     margin-top: 0px;
     display:grid; 
     text-align: left; /* 텍스트 좌측 정렬 */
@@ -310,7 +314,7 @@
   
   /* 이미지 스타일 */
   .main-about-us-image img {
-    width: 100vw; /* 이미지 최대 너비 */
+    width: 93vw; /* 이미지 최대 너비 */
     padding : 2vw;
     height: auto; /* 비율 유지 */
     border-radius: 30px; /* 둥근 모서리 (선택 사항) */
@@ -342,7 +346,8 @@
   /* 힐링 서비스 로고 부분 */
 
   .healing-service-logo img {
-    width: 100%;
+    width: 95vw;
+    height: auto;
     border-radius: 15px; /* 모서리를 둥글게 설정 */
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
     /* margin-top: 0px; */
@@ -350,14 +355,14 @@
   }
 
   .healing-service-description{
-    width : 100vw;
+    width : 95vw;
   }
   
   /* 힐링 프로그램 요소 */
   .healing-program-container {
     margin-left: 0px; 
     display: flex;
-    width: 100vw;
+    width: 95vw;
     flex-direction: column;  /* 카드들을 세로로 배치 */
     align-items: flex-start;  /* 카드들을 왼쪽으로 정렬 */
     gap: 20px;               /* 카드들 사이에 간격 추가 */
@@ -404,15 +409,16 @@
   
   /* 힐링 스페이스 뉴스 로고 부분 */
   .healing-space-news img{
-    width: 100vw;
+    width: 95vw;
+    height: auto;
   }
   
   .healing-space-desription{
-    width: 100vw;
+    width: 95vw;
   }
   
   .healing-blog-container {
-    width: 100vw;
+    width: 95vw;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -424,7 +430,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 100%;
-    
   }
   
   .blog-card {
