@@ -21,3 +21,30 @@
   border-bottom: 2px solid #ddd; /* 하단 경계선 추가 */
   padding-bottom: 5px;       /* 하단 여백 추가 */
 }
+
+@media (max-width : 768px){
+  .team-member-img img{
+    margin-top : 17vh;
+    width: 90vw;
+    height: auto; /* 비율 유지 */
+    border-radius: 10px; /* 둥근 모서리 (선택 사항) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+    transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
+}
+
+.team-member-img img:hover{
+  transform: scale(1.05);  /* 호버 시 5% 커지도록 설정 */
+}
+
+.team-recruit h2{
+  font-size: 2rem;           /* 글씨 크기 */
+  font-weight: bold;         /* 글씨 두께 */
+  color: #917f27;               /* 글씨 색상 */
+  margin-top: 3vh;          /* 상단 여백 */
+  margin-bottom: 1vh;       /* 하단 여백 */
+  text-align: left;          /* 텍스트 정렬 */
+  border-bottom: 2px solid #ddd; /* 하단 경계선 추가 */
+  padding-bottom: 5px;       /* 하단 여백 추가 */
+}
+
+}
