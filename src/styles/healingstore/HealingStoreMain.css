@@ -40,7 +40,11 @@
 }
 
 @media (max-width: 768px) {
+   
+.healing-store-container{
+    margin-top: 21vh;
     
+}
 .healing-store-main {
     display: flex;
     justify-content: center;
