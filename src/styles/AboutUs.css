@@ -62,13 +62,63 @@
 
 /* 반응형 (화면이 작아질 때 세로 정렬) */
 @media (max-width: 768px) {
-  .about-us-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-  }
+ /* 전체 컨테이너 */
+.about-us-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
-  .about-us-small-image img {
-    width: 80px;
-  }
+/* 왼쪽 작은 이미지 */
+.about-us-small-image img {
+  width: 70vw;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* 새로운 컨텐츠 박스 (아래 배치) */
+.about-us-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+/* 오른쪽 텍스트 */
+.about-us-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-us-text h4 {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.year {
+  font-style: italic;
+  color: gray;
+  padding-left: 10px;
+}
+
+/* 기존 큰 이미지 스타일 */
+.about-us-page-image img {
+  width: 95vw;
+  padding : 1.5vw;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-us-page-image img:hover {
+  transform: scale(1.10);
+}
 }
