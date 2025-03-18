@@ -121,7 +121,6 @@
     height: auto;
     margin-top: 16vh;
     gap: 2vh;
-    
   }
   
   .diary-meta-data {
@@ -138,41 +137,9 @@
     transform: scale(1.05);
   }
   
-  .diary-card2 {
-    width: 95vw; /*우측 영역의 너비 설정 */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .diary-header {
-    height: 27vh;
-    gap: 0vh;
-    display: grid;
-    text-align: right;
-  }
-  
-  .diary-header img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-  .diary-header p {
-    color : gray;
-    padding-top: 0px; 
-  }
-  
-  .diary-header h1 {
-    font-family: "Playfair Display", serif;
-    text-align: center;
-    color: #917f27;
-  }
-  
   .input-container {
     margin-bottom: 10px;
+    width : 95vw;
   }
   
   .input-container label {
@@ -186,17 +153,17 @@
   .input-container input{
     width: 85vw;
     padding: 0px;
-    margin-top: 5px;
+    margin-top: 1vh;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
   }
   
   .input-container textarea {
-    width: 85vw;
-    height: 40vh;
+    width: 95vw;
+    height: 30vh;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 1vh;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
@@ -229,6 +196,46 @@
     border-radius: 10px;
     margin-bottom : 2vh;
     
+    
+  }
+  
+  .diary-header p {
+    font-size: 1.2rem;
+    color : gray;
+    padding-top: 1.5vh; 
+  }
+  
+  .diary-card2 {
+    width: 100vw; /*우측 영역의 너비 설정 */
+    padding: 2vh 2.5vw;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .diary-header {
+    height: 20vh;
+    gap: 0vh;
+    display: flex;
+    text-align: right;
+    
+  }
+  
+  .diary-header img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+  .diary-header h1 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    color: #917f27;
+  }
+  
+  .diary-body{
+    margin-top : 0vh;
   }
   
 }

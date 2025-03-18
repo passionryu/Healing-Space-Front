@@ -92,34 +92,36 @@ const DiaryPage = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="input-container">
-            <label htmlFor="title">Diary title</label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              placeholder="Enter diary title"
-              value={formData.title}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="diary-body">
+          <form onSubmit={handleSubmit}>
+            <div className="input-container">
+              <label htmlFor="title">Diary title</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter diary title"
+                value={formData.title}
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className="input-container">
-            <label htmlFor="diary">Diary content</label>
-            <textarea
-              id="diary"
-              name="diary"
-              placeholder="Write your diary here"
-              value={formData.diary}
-              onChange={handleChange}
-            ></textarea>
-          </div>
+            <div className="input-container">
+              <label htmlFor="diary">Diary content</label>
+              <textarea
+                id="diary"
+                name="diary"
+                placeholder="Write your diary here"
+                value={formData.diary}
+                onChange={handleChange}
+              ></textarea>
+            </div>
 
-          <button type="submit" className="diary-submit-btn" disabled={isSubmitting}>
-            {isSubmitting ? "Saving..." : "Save Diary"}
-          </button>
-        </form>
+            <button type="submit" className="diary-submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? "Saving..." : "Save Diary"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
