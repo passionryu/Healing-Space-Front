@@ -23,7 +23,7 @@ const DiaryResultPage = () => {
   return (
     <div className="result-container" >
       <div className="result-page-card">
-        <h1>당신에게 전하는 편지 ✉️ </h1>
+        <h1>✉️ AI Diary Service for you ✉️ </h1>
 
         {/* 날씨에 맞는 이미지 출력 */}
         <div className="weather-image-container">
@@ -52,21 +52,6 @@ const DiaryResultPage = () => {
 
           <p style={{ textAlign: "left" }}>{healingMessage}</p>
 
-
-
-          <p style={{ textAlign: "left" }}>
-            마지막으로 우리 Healing Space팀이 당신에게 추천해주는 음악은 다음과 같습니다.🎵 <br />
-            당신의 오늘의 감정과 어울리는 음악으로 준비해봤습니다.
-          </p>
-
-          <p style={{ textAlign: "left" }}>
-            {/* <a href="{healingMusic}"> 👉 이곳을 클릭하세요! </a> */}
-            <a href={healingMusic} target="_blank" rel="noopener noreferrer">👉 이곳을 클릭하세요!</a>
-          </p>
-
-          <p style={{ textAlign: "left" }}>
-            이 음악을 들으며 오늘 하루를 평안함 가운데에 마무리 할 수 있는 당신이 되면 좋겠습니다.😊
-          </p>
 
           <h5 style={{ textAlign: "right" }} >
             - 발신자 : <br/>

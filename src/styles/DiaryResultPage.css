@@ -25,3 +25,32 @@
   width: 300px;
   height: auto;
 }
+
+@media (max-width :768px){
+  .result-container {
+    width: 100vw ; 
+    display: flex;
+    flex-direction: column; /* 요소들을 세로로 배치 */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top : 19vh;
+    gap : 20px;
+  }
+  
+  .result-page-card{  
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result h5{
+    color: gray;
+  }
+  
+  .weather-image-container img{
+    width: 80vw;
+    height: auto;
+  }
+}
