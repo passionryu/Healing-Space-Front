@@ -72,10 +72,10 @@ const DiaryList = () => {
                 ))}
             </div>
 
-            <br />
+            {/* <br />
             <p style={{ textAlign: "left" }}>Calendar View will be continue...</p>
             <p style={{ textAlign: "left" }}>Monthly Emotion Statistics & Weekly Emotion Statistics Chart will be continue...</p>
-            
+             */}
 
         </div>
         

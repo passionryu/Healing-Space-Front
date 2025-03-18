@@ -53,51 +53,61 @@
 
 /* 모바일 기기에서 글자가 너무 커지지 않도록 하는 스타일 */
 @media (max-width: 768px) {
-    .diary-detail {
-        padding: 15px;
-    }
+  /* DiaryDetail.css */
 
-    .diary-detail h1 {
-        font-size: 1.8rem;
-    }
-
-    .diary-detail p {
-        font-size: 0.95rem;
-    }
-
-    .diary-detail .diary-content {
-        font-size: 1rem;
-    }
+/* 전체 컨테이너 */
+.diary-detail {
+  width: 100vw;
+  margin-top : 17vh;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
-/* 응답 메시지 부분 */
-  
-  .mypage-diary-result-card {
-    width: 760px;
-    max-height: 1000px;
-    padding: 20px;
-    margin-top: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .mypage-diary-result-card h1 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    text-align: center;
-    color: #917f27;
-  }
-  
-  .mypage-diary-result {
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  .mypage-diary-result h3 {
-    margin: 10px 0;
-  }
-  
-  .mypage-diary-result{
-    color :gray;
-  }
+.diary-content h1{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  text-align: center;
+  color: #917f27;
+}
+
+/* 날짜, 감정, 힐링 메시지 등의 항목에 대한 스타일 */
+.diary-detail p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 2vh 0;
+  color: #555;
+}
+
+/* 각 항목의 제목 부분 강조 */
+.diary-detail p strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 본문 내용 */
+.diary-detail .diary-content {
+  margin-top: 1vh;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1.1rem;
+  white-space: pre-wrap; /* 줄 바꿈을 그대로 유지 */
+  word-wrap: break-word;
+}
+
+/* 기본적으로 여백을 잘 주어 각 요소들 간의 간격을 확보 */
+.diary-detail p + p {
+  margin-top: 10px;
+}
+.mypage-diary-result-card{
+  margin-top :5vh;
+}
+
+.mypage-diary-result-card h5{
+  color: #555;
+}
+}

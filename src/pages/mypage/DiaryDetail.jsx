@@ -57,8 +57,6 @@ const DiaryDetail = () => {
     return (
         <div className="diary-detail">
 
-
-
             <div className="diary-content">
                 <h1>당신이 기록한 일기 📓 </h1>
 
@@ -83,9 +81,9 @@ const DiaryDetail = () => {
                     <p style={{ textAlign: "left" }}>
                         AI가 분석한 이날 당신의 감정 : {diary.emotion}
                     </p>
-                    <p style={{ textAlign: "left" }}>
+                    {/* <p style={{ textAlign: "left" }}>
                         이날 당신에게 어울렸던 음악 : <a href={diary.healingMusic} target="_blank" rel="noopener noreferrer">{diary.healingMusic}</a>
-                    </p>
+                    </p> */}
 
                     <h5 style={{ textAlign: "right" }} >
                         - 발신자 : <br />
