@@ -43,7 +43,7 @@ const Login = () => {
 
       // 로그인 성공 시 홈 화면으로 이동
       //alert("Login Successful");
-      alert(apiBaseUrl);
+      // alert(apiBaseUrl);
       navigate("/");
     } catch (error) {
       // 오류 발생 시 오류 메시지 처리
