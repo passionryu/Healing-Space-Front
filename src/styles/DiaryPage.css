@@ -147,17 +147,11 @@
   }
   
   .diary-header {
-    height: 25vh;
-    gap: 1vh;
+    height: 27vh;
+    gap: 0vh;
     display: grid;
     text-align: right;
   }
-
-  
-  /* .diary-header img{
-    width: 50%;
-    height: auto;
-  } */
   
   .diary-header img {
     width: 50%;
@@ -166,10 +160,9 @@
     margin: auto;
 }
 
-
   .diary-header p {
     color : gray;
-    padding-top: 5px; 
+    padding-top: 0px; 
   }
   
   .diary-header h1 {
@@ -228,13 +221,14 @@
   }
   
   .message-banner {
+    
     text-align: center;
     font-size: 1.2rem;
     color: #555;
     background-color: white;
-    padding-bottom: 10px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom : 2vh;
+    
   }
   
 }
