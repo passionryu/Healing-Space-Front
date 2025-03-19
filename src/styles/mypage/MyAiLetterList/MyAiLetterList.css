@@ -48,3 +48,56 @@
     text-align: right;
   }
   
+  @media (max-width: 768px){
+    .ai-recommend-container {
+      margin-top: 13vh;
+      height: auto;
+      padding: 1vh 2vw;
+      width: 95vw;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .title {
+      /* font-size: 20px; */
+      font-weight: bold;
+      margin-bottom: 2vh;
+      color : #917f27;
+    }
+    
+    .empty-message {
+      font-size: 1rem;
+      color: gray;
+    }
+    
+    .recommend-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .recommend-item {
+      background: white;
+      padding: 0.7vh 4vw;
+      margin-bottom: 2vh;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .recommend-title {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0.3vh;
+      /* color : #917f27; */
+    }
+    
+    .recommend-date {
+      color: gray;
+      font-size: 0.7rem;
+      text-align: right;
+    }
+    
+  }

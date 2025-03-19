@@ -47,7 +47,7 @@ const MyAiLetterDetail = () => {
             {new Date(aiResponseDetail.dateTime).toLocaleString()}
           </p>
           <p className="detail-content" style={{textAlign : "left"}}>{aiResponseDetail.content}</p>
-          <h3 className="response-title">AI 응답</h3>
+          <h3 className="response-title">🌿 AI Letter for you 🌿</h3>
           <p className="response-content" style={{textAlign : "left"}}>{aiResponseDetail.response}</p>
         </>
       ) : (
