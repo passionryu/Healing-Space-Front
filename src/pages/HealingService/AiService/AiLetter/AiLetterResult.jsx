@@ -87,12 +87,7 @@ const AiLetterResult = () => {
           언제나 당신을 응원하는 Team Healing Space 
         </h4>
       </div>
-
-      {/* <div className="button-container">
-        <button className="save-button" onClick={saveRecommendation}>
-          저장하기
-        </button>
-      </div> */}
+      
     </div>
   );
 };

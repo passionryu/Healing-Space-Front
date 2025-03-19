@@ -59,3 +59,67 @@
     background-color: #7a6a1e; /* 버튼 호버 시 색상 */
   }
   
+  @media(max-width :768px){
+    .ai-letter-result-container {
+      margin-top :17vh;
+      width : 100vw;  
+      padding: 0px;
+      text-align: center; /* 전체적으로 중앙 정렬 */
+    }
+    
+    .result-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80vw;
+      height: auto;
+    }
+    
+    .ai-letter-string {
+      padding: 2vh 1.5vw;
+      border-radius: 15px; /* 모서리 둥글게 */
+      background-color: #fff; /* 배경색을 흰색으로 설정 (옵션) */
+      margin-top: 2vh; /* 상단 여백 */
+      text-align: left; /* 텍스트를 좌측 정렬 */
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 효과 */
+   
+    }
+    
+    .result-title {
+      font-family: "Playfair Display", serif;
+      color: #917f27;
+      font-size: 1.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    
+    .result-content {
+      font-size: 1.2rem;
+      margin-top: 2vh;
+    }
+    
+    .result-footer {
+      text-align: left; /* h4는 좌측 정렬 */
+      font-size: 0.9rem;
+      color: gray;
+      font-style: italic; /* 기울임 적용 */
+    }
+    
+    .save-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #917f27; /* 버튼 색상 */
+      color: white; /* 글자 색 */
+      font-size: 16px;
+      border: none;
+      border-radius: 5px; /* 둥근 버튼 */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: flex-end; /* 버튼을 오른쪽으로 정렬 */
+    }
+    
+    .save-button:hover {
+      background-color: #7a6a1e; /* 버튼 호버 시 색상 */
+    }
+     
+  }
