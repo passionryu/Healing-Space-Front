@@ -45,7 +45,7 @@ const Chatting = () => {
         const accessToken = localStorage.getItem('accessToken');
 
         try {
-            const response = await axios.post('http://localhost:8080/chatbot/result', {}, {
+            const response = await axios.post(`${apiBaseUrl}/chatbot/result`, {}, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`,
                 },
