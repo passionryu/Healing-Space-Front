@@ -43,7 +43,7 @@ const MyChatbotDetail = () => {
             ) : (
                 <p>Loading...</p>
             )}
-            {/* <button className="back-button" onClick={() => navigate(-1)}>뒤로 가기</button> */}
+           
         </div>
     );
 };

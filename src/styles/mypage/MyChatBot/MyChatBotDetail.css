@@ -49,3 +49,40 @@
 .back-button:hover {
     background: #a89741;
 }
+
+@media (max-width:768px){
+    .chatbot-detail {
+        max-width: 100vw;
+        margin-top : 18vh;
+        padding: 3vh 2vw;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .chatbot-detail h2 {
+        color: #333;
+        margin-bottom: 2vh;
+    }
+    
+    .chatbot-content {
+        background: white;
+        padding: 1vh 2vw;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .chatbot-date {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 2vh;
+    }
+    
+    .chatbot-letter {
+        font-size: 1rem;
+        padding: 1vh 1vw;
+        border-radius: 5px;
+    }
+       
+}
