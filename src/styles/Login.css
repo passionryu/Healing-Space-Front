@@ -4,10 +4,11 @@
 
 /* 전체 페이지 스타일 */
 .login-container {
+  margin-top: 4vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
     background-color: #f7f7f7; /* 배경 색상 */
   }
   
