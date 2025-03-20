@@ -13,6 +13,7 @@ const MyHealingMusicList = () => {
         const fetchMyHealingMusic = async () => {
             try {
                 const token = localStorage.getItem("accessToken");
+
                 const response = await axios.get(
                     `${apiBaseUrl}/healingmusic/list/my`,
                     {
