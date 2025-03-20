@@ -71,6 +71,7 @@ const HealingMessageDetail = () => {
                 }
             );
             setLikeCount(response.data);
+            window.location.reload(); 
         } catch (err) {
             setError("Failed to update the like count. Please try again.");
         }
@@ -144,12 +145,18 @@ const HealingMessageDetail = () => {
                 </span>
             </div>
             <p className="content" style={{textAlign:"left"}} >{message.content}</p>
+
+            {/* 좋아요 버튼을 누르면 재시작되어 새 데이터가 반영되게 임시 조치 */}
+            {/* 좋아요 조회 부분 */}
             <div className="like-section">
-                <button className="like-button" onClick={handleLike}>
-                    ❤️  {likeCount !== null ? likeCount : "Loading..."}
-                </button>
+            <button className="like-button" onClick={handleLike}>
+            ❤️ {message.like} 
+            </button>
             </div>
+            {/* 좋아요 조회 부분 */}
+
             <div className="comment-section">
+                {/* 댓글 작성 부분 */}
                 <h3 style={{textAlign:"left"}}>Comments</h3>
                 <form onSubmit={handleCommentSubmit}>
                     <textarea
@@ -161,6 +168,7 @@ const HealingMessageDetail = () => {
                         <button type="submit">Submit</button>
                     </div>
                 </form>
+                {/* 댓글 작성 부분 */}
 
                 {/* 댓글 부분 */}
                 <ul>

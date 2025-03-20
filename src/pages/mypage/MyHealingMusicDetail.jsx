@@ -96,9 +96,11 @@ const MyHealingMusicDetail = () => {
                 </a>
             </p>
 
+            {/* 좋아요 조회 부분 */}
             <div className="footer">
-                <p>❤️ {healingMusic.likes} likes</p>
+                <p>❤️ {healingMusic.likes} </p>
             </div>
+            {/* 좋아요 조회 부분 */}
 
             {/* 댓글 리스트 */}
             <div className="comments-section">
