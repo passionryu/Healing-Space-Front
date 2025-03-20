@@ -73,10 +73,10 @@ const HealingMessageList = () => {
             </ul>
 
             <br />
-            <p style={{ textAlign: "left" }}>Liked Count will be continue...</p> 
+            {/* <p style={{ textAlign: "left" }}>Liked Count will be continue...</p> 
             <p style={{ textAlign: "left" }}>Sort by most likes will be continue...</p>   
             <p style={{ textAlign: "left" }}>Sort by most latest will be continue...</p>   
-            <p style={{ textAlign: "left" }}>Sort by most oldest will be continue...</p>            
+            <p style={{ textAlign: "left" }}>Sort by most oldest will be continue...</p>             */}
 
         </div>
     );
