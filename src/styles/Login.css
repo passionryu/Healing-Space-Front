@@ -113,17 +113,19 @@
   
   /* 전체 페이지 스타일 */
   .login-container {
-    width: 97vw;
+    width: 100vw;
     margin-top : 19vh;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 70vh;
+      height: auto;
       background-color: #f7f7f7; /* 배경 색상 */
     }
     
     .login-card {
       background-color: white;
+      width: 90vw;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px #917f27;
@@ -136,10 +138,23 @@
     }
     
     .input-container label {
+     
       display: block;
       font-size: 14px;
       color: #917f27;
       margin-bottom: 5px;
+    }
+
+    .input-container input{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #917f27;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      margin-top: 10px;
     }
     
     .pw-input-container input {

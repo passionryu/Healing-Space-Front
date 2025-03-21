@@ -69,6 +69,8 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div className="login-input-form-container">
             <div className="login-left">
+
+              {/* username  */}
               <div className="signup-input-container">
                 <label htmlFor="username">Username (실제 이름)</label>
                 <input
@@ -81,6 +83,7 @@ const Signup = () => {
                 />
               </div>
 
+              {/* ID */}
               <div className="signup-input-container">
                 <label htmlFor="nickName">ID (활동명)</label>
                 <input
@@ -93,6 +96,7 @@ const Signup = () => {
                 />
               </div>
 
+              {/* PN */}
               <div className="signup-input-container">
                 <label htmlFor="phoneNumber">Phone Number</label>
                 <input
@@ -107,6 +111,8 @@ const Signup = () => {
             </div>
 
             <div className="login-right">
+              
+              {/* pw */}
               <div className="signup-input-container">
                 <label htmlFor="password">Password</label>
                 <input
@@ -119,6 +125,7 @@ const Signup = () => {
                 />
               </div>
 
+              {/* email */}
               <div className="signup-input-container">
                 <label htmlFor="email">Email</label>
                 <input
@@ -131,6 +138,7 @@ const Signup = () => {
                 />
               </div>
 
+              {/* birth */}
               <div className="signup-input-container">
                 <label htmlFor="birth">Birth Date</label>
                 <input
