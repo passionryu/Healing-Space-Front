@@ -79,13 +79,15 @@
   }
 
   .ai-service-container {
-    margin-top : 15vh;
+    width: 100%;
+    height: auto;
+    margin-top : 17vh;
     text-align: center;
-    padding: 20px;
+    padding: 1vh 4vw 0vh 1vw;
   }
   
   .ai-service-container img{
-    width: 95vw;
+    width: 90%;
     height :auto ;
   }
 
@@ -101,8 +103,8 @@
     flex-direction: row; /* 세로 배치 */
     background-color: #fff;
     padding: 0.5vh 3vw;
-    width: 95vw;
-    height: 75vh;
+    width: 95%;
+    height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     border-radius: 10px;
@@ -110,7 +112,7 @@
   }
 
   .service-card img{
-        width :80vw;
+        width :90%;
         height: auto;
         border-radius: 8px;
   }
@@ -139,7 +141,7 @@
   }
   
   .service-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #555;
     /* line-height: 1.5; */
   }
