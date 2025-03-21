@@ -224,40 +224,38 @@
     
     /* 서비스 로고 */
     .logo-container img {
-        height: 170px;
+      width :  70vw;
+        height: auto;
         display: block; /* 블록 요소로 변경하여 정렬 효과 적용 */
-        padding-left: 4px;
+        padding-left: 0px;
       }
     
       .signup-card {
         width: 90vw;
         background-color: white;
-        padding: 30px;
+        padding: 2vh 3vw;
         border-radius: 10px;
         box-shadow: 0 4px 8px #917f27;
-      
         height: auto;
         text-align: center;
       }
     
       .login-input-form-container {
         display: grid;
-        justify-content: space-between;
-        gap: 20px; /* 좌우 간격 조정 */
+        /* justify-content: space-between; */
         width: 100%;
       }
       
-      .login-left,
+      .login-left{
+        width: 90vw;
+      }
       .login-right {
-        flex: 1; /* 좌우 균등한 크기 */
-        display: flex;
-        flex-direction: column;
+       width: 90vw;
       }
         
-      
       /* 아이디/비밀번호 입력 칸 스타일 */
       .signup-input-container {
-        width : 100vw;
+        width : 100%;
         margin-bottom: 1vh;
       }
       
@@ -269,7 +267,7 @@
       }
       
       .signup-input-container input {
-        width: 80%;
+        width: 100%;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -283,17 +281,6 @@
         outline: none;
       }
       
-      /* 성별 선택 라디오 버튼 스타일 */
-      .gender-options {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
-      
-      .gender-options label {
-        font-size: 14px;
-        color: #917f27;
-      }
       
       /* 회원가입 버튼 스타일 */
       .signup-btn {
