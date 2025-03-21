@@ -181,9 +181,10 @@
       color: #666;
       margin-bottom: 0.8vh;
       text-align: left; /* 설명도 왼쪽 정렬 */
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
+      white-space: normal; /* 자동 줄바꿈 허용 */
+    
+      /* overflow: hidden; */
+      width: 100%;
       animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
     }
     
