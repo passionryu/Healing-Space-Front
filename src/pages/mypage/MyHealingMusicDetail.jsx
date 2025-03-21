@@ -82,9 +82,9 @@ const MyHealingMusicDetail = () => {
                 </div>
             </div>
 
-            {healingMusic.image && <img src={healingMusic.image} alt="music" className="my-music-image" />}
-            <p className="content">{healingMusic.content}</p>
-            <p>
+            {/* {healingMusic.image && <img src={healingMusic.image} alt="music" className="my-music-image" />} */}
+            <p className="content" style={{textAlign : "left"}}>{healingMusic.content}</p>
+            <p style={{textAlign : "left"}}>
                 <strong>Healing Music</strong> :
                 <a
                     href={healingMusic.videoLink}
@@ -92,7 +92,7 @@ const MyHealingMusicDetail = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "#917f27", fontWeight: "bold" }}
                 >
-                    여기를 클릭하시오
+                    {healingMusic.videoLink}
                 </a>
             </p>
 

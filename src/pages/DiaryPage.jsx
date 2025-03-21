@@ -116,6 +116,7 @@ const DiaryPage = () => {
                 onChange={handleChange}
               ></textarea>
             </div>
+            
 
             <button type="submit" className="diary-submit-btn" disabled={isSubmitting}>
               {isSubmitting ? "Saving..." : "Save Diary"}

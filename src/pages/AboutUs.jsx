@@ -61,7 +61,7 @@ const AboutUs = () => {
       </div> */}
 
       {/* SLIDER 시작 */}
-      <section>
+      {/* <section>
           <div className="slider-container">
             <button className="prev-button" onClick={handlePrev}>
               ◀
@@ -85,7 +85,7 @@ const AboutUs = () => {
               ▶
             </button>
           </div>
-        </section>
+        </section> */}
 
         {/* SLIDER 종단점 */}
 

@@ -74,11 +74,11 @@ const HealingMusicList = () => {
                 ))}
             </ul>
 
-            <br />
+            {/* <br />
             <p>Liked Count will be continue...</p>
             <p>Sort by most likes will be continue...</p>
             <p>Sort by most latest will be continue...</p>
-            <p>Sort by most oldest will be continue...</p>
+            <p>Sort by most oldest will be continue...</p> */}
         </div>
     );
 };

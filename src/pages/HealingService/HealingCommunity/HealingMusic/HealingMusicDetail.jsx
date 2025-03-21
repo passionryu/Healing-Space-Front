@@ -141,17 +141,17 @@ const HealingMusicDetail = () => {
                 <span className="created-date">{new Date(music.dateTime).toLocaleString()}</span>
             </div>
 
-            {music.image && <img src={music.image} alt="music" className="healing-music-image" />}
-            <p className="content">{music.content}</p>
-            <p>
-                <strong>Healing Music</strong> :
+            {/* {music.image && <img src={music.image} alt="music" className="healing-music-image" />} */}
+            <p className="content" style={{textAlign : "left"}}>{music.content}</p>
+            <p style={{textAlign : "left"}}>
+                <strong>Music Link</strong> :
                 <a
                     href={music.videoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "#917f27", fontWeight: "bold" }}
                 >
-                    여기를 클릭하시오
+                    {music.videoLink}
                 </a>
             </p>
 
