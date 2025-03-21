@@ -167,20 +167,20 @@
 @media (max-width: 768px) {
 
   .main-page{
-    margin-top : 17vh;
-    width: 97vw;
+    margin-top : 18vh;
+    width: 100vw;
   }
   /* About US 부분 */
   
   /* 전체 컨테이너 스타일 */
   .main-about-us-container {
-    width: 95vw;
+    width: 100vw;
     margin-top: 0px;
     display:grid; 
     text-align: left; /* 텍스트 좌측 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
-    gap: 20px; /* 이미지와 텍스트 사이 간격 */
-    padding: 10px; /* 내부 여백 */
+    gap: 1vh; /* 이미지와 텍스트 사이 간격 */
+    padding: 1vh 1vw; /* 내부 여백 */
   }
   
   /* 이미지 스타일 */
@@ -189,7 +189,7 @@
     padding : 2vw;
     height: auto; /* 비율 유지 */
     border-radius: 30px; /* 둥근 모서리 (선택 사항) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
     transition: transform 0.3s ease; /* 호버 시 크기 변화를 부드럽게 */
   }
   
@@ -204,7 +204,7 @@
   
   .main-about-us-text h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 0.6vh;
   }
   
   .main-about-us-text h4 {
@@ -253,7 +253,8 @@
   }
   
   .main-card img {
-    width : 30vw;
+    width : 40vw;
+    height: auto;
     /* height: 5vh; */
   }
   
@@ -270,11 +271,12 @@
   }
   
   .main-card h3 {
-    margin-bottom: 0vh;    /* 카드 제목과 본문 사이 간격 */
+    font-size: 1rem;
+    margin-bottom: 1.5vh;    /* 카드 제목과 본문 사이 간격 */
   }
   
   .main-card p {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: #555;            /* 텍스트 색상 */
   }
   
@@ -285,7 +287,7 @@
   }
   
   .healing-space-desription{
-    width: 95vw;
+    width: 100vw;
   }
   
   .healing-blog-container {
@@ -339,12 +341,7 @@
     color: #666;
   }
   
-  .profile-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-top: 10px;
-  }
+  
   
 
 }
