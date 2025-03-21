@@ -23,9 +23,13 @@
 }
 
 @media (max-width : 768px){
+  .team-member-container{
+    width: 100%;
+    height: auto;
+  }
   .team-member-img img{
     margin-top : 17vh;
-    width: 90vw;
+    width: 90%;
     height: auto; /* 비율 유지 */
     border-radius: 10px; /* 둥근 모서리 (선택 사항) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */

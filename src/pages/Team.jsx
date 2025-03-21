@@ -3,7 +3,7 @@ import "../styles/Team.css"
 
 const Team = () => {
     return (
-        <>
+        <div className='team-member-container'>
             {/* 이미지 영역 */}
             <div className='team-member-img'>
                 <img src="../src/assets/images/my_profile.png" alt="rsy img" />
@@ -20,7 +20,7 @@ const Team = () => {
 
             </div>
 
-        </>
+        </div>
     )
 
 }
