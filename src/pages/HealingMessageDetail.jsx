@@ -155,7 +155,7 @@ const HealingMessageDetail = () => {
             </div>
             {/* 좋아요 조회 부분 */}
 
-            <div className="comment-section">
+            <div className="healing-message-comment-section">
                 {/* 댓글 작성 부분 */}
                 <h3 style={{textAlign:"left"}}>Comments</h3>
                 <form onSubmit={handleCommentSubmit}>
