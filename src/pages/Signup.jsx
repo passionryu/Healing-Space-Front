@@ -59,11 +59,11 @@ const Signup = () => {
             <img src="../src/assets/images/main_logo.png" alt="Main Logo" className="main-logo" />
           </div>
           <p className="signup-description" style={{ textAlign: "left" }}>
-            <span className="line line1"> 🌿Welcome to "Healing Space"🌿</span>
+            <span className="line signup-line1"> 🌿Welcome to "Healing Space"🌿</span>
             <br />
-            <span className="line line2">We develop IT services for your peace of mind.</span>
+            <span className="line signup-line2">We develop IT services for your peace of mind.</span>
             <br />
-            <span className="line line3">We hope that you find peace & happiness when you visit here.😊</span>
+            <span className="line signup-line3">We hope that you find peace & happiness when you visit here.😊</span>
           </p>
         </div>
         <form onSubmit={handleSubmit}>
