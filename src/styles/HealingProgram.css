@@ -50,7 +50,7 @@
     /*align-items: center;  /* 세로(수직) 중앙 정렬 */
     /*justify-content: center; /* 가로(수평) 중앙 정렬 */
     gap: 3vh;               /* 카드들 사이에 간격 추가 */
-    /*padding: 0px;           /* 컨테이너 여백 */
+    padding: 2vh 3vw;           /* 컨테이너 여백 */
   }
   
   .heal-card {
