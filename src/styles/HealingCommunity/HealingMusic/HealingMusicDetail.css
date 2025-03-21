@@ -64,3 +64,108 @@
     cursor: pointer;
     outline: none;
 }
+
+@media (max-width :768px){
+    .healing-music-detail {
+        width: 100vw;
+        margin-top: 15vh;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .author-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .nickname {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .healing-music-comment-section textarea{
+        width: 90vw;
+        height: 80px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        resize: none; 
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .healing-music-comment-section button{
+        padding: 10px 20px;
+        background-color:  #a5933a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+
+    .healing-music-comment-section button:hover {
+        background-color:  #b4a455;
+    }
+    
+
+    /* 댓글 부분 관리하기  */
+   
+    .healing-music-comment-section li {
+        padding: 10px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .created-date {
+        color: #888;
+    }
+    
+    .content {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .video-container {
+        margin: 20px 0;
+    }
+    
+    .healing-music-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    
+    .like-section {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    
+    .like-button {
+        background: none;
+        border: none;
+        color: #e74c3c;
+        font-size: 18px;
+        cursor: pointer;
+        outline: none;
+    }
+    
+}

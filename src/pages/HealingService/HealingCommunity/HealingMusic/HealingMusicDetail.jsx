@@ -162,7 +162,7 @@ const HealingMusicDetail = () => {
             </div>
 
             {/* 댓글 섹션 */}
-            <div className="comment-section">
+            <div className="healing-music-comment-section">
                 <h3 style={{ textAlign: "left" }}>Comments</h3>
                 <form onSubmit={handleCommentSubmit}>
                     <textarea

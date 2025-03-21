@@ -71,3 +71,91 @@ ul {
     margin: 5px 0;
     color: #555;
 }
+
+@media (max-width : 768px){
+
+    .healing-music-list{
+        margin-top : 17vh;
+        width: 100vw;
+    }
+
+    .healing-music-header {
+        display: grid;
+        /* position: relative;
+        align-items: center;
+        justify-content: center; */
+        width: 100vw;
+        height: auto;
+    }
+    
+    .healing-music-logo img {
+        width: 70%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 7vh;
+    }
+    
+    .create-music-button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        background-color: #917f27;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .create-music-button:hover {
+        background-color: #a5933a;
+    }
+    
+    .healing-music-list {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .music-item {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 2vh;
+        padding: 1vh 1vw;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .music-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .music-thumbnail {
+        width: 40%;
+        height: auto;
+        border-radius: 8px;
+        margin-left : 2vw;
+        margin-right: 2vw;
+    }
+    
+    .music-info h3 {
+        margin: 0 0 10px 0;
+    }
+    
+    .music-info p {
+        font-size: 0.8rem;
+        margin: 5px 0;
+        color: #555;
+    }
+    
+}
