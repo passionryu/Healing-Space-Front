@@ -58,7 +58,7 @@ const Signup = () => {
           <div className="logo-container">
             <img src="../src/assets/images/main_logo.png" alt="Main Logo" className="main-logo" />
           </div>
-          <p className="description" style={{ textAlign: "left" }}>
+          <p className="signup-description" style={{ textAlign: "left" }}>
             <span className="line line1"> 🌿Welcome to "Healing Space"🌿</span>
             <br />
             <span className="line line2">We develop IT services for your peace of mind.</span>

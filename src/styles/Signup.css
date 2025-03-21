@@ -176,10 +176,10 @@
       align-items: center;
     }
     
-    .description {
-      font-size: 1rem;
+    .signup-description {
+      font-size: 0.8rem;
       color: #666;
-      margin-bottom: 20px;
+      margin-bottom: 0.8vh;
       text-align: left; /* 설명도 왼쪽 정렬 */
       white-space: nowrap;
       overflow: hidden;
