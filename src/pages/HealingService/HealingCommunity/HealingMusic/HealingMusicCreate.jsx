@@ -100,7 +100,7 @@ const HealingMusicCreate = () => {
             required
           ></textarea>
         </div>
-
+        
         <button type="submit" className="submit-button" disabled={loading}>
           {loading ? "전송 중..." : "힐링 뮤직 공유하기"}
         </button>
