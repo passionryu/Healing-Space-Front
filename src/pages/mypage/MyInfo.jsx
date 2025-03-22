@@ -77,15 +77,15 @@ const MyInfoPage = () => {
 
     // 사용자 정보 렌더링
     return (
-        <>
+        <div className="my-info-container">
             <div className="my-info-detail">
-                <div className="profile">
+               
                     <img
                         src={"../src/assets/images/profile.jpg"}
                         alt="Profile"
                         className="profile-image"
                     />
-                </div>
+               
 
                 <div className="user-details">
                     <p><strong>ID:</strong> {userInfo.Id}</p>
@@ -105,7 +105,7 @@ const MyInfoPage = () => {
 
                 <button onClick={handleAccountDeletion}>Account Deletion</button>
             </div>
-        </>
+        </div>
     );
 };
 
