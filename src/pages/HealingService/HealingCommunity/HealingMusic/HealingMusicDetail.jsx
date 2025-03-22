@@ -134,7 +134,7 @@ const HealingMusicDetail = () => {
 
     return (
         <div className="healing-music-detail">
-            <h1>{music.title}</h1>
+            <h1 style={{textAlign : "left"}}>{music.title}</h1>
             <div className="author-info">
                 <img src={"../src/assets/images/profile.jpg"} alt="profile" className="profile-image" />
                 <span className="nickname">{music.nickName}</span>
@@ -177,7 +177,7 @@ const HealingMusicDetail = () => {
 
                 <ul>
                     {comments.map((cmt, index) => (
-                        <li key={index}>
+                        <li className="healing-music-detail-li" key={index}>
                             <div className="comment-info" style={{ textAlign: "left", display: "flex", alignItems: "center", gap: "10px" }}>
                                 <img src={"../src/assets/images/profile.jpg"} alt="comment-profile" className="profile-image2" />
                                 <span className="nickname2">{cmt.nickName}</span>

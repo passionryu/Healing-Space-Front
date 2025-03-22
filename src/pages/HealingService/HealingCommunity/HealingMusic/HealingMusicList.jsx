@@ -49,9 +49,9 @@ const HealingMusicList = () => {
     return (
         <div className="healing-music-list">
             <div className="healing-music-header">
-                <div className="healing-music-logo">
+               
                     <img src="../src/assets/images/healingmusicsharing.png" alt="Healing Music Logo" />
-                </div>
+                
 
                 {/* 음악 글 작성 버튼 */}
                 <button className="create-music-button" onClick={handleCreateMusicPost}>

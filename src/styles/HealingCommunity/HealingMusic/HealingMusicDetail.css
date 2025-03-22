@@ -67,11 +67,11 @@
 
 @media (max-width :768px){
     .healing-music-detail {
-        width: 100vw;
-        margin-top: 15vh;
+        width: 100%;
+        margin-top: 19vh;
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        padding: 20px;
+        padding: 0vh 2vw;
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: #f9f9f9;
@@ -79,36 +79,46 @@
     }
     
     .author-info {
+        width: 100%;
         display: flex;
         align-items: center;
         margin-bottom: 20px;
     }
+
+    .author-info img{
+        width: 20%;
+        height :auto;
+    }
+
+    .healing-music-detail h1{
+        margin-left : 5vw;
+    }
     
-    .profile-image {
-        width: 50px;
+    /* .profile-image {
+        width: 0px;
         height: 50px;
         border-radius: 50%;
         margin-right: 10px;
-    }
+    } */
     
     .nickname {
         font-weight: bold;
-        margin-right: 10px;
+        margin-right: 4vw;
     }
 
     .healing-music-comment-section textarea{
-        width: 90vw;
-        height: 80px;
-        padding: 10px;
+        width: 90%;
+        height: 8vh;
+        padding: 1vh 3vw;
         border: 1px solid #ddd;
         border-radius: 4px;
         resize: none; 
-        margin-bottom: 10px;
-        font-size: 14px;
+        margin-bottom: 1vh;
+        font-size: 1rem;
     }
 
     .healing-music-comment-section button{
-        padding: 10px 20px;
+        padding: 1.2vh 3vw;
         background-color:  #a5933a;
         color: white;
         border: none;
@@ -125,11 +135,11 @@
     /* 댓글 부분 관리하기  */
    
     .healing-music-comment-section li {
-        padding: 10px;
+        padding: 1vh 3vw;
         background: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 4px;
-        margin-bottom: 10px;
+        margin-bottom: 1.7vh;
     }
 
     .created-date {
@@ -137,7 +147,7 @@
     }
     
     .content {
-        font-size: 16px;
+        font-size: 300px;
         color: #333;
         margin-bottom: 20px;
     }
@@ -167,5 +177,25 @@
         cursor: pointer;
         outline: none;
     }
-    
+ 
+    .comment-info{
+        width: 100%;
+        gap : 2vw
+    }
+    .comment-info img {
+        width: 20% ;
+        height: auto;
+    }
+    .nickname2{
+        font-size: 0.9rem;
+        margin-right: 4vw;
+    }
+    .created-date{
+        font-size: 0.7rem;
+    }
+   
+    .healing-music-detail-li{
+        width: 95%;
+        
+    }
 }
