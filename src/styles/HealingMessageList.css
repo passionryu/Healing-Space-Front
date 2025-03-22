@@ -77,13 +77,14 @@ ul {
 
 @media (max-width :768px){
 .healing-message-list{
-    width :100vw;
-    margin-top:17vh;
+    width :90%;
+    margin-top:18vh;
     height: auto;
+   
 }
 
     .healing-message-header {
-        
+        width: 100%;
         display: grid;
         /*position: relative; /* 버튼을 배치하기 위한 기준 */
         /*align-items: center; /* 세로축 중앙 정렬 */
@@ -91,40 +92,35 @@ ul {
         height: auto; /* 헤더 높이를 적절히 설정 */
     }
     .healing-message-logo img{
-        width: 90%;
+        width: 80%;
         height: auto;
         align-items: center;
         justify-content: center;
-        margin-bottom : 10vh;
+        margin-bottom : 8vh;
     }
 
-    .create-post-button {
+    .healing-message-create-post-button {
         position: absolute; /* 버튼을 자유롭게 배치 */
-        bottom: 10px; /* 헤더의 아래쪽 여백 */
-        right: 10px; /* 헤더의 오른쪽 여백 */
-        padding: 10px 20px;
+        bottom: 1vh; /* 헤더의 아래쪽 여백 */
+        right: 2vw; /* 헤더의 오른쪽 여백 */
+        padding: 1vh 3vw;
         background-color: #917f27;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 1rem;
         transition: background-color 0.3s ease;
     }
     
-    .create-post-button:hover {
+    .healing-message-create-post-button:hover {
         background-color: #a5933a;
     }
 
-    
-    .healing-message-list {
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
-    
+
     .healing-message-list h1 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 2vh;
     }
     
     ul {
@@ -133,7 +129,7 @@ ul {
     }
     
     .message-item {
-        width: 95vw;
+        width: 95%;
         background: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -148,11 +144,13 @@ ul {
     }
     
     .message-item h3 {
-        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+        margin: 0 0 0.7vh 0;
     }
     
     .message-item p {
-        margin: 5px 0;
+        font-size: 0.8rem;
+        margin: 0.3vh 0;
         color: #555;
     }
     

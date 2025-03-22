@@ -55,7 +55,7 @@ const HealingMessageList = () => {
                 </div>
 
                 {/* 글 작성하기 버튼 */}
-                <button className="create-post-button" onClick={handleCreatePost}>
+                <button className="healing-message-create-post-button" onClick={handleCreatePost}>
                     글 작성하기
                 </button>
             </div>

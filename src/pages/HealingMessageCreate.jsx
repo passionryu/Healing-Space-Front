@@ -101,10 +101,12 @@ const HealingMessageCreate = () => {
             required
           ></textarea>
         </div>
-
-        <button type="submit" className="submit-button" disabled={loading}>
+        
+        <div className="healing-message-create-button">
+        <button type="submit" className="message-submit-button" disabled={loading}>
           {loading ? "전송 중..." : "힐링 메시지 공유하기"}
         </button>
+        </div>
       </form>
 
       {error && <p className="error-message">{error}</p>}

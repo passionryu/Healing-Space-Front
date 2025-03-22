@@ -81,30 +81,29 @@
   @media (max-width :768px){
     .healing-message-create {
       margin-top: 13vh;
-      width : 100vw;
-      padding: 20px;
+      height: auto;
+      width : 100%;
+      padding: 1vh 2vw;
       color: #917f27;
       font-family: Arial, sans-serif;
     }
     
     .healing-message-create h1 {
       text-align: center;
-      margin-bottom: 3vh;
+      margin-bottom: 2vh;
     }
     
     .form-group {
       margin-bottom: 1vh;
-      
     }
     
     label {
       font-size: 1rem;
       font-weight: bold;
-      display: block;
-  
+      display: block;  
       font-weight: bold;         /* 글씨 두께 */
       color: #917f27;               /* 글씨 색상 */
-      margin-top: 20px;          /* 상단 여백 */
+      margin-top: 2vh;          /* 상단 여백 */
       margin-bottom: 0px;       /* 하단 여백 */
       text-align: left;          /* 텍스트 정렬 */
       border-bottom: 2px solid #ddd; /* 하단 경계선 추가 */
@@ -113,8 +112,21 @@
       
     }
     
-    input[type="text"],
+    /* input[type="text"],
     textarea {
+      width: 90%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    } */
+
+    .form-group label{
+      width: 109%;
+    }
+
+    .form-group textarea{
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -127,9 +139,9 @@
       margin-top: 5px;
     }
     
-    button.submit-button {
+    button.message-submit-button {
       width: 100%;
-      padding: 12px;
+      padding: 2vh 4vw;
       background-color: #917f27;
       color: white;
       font-size: 1rem;
@@ -139,14 +151,37 @@
       transition: background-color 0.3s;
     }
     
-    button.submit-button:hover {
+    button.message-submit-button:hover {
       background-color: #a5933a;
     }
     
-    button.submit-button:disabled {
+    button.message-submit-button:disabled {
       background-color: #ccc;
     }
-    
+  
+    .healing-message-create-button{
+      width: 110%;
+    }
+    .healing-message-create-button button{
+      width: 100%;
+      padding: 2vh 4vw;
+      background-color: #917f27;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .healing-message-create-button button:hover{
+      background-color: #a5933a; 
+    }
+
+    .healing-message-create-button button:disabled {
+      background-color: #ccc;
+    }
+
     .error-message {
       color: red;
       text-align: center;
