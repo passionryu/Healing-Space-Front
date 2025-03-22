@@ -110,61 +110,36 @@
   
   @media (max-width:768px){
     .ai-letter-container {
-      width: 100vw;
-      margin-top:17vh;
+      width: 100%;
+      height: auto;
+      margin-top:19vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* 내용 상단 정렬 */
+      justify-content: flex-start; 
       padding: 0px;
       font-family: 'Arial', sans-serif;
     }
     
     .ai-letter-container img {
-      width: 70vw;
+      width: 70%;
       height: auto;
-      align-self: center; /* 로고는 가운데 정렬 */
+      align-self: center; 
     }
-    
-    .title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 10px;
-      text-align: left; /* 제목은 왼쪽 정렬 */
+
+    .ai-letter-container p{
+      width: 100%;
+      font-size: 0.7rem;
+      height: auto;
     }
-    
-    .description {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 3vh;
-      text-align: left; /* 설명도 왼쪽 정렬 */
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-    }
-    
-    .story-input {
-      width: 100vw; /* 가운데 정렬을 위해 넓이를 50%로 설정 */
-      height: 50vh;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      resize: none;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      align-self: center; /* input 영역을 가운데 정렬 */
-    }
-    
-    .story-input:focus {
-      outline: none;
-      border-color: #020e1c;
-      box-shadow: 0 0 5px rgba(30, 31, 31, 0.811);
+
+    .ai-letter-container textarea{
+      width: 96%;
+      height: 35vh;
     }
     
     .ai-letter-submit-button {
-      width: 100vw;
-      height: 50px;
+      width: 100%;
+      height: 5vh;
       font-size: 1rem;
       color: #fff;
       background-color: #917f27;
@@ -172,7 +147,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.8s ease;
-      margin-left: auto; /* 버튼을 오른쪽으로 정렬 */
+       
     }
     
     .ai-letter-submit-button:disabled {
@@ -202,14 +177,14 @@
     }
     
     .line3 {
-      display: block; /* 줄 바꿈 */
-      width: 100%;  /* 텍스트 영역을 꽉 채우게 설정 */
+      display: block; 
+      width: 100%;
       animation-delay: 5.5s, 10s;
     }
     
     .line3::after {
       content: "성심껏 편지를 작성해드립니다.✉️";
-      display: block; /* 텍스트를 새 줄로 표시 */
+      display: block; 
     }
     
     
