@@ -9,10 +9,9 @@ const HealingProgram = () => {
 
       <div className="heal-card">
         <Link to="/healing-message-list">
-          <div>
+          
             <img src="../src/assets/images/healingmessagesharing.png" alt="이미지" />
-          </div>
-
+          
           <div className="card-text">
 
             <h3 style={{ textAlign: "left" }}>Healing Messge Sharing</h3>
