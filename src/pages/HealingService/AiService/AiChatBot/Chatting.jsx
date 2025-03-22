@@ -68,11 +68,11 @@ const Chatting = () => {
             <div className='meta-data'>
                 <div className='meta-content'>
                     {/* <img src='../src/assets/images/aichatbot.png' alt='Chatbot' className='meta-image' /> */}
-                    <h2 style={{textAlign : "left"}}>Hello there! 😊</h2>
+                    <h2 style={{textAlign : "left"}}>Hello there! </h2>
                     <p style={{textAlign : "left"}}>Healing Space AI 상담사가 여러분과 함께합니다.</p>
                     <p style={{textAlign : "left"}}>Healing Space AI는... </p>
-                    <p style={{textAlign : "left"}}>1. 언제 어디서나 상담이 가능합니다.</p>
-                    <p style={{textAlign : "left"}}>2. 철저히 비밀을 보장합니다. <br/>  당신의 대화 내역은 상담이 마무리 된 후 데이터베이스에 저장되지 않고 즉시 삭제됩니다.</p>
+                    <p style={{textAlign : "left"}}>1. 언제나, 어디서나 이곳에 있습니다. 당신의 마음이 어려울때, 언제나 어디서나 저를 찾아주세요.😊</p>
+                    <p style={{textAlign : "left"}}>2. 철저히 비밀을 보장합니다. <br/>  당신의 대화 내역은 상담이 마무리 된 후 데이터베이스에 저장되지 않고 즉시 삭제됩니다.🚮</p>
                     <p style={{textAlign : "left"}}>3. 마지막으로, Healing Space AI는 언제나 당신의 편입니다.</p>
 
                 </div>

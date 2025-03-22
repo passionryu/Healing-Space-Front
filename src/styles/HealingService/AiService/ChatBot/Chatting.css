@@ -153,18 +153,18 @@
     /* 전체 페이지를 좌우 정렬 */
 .chatting-page {
     display: grid;
-    margin-top : 16vh;
+    margin-top : 18vh;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: auto;
-    gap: 30px; /* 좌우 간격 */
-    padding: 20px;
+    gap: 2vh; 
+    padding: 2vh 3vw;
 }
 
 /* 좌측 메타 데이터 (텍스트 + 이미지) */
 .meta-data {
-    width: 90vw;
+    width: 90%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -172,7 +172,7 @@
     background: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2vh 3vw;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -193,16 +193,16 @@
 }
 
 .meta-data p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
 }
 
 /* 우측 채팅 박스 */
 .chat-container {
-    width: 100vw;
+    width: 97%;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 55vh;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
