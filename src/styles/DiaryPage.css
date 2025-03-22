@@ -172,28 +172,27 @@
   line-height: 20px;
 }
 
-
 /* 모바일 대응  */
 /* 모바일 대응  */
 /* 모바일 대응  */
 /* 모바일 대응  */
 /* 모바일 대응  */
-
 
 @media (max-width : 768px){
 
   .diary-container {
     display: grid;
     justify-content: space-between; /* 좌측과 우측을 나누기 */
-    width: 105vw;
+    width: 100%;
     height: auto;
-    margin-top: 16vh;
-    gap: 2vh;
+    padding : 1vh 4vw .05vh 0vw;
+    margin-top: 20vh;
+    gap: 3vh;
   }
   
   .diary-meta-data {
-    width: 95vw; /* 좌측 영역의 너비 설정 */
-    padding: 20px;
+    width: 95%; /* 좌측 영역의 너비 설정 */
+    padding: 1vh 3vw;
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #f0f0f0;
@@ -206,8 +205,8 @@
   }
   
   .input-container {
-    margin-bottom: 10px;
-    width : 95vw;
+    margin-bottom: 1vh;
+    width : 95%;
   }
   
   .input-container label {
@@ -215,11 +214,11 @@
     display: block;
     text-align: left;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1.5vh;
   }
   
   .input-container input{
-    width: 85vw;
+    width: 85%;
     padding: 0px;
     margin-top: 1vh;
     border: 1px solid #ccc;
@@ -228,9 +227,9 @@
   }
   
   .input-container textarea {
-    width: 95vw;
+    width: 95%;
     height: 30vh;
-    padding: 10px;
+    padding: 1vh 2vw;
     margin-top: 1vh;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -238,14 +237,14 @@
   }
   
   .diary-submit-btn {
-    float: right;
-    width: 95vw;
-    padding: 10px;
+    float: left;
+    width: 96%;
+    padding: 1.5vh 2vw;
     background-color: #917f27;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
@@ -268,13 +267,14 @@
   }
   
   .diary-header p {
-    font-size: 1.2rem;
+    display: none;
+    font-size: 0.2rem;
     color : gray;
     padding-top: 1.5vh; 
   }
   
   .diary-card2 {
-    width: 100vw; /*우측 영역의 너비 설정 */
+    width: 97%; /*우측 영역의 너비 설정 */
     padding: 2vh 2.5vw;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -283,6 +283,7 @@
   
   .diary-header {
     height: 20vh;
+    width: 90%;
     gap: 0vh;
     display: flex;
     text-align: right;
@@ -290,10 +291,11 @@
   }
   
   .diary-header img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 1vh 1vw 0.5vh 4vw;
+    
 }
 
   .diary-header h1 {
