@@ -77,7 +77,7 @@ function Main() {
             <div>
               <img src="../src/assets/images/aihealingservices.png" alt="이미지" />
             </div>
-            <div className="card-text">
+            <div className="main-page-card-text">
               <Link to={"/ai-service-main"}>
                 <h3>AI Healing Service</h3>
                 <p>Healing Space's AI service will response for you.😉</p>
@@ -89,7 +89,7 @@ function Main() {
             <div>
               <img src="../src/assets/images/healingstore.png" alt="이미지" />
             </div>
-            <div className="card-text">
+            <div className="main-page-card-text">
               <Link to="/healing-store-main">
                 <h3>Healing Store</h3>
                 <p>Why don't you buy some healing stuff for yourself? 😎</p>
@@ -101,7 +101,7 @@ function Main() {
             <div>
               <img src="../src/assets/images/healingcommunity.png" alt="이미지" />
             </div>
-            <div className="card-text">
+            <div className="main-page-card-text">
               <Link to="/healing-program">
                 <h3>Healing Community</h3>
                 <p>Healing Community for you 😉</p>
