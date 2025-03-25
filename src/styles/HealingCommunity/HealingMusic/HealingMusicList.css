@@ -1,9 +1,16 @@
 .healing-music-header {
+    width: 1000px;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
     height: 270px;
+    margin-bottom: 100px;
+}
+
+.healing-music-header img{
+ width: 50%;
+ height: auto;   
 }
 
 .healing-music-logo img {
@@ -74,18 +81,24 @@ ul {
 
 @media (max-width : 768px){
 
-    .healing-music-list{
-        margin-top : 18vh;
-        width: 100%;
+    .healing-music-list{      
+        margin-top : 17vh;
+        width: 95%;
+        
+        margin-right: 10vw;
+       
     }
 
     .healing-music-header {
+        margin-top : 3vh;
         display: grid;
+        
         /* position: relative;
         align-items: center;
         justify-content: center; */
         width: 100%;
         height: auto;
+        margin-bottom: 0px;
     }
     
     .healing-music-header img {
