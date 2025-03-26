@@ -67,7 +67,7 @@ function Main() {
 
         {/* 힐링 프로그램 요소 시작점 */}
         <div className="healing-service-description">
-          <h4>Healing Space 팀이 준비한 다양한 힐링 서비스를 만나보세요.</h4>
+          {/* <h4>Healing Space 팀이 준비한 다양한 힐링 서비스를 만나보세요.</h4> */}
           <p>Explore the diverse healing services prepared by the Healing Space team.</p>
         </div>
 
