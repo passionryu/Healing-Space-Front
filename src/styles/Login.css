@@ -108,13 +108,14 @@
   
   @media (max-width: 768px){
     .login-logo-container img{
-      height: 150px;
+     width: 95%;
+     height: auto;
   }
   
   /* 전체 페이지 스타일 */
   .login-container {
-    width: 100vw;
-    margin-top : 19vh;
+    width: 100%;
+    margin-top : 20vh;
 
       display: flex;
       justify-content: center;
@@ -125,8 +126,8 @@
     
     .login-card {
       background-color: white;
-      width: 90vw;
-      padding: 30px;
+      width: 90%;
+      padding: 0vh 4vw 2vh 4vw ;
       border-radius: 10px;
       box-shadow: 0 4px 8px #917f27;
       text-align: center;

@@ -230,14 +230,14 @@
 
   .mypage-container{
     width: 100%;
-    height : 40vh;
+    height : auto;
   }
 
   .profile-card {
     display: grid;
     width: 70%;
     height : auto;
-    margin-top : 15vh;
+    margin-top : 19vh;
     padding: 2vh;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -420,7 +420,7 @@
     align-items: center;
     width: 100%;
     height: 8vh;
-    margin-bottom: 13vh;
+    margin-bottom: 1vh;
     border-radius: 30px;
     /* 둥근 모서리 */
     background-color: #917f27;

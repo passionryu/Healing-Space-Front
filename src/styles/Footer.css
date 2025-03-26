@@ -31,7 +31,7 @@ footer p {
 @media (max-width: 768px) {
     footer {
 
-        position: fixed;
+        position: absolute;
         /* 화면에서 절대 위치 설정 */
         left: 0;
         right: 0;
