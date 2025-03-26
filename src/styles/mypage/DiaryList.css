@@ -60,13 +60,11 @@
 }
 
 @media (max-width : 768px){
-    /* .diary-list h2{
-    color: #555;
-    size: 20px;
-} */
+    
 .diary-list {
-    width : 100vw;
-    margin-top: 10vh;
+    width : 100%;
+    height: auto;
+    margin-top: 0vh;
     padding: 0px;
 }
 
@@ -83,11 +81,11 @@
 .diary-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개 카드씩 한 줄에 배치 */
-    gap: 3vw; /* 카드 사이 간격 */
+    gap: 1.5vw; /* 카드 사이 간격 */
 }
 
 .diary-card {
-    width :30vw;
+    width : 70%;
     height :auto;
     border: 1px solid #ddd;
     padding: 1vh 3vw;
@@ -102,25 +100,25 @@
     transform: scale(1.05);
 }
 
-.diary-thumbnail {
+/* .diary-thumbnail {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
-}
+} */
 
 .diary-card h3 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     margin: 10px 0;
 }
 
 .diary-card p {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     color: #555;
 }
 
 .mypage-weather-image-container img{
-    width: 25vw;
+    width: 50%;
     height: auto;
 }
 

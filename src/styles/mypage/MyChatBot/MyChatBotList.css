@@ -54,9 +54,9 @@
 
 @media (max-width:768px){
     .my-chatbot-history {
-        width: 100vw;
-        margin-top : 15vh;
-        padding: 20px;
+        width: 100%;
+        margin-top : 19vh;
+        padding: 1vh 3vw;
         background: #f9f9f9;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

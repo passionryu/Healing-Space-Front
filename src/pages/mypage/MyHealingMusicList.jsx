@@ -47,7 +47,7 @@ const MyHealingMusicList = () => {
             <h2>My Healing Music</h2>
             <div className="music-cards-container">
                 {musicList.map((music) => (
-                    <div key={music.musicId} className="music-card">
+                    <div key={music.musicId} className="my-music-card">
                         <Link to={`/my-healing-music-detail/${music.musicId}`}>
                             {music.img && <img src={music.img} alt={music.title} className="music-image" />}
                             <h3>{music.title}</h3>

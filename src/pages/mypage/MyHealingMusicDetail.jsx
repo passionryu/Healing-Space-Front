@@ -64,10 +64,10 @@ const MyHealingMusicDetail = () => {
     }
 
     return (
-        <div className="my-healing-music-detail">
+        <div className="my-healing-music-detail-2">
             <div className="header">
                 <div className="meta">
-                    <h2>{healingMusic.title}</h2>
+                    <h2 style={{textAlign : "left"}}>{healingMusic.title}</h2>
                     <div className="sub-data">
                         <img
                             src={"../src/assets/images/profile.jpg"}
@@ -103,22 +103,24 @@ const MyHealingMusicDetail = () => {
             {/* 좋아요 조회 부분 */}
 
             {/* 댓글 리스트 */}
-            <div className="comments-section">
+            <div className="comments-section-2">
                 <h3>댓글</h3>
                 {comments.length > 0 ? (
                     comments.map((comment) => (
-                        <div key={comment.commentId} className="comment">
+                        <div key={comment.commentId} className="comment-2">
                             <img
                                 src={"../src/assets/images/profile.jpg"}
                                 alt="Profile"
                                 className="comment-profile"
                             />
-                            <div className="comment-content">
-                                <p className="comment-author" style={{textAlign : "left"}}>{comment.nickName}</p>
-                                <p className="comment-date" style={{textAlign : "left"}}>
+                            <div className="comment-content-2">
+                                <div className="nick-date-2">
+                                <p className="comment-author-2" style={{textAlign : "left"}}>{comment.nickName}</p>
+                                <p className="comment-date-2" style={{textAlign : "left"}}>
                                     {new Date(comment.dateTime).toLocaleDateString()}
                                 </p>
-                                <p className="comment-text" style={{textAlign : "left"}}>{comment.content}</p>
+                                </div>
+                                <p className="comment-text-2" style={{textAlign : "left"}}>{comment.content}</p>
                             </div>
                         </div>
                     ))

@@ -86,7 +86,7 @@ const HealingMessageDetail = () => {
         <div className="my-healing-message-detail">
             <div className="header">
                 <div className="meta">
-                    <h2>{healingMessage.title}</h2>
+                    <h2 style={{textAlign : "left"}}>{healingMessage.title}</h2>
                     <div className="sub-data">
                         <img
                             src={"../src/assets/images/profile.jpg"}
