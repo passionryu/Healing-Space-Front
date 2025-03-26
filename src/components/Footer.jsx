@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             
-                <h3>Healing Space Company</h3>
+                {/* <h3>Healing Space Company</h3> */}
                 <p>경기도 성남시 수정구 성남대로 1342</p>
                 <p>&copy; 2024 by Healing Space Company. All rights reserved.</p>
         
