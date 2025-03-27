@@ -83,7 +83,7 @@ const HealingMessageDetail = () => {
     }
 
     return (
-        <div className="my-healing-message-detail">
+        <div className="my-liked-healing-message-detail">
             <div className="header">
                 <div className="meta">
                     <h2 style={{textAlign : "left"}}>{healingMessage.title}</h2>

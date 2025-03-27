@@ -17,7 +17,7 @@ const MyLikedHealingMusicDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/my/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/my/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const MyLikedHealingMusicDetail = () => {
             try {
                 const token = localStorage.getItem("accessToken");
                 const response = await axios.get(
-                    `http://localhost:8080/healingmusic/comment/${musicId}`,
+                    `${apiBaseUrl}/healingmusic/comment/${musicId}`,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const MyLikedHealingMusicDetail = () => {
         <div className="my-healing-music-detail">
             <div className="header">
                 <div className="meta">
-                    <h2>{healingMusic.title}</h2>
+                    <h2 style={{textAlign :"left"}}>{healingMusic.title}</h2>
                     <div className="sub-data">
                         <img
                             src={"../src/assets/images/profile.jpg"}
@@ -112,10 +112,13 @@ const MyLikedHealingMusicDetail = () => {
                                 className="comment-profile"
                             />
                             <div className="comment-content">
+
+                                <div className="my-liked-healing-message-detail-comment-header">
                                 <p className="comment-author" style={{textAlign : "left"}}>{comment.nickName}</p>
                                 <p className="comment-date" style={{textAlign : "left"}}>
                                     {new Date(comment.dateTime).toLocaleDateString()}
                                 </p>
+                                </div>
                                 <p className="comment-text" style={{textAlign : "left"}}>{comment.content}</p>
                             </div>
                         </div>
