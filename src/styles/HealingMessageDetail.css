@@ -1,8 +1,9 @@
 .healing-message-detail {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 800px;
+    margin-top: 5vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    border: 1px solid #ddd;
     padding: 20px;
 }
 
