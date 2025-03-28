@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: auto;
   background-color: #f7f7f7;
   /* 배경 색상 */
 }
@@ -79,12 +79,13 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px #917f27;
   width: 800px;
-  height: 610px;
+  height: auto;
   text-align: center;
 }
 
 .login-input-form-container {
   display: flex;
+  height: auto;
   justify-content: space-between;
   gap: 20px;
   /* 좌우 간격 조정 */
