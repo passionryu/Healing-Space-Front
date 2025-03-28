@@ -96,18 +96,7 @@ const Signup = () => {
                 />
               </div>
 
-              {/* PN */}
-              <div className="signup-input-container">
-                <label htmlFor="phoneNumber">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  placeholder="Enter your phone number"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                />
-              </div>
+            
             </div>
 
             <div className="login-right">
@@ -125,8 +114,21 @@ const Signup = () => {
                 />
               </div>
 
+                {/* PN */}
+                <div className="signup-input-container">
+                <label htmlFor="phoneNumber">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="Enter your phone number"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                />
+              </div>
+
               {/* email */}
-              <div className="signup-input-container">
+              {/* <div className="signup-input-container">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -136,10 +138,10 @@ const Signup = () => {
                   value={formData.email}
                   onChange={handleChange}
                 />
-              </div>
+              </div> */}
 
               {/* birth */}
-              <div className="signup-input-container">
+              {/* <div className="signup-input-container">
                 <label htmlFor="birth">Birth Date</label>
                 <input
                   type="date"
@@ -148,7 +150,7 @@ const Signup = () => {
                   value={formData.birth}
                   onChange={handleChange}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
