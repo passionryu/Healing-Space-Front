@@ -91,8 +91,8 @@ const MyInfoPage = () => {
                     <p><strong>ID:</strong> {userInfo.Id}</p>
                     <p><strong>이름:</strong> {userInfo.name}</p>
                     <p><strong>전화번호:</strong> {userInfo.phoneNumber}</p>
-                    <p><strong>생년월일:</strong> {userInfo.birth}</p>
-                    <p><strong>이메일:</strong> {userInfo.email}</p>
+                    {/* <p><strong>생년월일:</strong> {userInfo.birth}</p>
+                    <p><strong>이메일:</strong> {userInfo.email}</p> */}
                     <p><strong>가입일:</strong> {new Date(userInfo.registerDate).toLocaleString()}</p>
                 </div>
             </div>
