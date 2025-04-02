@@ -103,11 +103,7 @@ const MyLikedHealingMessageDetail = () => {
             </div>
 
             <div className="content">
-                {/* <img
-                    className="post-image"
-                    src={healingMessage.imagePath || ""}
-                    alt="Post"
-                /> */}
+  
                 <p>{healingMessage.content}</p>
             </div>
             <div className="footer">
