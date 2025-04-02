@@ -7,7 +7,7 @@
     padding: 20px;
 }
 
-.author-info {
+.healing-message-author-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@
     margin: 20px 0;
 }
 
-.content {
+.healing-message-content {
     font-size: 16px;
     color: #333;
     margin-bottom: 20px;
@@ -132,20 +132,27 @@
 @media (max-width : 768px){
     .healing-message-detail {
         margin-top : 22vh;
-        max-width: 100%;
+        width: 100%;
         font-family: Arial, sans-serif;
         line-height: 1.6;
         padding: 0vh 0vw;
     }
+
+    .healing-message-detail h1{
+        margin-top :2vh;
+        margin-left : 3.5vw;
+      
+    }
     
-    .author-info {
+    .healing-message-author-info {
         display: flex;
+        margin-left: 2.5vw;
         align-items: center;
         margin-bottom: 2vh;
     }
 
-    .author-info img {
-        width :  30% ;
+    .healing-message-author-info img {
+        width :  15% ;
         height : auto;
     }
 /*     
@@ -187,10 +194,11 @@
         margin: 20px 0;
     }
     
-    .content {
-        font-size: 16px;
+    .healing-message-content {
+        font-size: 1rem;
+        margin-left: 2.5vw;
         color: #333;
-        margin-bottom: 20px;
+        margin-bottom: 3vh;
     }
     
     .like-section {
@@ -213,13 +221,15 @@
     }
     
     .healing-message-comment-section h3 {
+        margin-left: 2.5vw;
         margin-bottom: 3px;
     }
     
     .healing-message-comment-section ul {
+        width: 92%;
         list-style: none;
-        padding: 0;
-        margin-bottom: 20px;
+        margin: 0 auto 2vh; /* 가운데 정렬 및 아래 여백 */
+        
     }
     
     .healing-message-comment-section li {
@@ -231,9 +241,9 @@
     }
     
     .healing-message-comment-section textarea {
-        width: 90%;
+        width: 92%;
         height: 10vh;
-        padding: 10px;
+        padding: 0 0;
         border: 1px solid #ddd;
         border-radius: 4px;
         resize: none; 
@@ -242,12 +252,14 @@
     }
     
     .healing-message-comment-section button {
-        padding: 10px 20px;
+        padding: 3vw 2vh;
         background-color:  #a5933a;
         color: white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        margin-right:3vw ;
+        margin-bottom: 2vh;
     }
     
     .healing-message-comment-section button:hover {
@@ -256,10 +268,16 @@
     
     /* 댓글 내용과 버튼을 감싸는 컨테이너 */
     .comment-content-container {
+        
         display: flex;
         justify-content: space-between; /* 댓글 내용과 버튼을 양쪽 끝으로 배치 */
         align-items: center;
         gap :10px; 
+      }
+
+      .comment-content-container p{
+        width: 100%;
+        height: auto;
       }
     
       .hover-button-comment:hover {
