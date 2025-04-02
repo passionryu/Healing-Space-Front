@@ -133,7 +133,7 @@ const HealingMessageDetail = () => {
     return (
         <div className="healing-message-detail">
             <h1 style={{textAlign:"left"}}>{message.title}</h1>
-            <div className="author-info">
+            <div className="healing-message-author-info">
                 <img
                     src={"../../src/assets/images/profile.jpg"}
                     alt="profile"
@@ -144,7 +144,7 @@ const HealingMessageDetail = () => {
                     {new Date(message.createdDate).toLocaleString()}
                 </span>
             </div>
-            <p className="content" style={{textAlign:"left"}} >{message.content}</p>
+            <p className="healing-message-content" style={{textAlign:"left"}} >{message.content}</p>
 
             {/* 좋아요 버튼을 누르면 재시작되어 새 데이터가 반영되게 임시 조치 */}
             {/* 좋아요 조회 부분 */}
