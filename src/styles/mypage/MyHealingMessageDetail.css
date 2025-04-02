@@ -112,6 +112,11 @@
         width: 25%;
         height: auto;
     }
+
+    .sub-data p{
+        font-size: 0.8rem;
+      
+    }
     
     .profile-image {
         width: 20%;
@@ -142,7 +147,7 @@
     }
     
     .content p {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.5;
         color: #555;
     }
